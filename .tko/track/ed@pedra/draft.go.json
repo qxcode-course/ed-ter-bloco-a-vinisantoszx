@@ -1,0 +1,99 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-17_01-32-06",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -37,106 +37,32 @@\n ) %7B%0A\n-%09var comp, a, b int%0A%0A%09fmt.Scanf(%22%25d%22, &comp)%0A%0A%09for 0 %3C comp %7B%0A        fmt.Scanf(%22%25d %25d%22, &a, &b)%0A%09%7D\n+    fmt.Println(%22qxcode%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-03-17_02-22-43",
+            "content": "@@ -90,9 +90,9 @@\n for \n-1\n+0\n  %3C c\n",
+            "lines": "13"
+        },
+        {
+            "label": "2026-03-17_02-23-03",
+            "content": "@@ -1,184 +1,61 @@\n-package main%0A%0Aimport %22fmt%22%0A%0Afunc main() %7B%0A%09var comp, a, b int%0A%09i := 1%0A%0A%09fmt.Scanf(%22%25d%22, &comp)%0A%0A%09for i %3C comp %7B%0A%09%09fmt.Scanf(%22%25d %25d%22, &a, &b)%0A%0A%09%09i++%0A%0A%09%09if i == comp %7B%0A%09%09%09break%0A%09%09%7D%0A%09%7D%0A%7D\n+@@ -136,22 +136,8 @@%0A &b)%250A%0A-        break%250A%0A %2509%257D%250A%257D\n %0A\n",
+            "lines": "4"
+        },
+        {
+            "label": "2026-03-17_02-27-16",
+            "content": "@@ -18,18 +18,13 @@\n ort \n-(%0A%09\n %22fmt%22\n-%0A)\n %0A%0Afu\n@@ -61,17 +61,17 @@\n t%0A%09i := \n-0\n+1\n %0A%0A%09fmt.S\n@@ -139,40 +139,8 @@\n b)%0A%0A\n-%09%09if a %3E= 10 && b %3E= 10 %7B%0A%0A%09%09%7D%0A%0A\n %09%09i+\n@@ -176,10 +176,9 @@\n %09%09%7D%0A\n+\n %09%7D%0A\n-%0A\n %7D%0A\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-03-17_11-16-15",
+            "content": "@@ -27,16 +27,8 @@\n mt%22%0A\n-%09%22math%22%0A\n )%0A%0Af\n@@ -170,100 +170,19 @@\n 0 %7B%0A\n-%09%09%09diferenca := math.Abs(a) - math.Abs(b)%0A%0A%09%09%09fmt.Printf(%22%25d%22, diferenca)%0A%09%09%7D else %7B%0A%09%09%09%0A%09%09%7D\n+%0A%09%09%7D%0A%0A%09%09i++\n %0A%0A%09%09\n@@ -208,22 +208,15 @@\n reak%0A%09%09%7D\n-%0A%0A%09%09i++\n %0A%09%7D%0A%0A%7D%0A\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-17_11-31-52",
+            "content": "@@ -203,18 +203,9 @@\n Abs(\n-float64(a)\n+a\n ) - \n@@ -217,18 +217,9 @@\n Abs(\n-float64(b)\n+b\n )%0A%0A%09\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-17_11-34-14",
+            "content": "@@ -194,13 +194,51 @@\n  := \n-a - b\n+math.Abs(float64(a)) - math.Abs(float64(b))\n %0A%0A%09%09\n@@ -247,17 +247,24 @@\n mt.Print\n-(\n+f(%22%25d%22, \n diferenc\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-17_11-36-06",
+            "content": "@@ -23,16 +23,24 @@\n %0A%09%22fmt%22%0A\n+%09%22math%22%0A\n )%0A%0Afunc \n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-17_11-36-13",
+            "content": "@@ -193,66 +193,8 @@\n  b%0A%0A\n-%09%09%09if diferenca %3C 0 %7B%0A%09%09%09%09diferenca = -diferenca%0A%09%09%09%7D%0A%09%09%09%0A\n %09%09%09f\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-17_11-39-03",
+            "content": "@@ -249,16 +249,9 @@\n %7D%0A%09%09\n-%7D else %7B\n+%09\n %0A%09%09%09\n@@ -264,25 +264,33 @@\n int(\n-%22sem ganhador%5Cn%22)\n+diferenca)%0A%09%09%7D else %7B%0A%09%09%09\n %0A%09%09%7D\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-17_11-41-27",
+            "content": "@@ -285,25 +285,16 @@\n dor%5Cn%22)%0A\n-%09%09%09break%0A\n %09%09%7D%0A%0A%09%09i\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-17_11-42-04",
+            "content": "@@ -59,16 +59,24 @@\n a, b int\n+%0A%09i := 0\n %0A%0A%09fmt.S\n@@ -102,16 +102,8 @@\n %09for\n- i := 0;\n  i %3C\n@@ -111,13 +111,9 @@\n comp\n-; i++\n+ \n %7B%0A%09%09\n@@ -243,17 +243,16 @@\n ca%0A%09%09%09%7D%0A\n-%0A\n %09%09%7D else\n@@ -294,18 +294,56 @@\n %09%09break%0A\n-\n %09%09%7D\n+%0A%0A%09%09if i == comp %7B%0A%09%09%09break%0A%09%09%7D%0A%0A%09%09i++\n %0A%09%7D%0A%0A%7D%0A\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-17_11-48-56",
+            "content": "@@ -252,83 +252,8 @@\n %09%7D%0A%0A\n-%09%09%09menor := diferenca%0A%09%09%09if menor %3E diferenca %7B%0A%09%09%09%09menor = diferenca%0A%09%09%09%7D%0A\n %09%09%7D \n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-03-17_11-51-24",
+            "content": "@@ -59,31 +59,13 @@\n a, b\n-, menor, diferenca\n  int%0A\n+\n %0A%09fm\n@@ -90,22 +90,8 @@\n p)%0A%0A\n-%09menor = 999%0A%0A\n %09for\n@@ -183,16 +183,17 @@\n ferenca \n+:\n = a - b%0A\n@@ -248,16 +248,38 @@\n a%0A%09%09%09%7D%0A%0A\n+%09%09%09menor := diferenca%0A\n %09%09%09if me\n@@ -318,21 +318,72 @@\n ferenca%0A\n-\n %09%09%09%7D%0A\n+%09%09%7D else %7B%0A%09%09%09fmt.Print(%22sem ganhador%5Cn%22)%0A%09%09%09break%0A\n %09%09%7D%0A%09%7D%0A%0A\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-17_11-55-51",
+            "content": "@@ -77,16 +77,8 @@\n enca\n-, indice\n  int\n@@ -334,53 +334,16 @@\n %0A%09%09%09\n-%09indice = i%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A%09fmt.Println(indice)\n+%7D%0A%09%09%7D%0A%09%7D\n %0A%0A%7D%0A\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-17_11-58-16",
+            "content": "@@ -359,50 +359,8 @@\n %09%09%7D%0A\n-%09%09%7D else %7B%0A%09%09%09fmt.Println(%22sem ganhador%22)%0A\n %09%09%7D%0A\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-17_11-59-15",
+            "content": "@@ -355,16 +355,58 @@\n  i%0A%09%09%09%7D%0A\n+%09%09%7D else %7B%0A%09%09%09fmt.Println(%22sem ganhador%22)%0A\n %09%09%7D%0A%09%7D%0A%0A\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-17_11-59-28",
+            "content": "@@ -368,89 +368,27 @@\n %7D%0A%0A%09\n-if indice != 0 %7B%0A%09%09fmt.Println(indice)%0A%09%7D else %7B%0A%09%09fmt.Println(%22sem ganhador%22)%0A%09%7D\n+fmt.Println(indice)\n %0A%0A%7D%0A\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-17_12-00-13",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc main() {\n\tvar comp, a, b, menor, diferenca, indice int\n\n\tfmt.Scanf(\"%d\", &comp)\n\n\tmenor = 999\n\n\tfor i := 0; i < comp; i++{\n\t\tfmt.Scanf(\"%d %d\", &a, &b)\n\n\t\tif a >= 10 && b >= 10 {\n\t\t\tdiferenca = a - b\n\n\t\t\tif diferenca < 0 {\n\t\t\t\tdiferenca = -diferenca\n\t\t\t}\n\n\t\t\tif menor > diferenca {\n\t\t\t\tmenor = diferenca\n\t\t\t\tindice = i\n\t\t\t}\n\t\t}\n\t}\n\n\tif indice != 0 {\n\t\tfmt.Println(indice)\n\t} else {\n\t\tfmt.Println(\"sem ganhador\")\n\t}\n\n}\n",
+            "lines": "37"
+        }
+    ]
+}

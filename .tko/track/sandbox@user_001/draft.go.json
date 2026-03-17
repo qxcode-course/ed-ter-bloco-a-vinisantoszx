@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-11_13-49-05",
+            "content": "@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -37,51 +37,8 @@\n ) %7B%0A\n-    var c int%0A    %0A    fmt.Scan(%22%25v%22, &c)%0A%0A\n     \n@@ -54,14 +54,15 @@\n ln(%22\n-%25v%22, c\n+qxcode%22\n )%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-03-11_13-58-47",
+            "content": "@@ -43,23 +43,16 @@\n    var c\n-aracter\n  int%0A   \n@@ -72,21 +72,14 @@\n n(%22%25\n-c\n+v\n %22, &c\n-aracter\n )%0A%0A \n@@ -94,24 +94,18 @@\n rint\n-f(%22%25c\n+ln(%22%25v\n %22, c\n-aracter\n )%0A%7D%0A\n",
+            "lines": "10"
+        },
+        {
+            "label": "2026-03-11_14-01-15",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -38,168 +38,46 @@\n ) %7B%0A\n-%09var idade int%0A%0A%09fmt.Println(%22==========EMISS%C3%83O DE TITULO DE ELEITOR============%22)%0A%09fmt.Println(%22================DIGITE SUA IDADE==================%22)%0A%0A%09\n+    var caracter int%0A    %0A    \n fmt.Scan\n f(%22%25\n@@ -76,409 +76,56 @@\n Scan\n-f\n (%22%25\n-d\n+c\n %22, &\n-idade)%0A%0A%09if idade %3E 0 %7B%0A%09%09if idade %3C 16 %7B%0A%09%09%09fmt.Println(%22Voc%C3%AA n%C3%A3o pode votar%22)%0A%09%09%7D else if idade %3E= 16 && idade %3C 18 %7B%0A%09%09%09fmt.Println(%22Voc%C3%AA tem direito de votar%22)%0A%09%09%7D else if idade %3E= 18 && idade %3C 65 %7B%0A%09%09%09fmt.Println(%22Voc%C3%AA %C3%A9 obrigado a votar%22)%0A%09%09%7D else if idade %3E= 65 %7B%0A%09%09%09fmt.Println(%22Voc%C3%AA tem direito de votar, mas n%C3%A3o %C3%A9 obrigado%22)%0A%09%09%7D%0A%09%7D else %7B%0A%09%09fmt.Println(%22Digite um valor v%C3%A1lido%22)%0A%09%7D%0A\n+caracter)%0A%0A    fmt.Printf(%22%25c%22, caracter)\n %0A%7D%0A\n",
+            "lines": "10"
+        },
+        {
+            "label": "2026-03-11_14-16-04",
+            "content": "@@ -51,16 +51,151 @@\n de int%0A%0A\n+%09fmt.Println(%22==========EMISS%C3%83O DE TITULO DE ELEITOR============%22)%0A%09fmt.Println(%22================DIGITE SUA IDADE==================%22)%0A%0A\n %09fmt.Sca\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-11_14-23-51",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar idade int\n\n\tfmt.Scanf(\"%d\", &idade)\n\n\tif idade > 0 {\n\t\tif idade < 16 {\n\t\t\tfmt.Println(\"Voc\u00ea n\u00e3o pode votar\")\n\t\t} else if idade >= 16 && idade < 18 {\n\t\t\tfmt.Println(\"Voc\u00ea tem direito de votar\")\n\t\t} else if idade >= 18 && idade < 65 {\n\t\t\tfmt.Println(\"Voc\u00ea \u00e9 obrigado a votar\")\n\t\t} else if idade >= 65 {\n\t\t\tfmt.Println(\"Voc\u00ea tem direito de votar, mas n\u00e3o \u00e9 obrigado\")\n\t\t}\n\t} else {\n\t\tfmt.Println(\"Digite um valor v\u00e1lido\")\n\t}\n\n}\n",
+            "lines": "24"
+        }
+    ]
+}

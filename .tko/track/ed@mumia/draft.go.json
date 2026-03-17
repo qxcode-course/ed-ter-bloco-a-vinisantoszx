@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-16_01-21-55",
+            "content": "@@ -131,25 +131,25 @@\n fmt.Printf(%22\n-%25\n+&\n s eh crianca\n@@ -191,25 +191,25 @@\n fmt.Printf(%22\n-%25\n+&\n s eh jovem%22,\n@@ -249,25 +249,25 @@\n fmt.Printf(%22\n-%25\n+&\n s eh adulto%22\n@@ -310,25 +310,25 @@\n fmt.Printf(%22\n-%25\n+&\n s eh idoso%22,\n@@ -362,9 +362,9 @@\n tf(%22\n-%25\n+&\n s eh\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-03-16_01-23-53",
+            "content": "@@ -148,18 +148,16 @@\n  crianca\n-%5Cn\n %22, nome)\n@@ -206,18 +206,16 @@\n eh jovem\n-%5Cn\n %22, nome)\n@@ -265,18 +265,16 @@\n h adulto\n-%5Cn\n %22, nome)\n@@ -325,18 +325,16 @@\n eh idoso\n-%5Cn\n %22, nome)\n@@ -373,10 +373,8 @@\n umia\n-%5Cn\n %22, n\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-03-16_01-24-13",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar nome string\n\tvar idade int\n\n\tfmt.Scan(&nome)\n\tfmt.Scan(&idade)\n\n\tif idade < 12 {\n\t\tfmt.Printf(\"%s eh crianca\\n\", nome)\n\t} else if idade < 18 {\n\t\tfmt.Printf(\"%s eh jovem\\n\", nome)\n\t} else if idade < 65 {\n\t\tfmt.Printf(\"%s eh adulto\\n\", nome)\n\t} else if idade < 1000 {\n\t\tfmt.Printf(\"%s eh idoso\\n\", nome)\n\t} else {\n\t\tfmt.Printf(\"%s eh mumia\\n\", nome)\n\t}\n}\n",
+            "lines": "23"
+        }
+    ]
+}

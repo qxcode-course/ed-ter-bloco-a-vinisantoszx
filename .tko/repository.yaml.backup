@@ -1,0 +1,34 @@
+version: '0.2'
+sources:
+- name: sandbox
+  target: sandbox
+  type: local
+  writeable: true
+  quests: null
+  tasks: null
+- name: ed
+  target: https://github.com/qxcodeed/arcade.git
+  type: git
+  writeable: false
+  cache_timestamp: '2026-03-17 02:22:37'
+  quests: null
+  tasks: null
+expanded:
+- sandbox@sandbox
+- ed@revisão
+- ed@main-quest
+- sandbox@sandbox:00_rascunhos
+tasks:
+  sandbox@user_001: '{self:1, rate:100, study:35}'
+  ed@pintando: '{self:1, rate:100, study:30, concept:1}'
+  ed@mumia: '{self:1, rate:100, study:15}'
+  ed@fuga: '{self:1, rate:100, study:60, friend:Mayson, concept:1}'
+flags:
+  painel: 1
+  quests: 0
+  tracks: 0
+  tasks: 0
+  task_graph_mode: 0
+  show_time: 0
+lang: go
+selected: ed@pedra
