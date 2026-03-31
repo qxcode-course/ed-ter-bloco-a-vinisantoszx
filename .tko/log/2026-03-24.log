@@ -1,0 +1,34 @@
+2026-03-24 13:34:15, MOVE, v:1, k:ed@princesa, mode:DOWN
+2026-03-24 13:34:17, MOVE, v:1, k:ed@apagando, mode:DOWN
+2026-03-24 13:34:18, MOVE, v:1, k:ed@manipulacao, mode:DOWN
+2026-03-24 13:34:19, MOVE, v:1, k:ed@especiais, mode:DOWN
+2026-03-24 13:34:20, MOVE, v:1, k:ed@buscas, mode:DOWN
+2026-03-24 13:34:21, MOVE, v:1, k:ed@rotacoes, mode:DOWN
+2026-03-24 13:34:21, MOVE, v:1, k:ed@alternando, mode:DOWN
+2026-03-24 13:36:38, MOVE, v:1, k:ed@baruel, mode:PICK
+2026-03-24 13:36:41, MOVE, v:1, k:ed@baruel, mode:BACK
+2026-03-24 13:36:43, MOVE, v:1, k:ed@gomos, mode:DOWN
+2026-03-24 13:36:45, MOVE, v:1, k:ed@gomos, mode:PICK
+2026-03-24 13:36:53, EXEC, v:1, k:ed@gomos, mode:FULL, rate:0, size:5
+2026-03-24 13:37:24, EXEC, v:1, k:ed@gomos, mode:FREE
+2026-03-24 13:37:38, MOVE, v:1, k:ed@gomos, mode:BACK
+2026-03-24 13:38:05, MOVE, v:1, k:ed@princesa, mode:PICK
+2026-03-24 13:38:06, MOVE, v:1, k:ed@princesa, mode:BACK
+2026-03-24 14:07:36, SELF, v:1, k:ed@analise, self:1, rate:100
+2026-03-24 14:07:37, SELF, v:1, k:ed@analise
+2026-03-24 14:07:38, SELF, v:1, k:ed@analise, self:1, rate:100
+2026-03-24 14:07:38, SELF, v:1, k:ed@analise
+2026-03-24 14:07:39, SELF, v:1, k:ed@analise, self:1, rate:100
+2026-03-24 14:07:40, SELF, v:1, k:ed@analise
+2026-03-24 14:07:41, SELF, v:1, k:ed@analise, self:1, rate:100
+2026-03-24 14:07:42, SELF, v:1, k:ed@analise
+2026-03-24 14:07:42, SELF, v:1, k:ed@analise, self:1, rate:100
+2026-03-24 14:07:43, SELF, v:1, k:ed@analise
+2026-03-24 14:07:43, SELF, v:1, k:ed@analise, self:1, rate:100
+2026-03-24 14:07:44, SELF, v:1, k:ed@analise
+2026-03-24 14:07:45, SELF, v:1, k:ed@analise, self:1, rate:100
+2026-03-24 14:07:45, SELF, v:1, k:ed@analise
+2026-03-24 14:07:49, SELF, v:1, k:ed@analise, self:1, rate:100
+2026-03-24 14:07:51, SELF, v:1, k:ed@analise
+2026-03-24 14:20:37, SELF, v:1, k:ed@analise, self:1, rate:100
+2026-03-24 14:20:39, MOVE, v:1, k:ed@princesa, mode:PICK

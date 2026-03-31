@@ -1,0 +1,89 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-30_17-55-41",
+            "content": "@@ -41,19 +41,35 @@\n     \n-var N, E int\n+fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-03-30_19-43-20",
+            "content": "@@ -53,39 +53,7 @@\n  int\n-%0A%0A    fmt.Scanf(%22%25d %25d%22, &N, &E)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-03-30_19-44-00",
+            "content": "@@ -45,12 +45,12 @@\n var \n-n, e\n+N, E\n  int\n@@ -79,82 +79,13 @@\n %22, &\n-n, &e)%0A%0A    v := make(%5B%5Dint, n)%0A%09for i := 0; i %3C n; i++ %7B%0A%09%09v%5Bi%5D = i + 1%0A%09%7D\n+N, &E)\n %0A%7D%0A\n",
+            "lines": "7"
+        },
+        {
+            "label": "2026-03-30_19-50-33",
+            "content": "@@ -154,27 +154,7 @@\n 1%0A%09%7D\n-%0A%0A    fmt.Println(v)\n %0A%7D%0A\n",
+            "lines": "12"
+        },
+        {
+            "label": "2026-03-30_19-50-48",
+            "content": "@@ -1,164 +1,319 @@\n-package main%0A%0Aimport %22fmt%22%0A%0Afunc main() %7B%0A%09var n, e int%0A%0A%09fmt.Scanf(%22%25d %25d%22, &n, &e)%0A%0A%09v := make(%5B%5Dint, n)%0A%09for i := 0; i %3C n; i++ %7B%0A%09%09v%5Bi%5D = i + 1%0A%09%7D%0A\n+@@ -6,17 +6,16 @@%0A ge main%250A%0A-%250A%0A import %2522%0A@@ -19,17 +19,16 @@%0A t %2522fmt%2522%250A%0A-%250A%0A func mai%0A@@ -33,17 +33,20 @@%0A ain() %257B%250A%0A-%2509%0A+    %0A var n, e%0A@@ -51,17 +51,20 @@%0A  e int%250A%250A%0A-%2509%0A+    %0A fmt.Scan%0A@@ -83,17 +83,20 @@%0A n, &e)%250A%250A%0A-%2509%0A+    %0A v := mak%0A@@ -155,48 +155,26 @@%0A %250A%2509%257D%250A%0A-\n     %0A\n+ %250A\n     \n+%0A-\n espa\n@@ -327,10 +327,14 @@\n  - 1\n-%0A%09\n+%250A%2509\n vivo\n@@ -343,12 +343,39 @@\n := n\n-%0A\n+%250A\n     %0A\n-%7D\n++fmt.Println(v)%0A %250A%257D%250A\n %0A\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-30_20-36-39",
+            "content": "@@ -25,220 +25,8 @@\n t%22%0A%0A\n-func imprimirFila(v %5B%5Dint, espada int) %7B%0A%09fmt.Print(%22%5B%22)%0A%09for i, p := range v %7B%0A%09%09if  p != 0 %7B%0A%09%09%09fmt.Print(p)%0A%09%09%09if i == espada %7B%0A%09%09%09%09fmt.Print(%22%3E%22)%0A%09%09%09%7D else %7B%0A%09%09%09%09fmt.Print(%22 %22)%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%09fmt.Print(%22%5D%22)%0A%7D%0A%0A\n func\n@@ -144,18 +144,25 @@\n  + 1%0A%09%7D%0A\n-%0A%09\n+    %0A    \n espada :\n@@ -185,53 +185,11 @@\n = n%0A\n-%0A%09for vivos %3E 1 %7B%0A%09%09imprimirFila(v, espada)%0A%09%7D\n+    \n %0A%7D%0A\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-03-30_20-40-26",
+            "content": "@@ -433,94 +433,8 @@\n ada)\n-%0A%0A%09%09vitima := (espada + 1) %25 n%0A%09%09for v%5Bvitima%5D == 0 %7B%0A%09%09%09vitima = (vitima + 1) %25 n%0A%09%09%7D\n %0A%09%7D%0A\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-03-30_20-43-06",
+            "content": "@@ -519,120 +519,8 @@\n %0A%09%09%7D\n-%0A%0A%09%09v%5Bvitima%5D = 0%0A%09%09vivos--%0A%0A%09%09espada = (vitima + 1) %25 n%0A%09%09for v%5Bespada%5D == 0 %7B%0A%09%09%09espada = (espada + 1) %25 n%0A%09%09%7D\n %0A%09%7D%0A\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-03-30_20-44-24",
+            "content": "@@ -404,16 +404,43 @@\n s %3E 1 %7B%0A\n+%09%09imprimirFila(v, espada)%0A%0A\n %09%09vitima\n@@ -634,33 +634,7 @@\n %7D%0A%09%7D\n-%0A%0A%09imprimirFila(v, espada)\n %0A%7D%0A\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-03-30_20-44-46",
+            "content": "@@ -601,18 +601,20 @@\n %25 n%0A%09%09%7D%0A\n-%0A\n %09\n+%7D%0A%0A\n %09imprimi\n@@ -630,13 +630,10 @@\n espada)%0A\n-%09%7D%0A\n %7D%0A\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-03-30_20-45-20",
+            "content": "@@ -391,34 +391,8 @@\n  n%0A%0A\n-%09imprimirFila(v, espada)%0A%0A\n %09for\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-03-30_20-45-33",
+            "content": "@@ -228,10 +228,8 @@\n rint\n-ln\n (%22%5D%22\n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-03-30_20-45-40",
+            "content": "@@ -229,17 +229,16 @@\n intln(%22%5D\n- \n %22)%0A%7D%0A%0Afu\n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-03-30_20-45-56",
+            "content": "@@ -75,17 +75,16 @@\n Print(%22%5B\n- \n %22)%0A%09for \n@@ -168,17 +168,16 @@\n Print(%22%3E\n- \n %22)%0A%09%09%09%7D \n@@ -229,16 +229,17 @@\n intln(%22%5D\n+ \n %22)%0A%7D%0A%0Afu\n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-03-30_20-46-19",
+            "content": "@@ -25,74 +25,8 @@\n t%22%0A%0A\n-// TRABALHO DMS PRA ENTENDER OS ESPA%C3%87OS DESSES PRINTS KKKKKKKKKKK%0A\n func\n@@ -107,16 +107,17 @@\n  %7B%0A%09%09if \n+ \n p != 0 %7B\n@@ -395,26 +395,8 @@\n  n%0A%0A\n-%09for vivos %3E 1 %7B%0A%09\n %09imp\n@@ -417,16 +417,33 @@\n spada)%0A%0A\n+%09for vivos %3E 1 %7B%0A\n %09%09vitima\n@@ -626,18 +626,45 @@\n + 1) %25 n%0A%09%09%7D\n+%0A%0A%09%09imprimirFila(v, espada)\n %0A%09%7D%0A%7D%0A\n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-03-30_20-47-37",
+            "content": "@@ -456,16 +456,34 @@\n s := n%0A%0A\n+%09for vivos %3E 1 %7B%0A%09\n %09imprimi\n@@ -500,33 +500,16 @@\n spada)%0A%0A\n-%09for vivos %3E 1 %7B%0A\n %09%09vitima\n@@ -700,35 +700,8 @@\n %0A%09%09%7D\n-%0A%0A%09%09imprimirFila(v, espada)\n %0A%09%7D%0A\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-03-30_20-47-58",
+            "content": "package main\n\nimport \"fmt\"\n\n// TRABALHO DMS PRA ENTENDER OS ESPA\u00c7OS DESSES PRINTS KKKKKKKKKKK\nfunc imprimirFila(v []int, espada int) {\n\tfmt.Print(\"[ \")\n\tfor i, p := range v {\n\t\tif p != 0 {\n\t\t\tfmt.Print(p)\n\t\t\tif i == espada {\n\t\t\t\tfmt.Print(\"> \")\n\t\t\t} else {\n\t\t\t\tfmt.Print(\" \")\n\t\t\t}\n\t\t}\n\t}\n\tfmt.Println(\"]\")\n}\n\nfunc main() {\n\tvar n, e int\n\n\tfmt.Scanf(\"%d %d\", &n, &e)\n\n\tv := make([]int, n)\n\tfor i := 0; i < n; i++ {\n\t\tv[i] = i + 1\n\t}\n\n\tespada := e - 1\n\tvivos := n\n\n\timprimirFila(v, espada)\n\n\tfor vivos > 1 {\n\t\tvitima := (espada + 1) % n\n\t\tfor v[vitima] == 0 {\n\t\t\tvitima = (vitima + 1) % n\n\t\t}\n\n\t\tv[vitima] = 0\n\t\tvivos--\n\n\t\tespada = (vitima + 1) % n\n\t\tfor v[espada] == 0 {\n\t\t\tespada = (espada + 1) % n\n\t\t}\n\n\t\timprimirFila(v, espada)\n\t}\n}\n",
+            "lines": "52"
+        }
+    ]
+}

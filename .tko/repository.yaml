@@ -13,22 +13,25 @@ sources:
   quests: null
   tasks: null
 expanded:
-- ed@main-quest
-- sandbox@sandbox:00_rascunhos
-- sandbox@sandbox
-- ed@revisão
+- ed@basic
+- ed@map_set
 tasks:
   sandbox@user_001: '{self:1, rate:100, study:30}'
   ed@pintando: '{self:1, rate:100, study:15}'
   ed@mumia: '{self:1, rate:100, study:15}'
   ed@fuga: '{self:1, rate:100, study:60, friend:Mayson, concept:1}'
   ed@pedra: '{self:1, rate:100, study:80, concept:1}'
+  ed@casais: '{self:1, rate:100, study:40, friend:Mayson}'
+  ed@baruel: '{self:1, rate:100, study:90, concept:1}'
+  ed@analise: '{self:1, rate:100}'
+  ed@princesa: '{self:1, rate:100, study:110, concept:1}'
+  ed@apagando: '{self:1, rate:100, study:50, concept:1}'
+  ed@manipulacao: '{self:1, rate:100, study:90, friend:Mayson, concept:1}'
 flags:
-  painel: 0
-  quests: 0
-  tracks: 0
-  tasks: 0
+  panel: 1
+  inbox: 0
+  show_panel: 1
   task_graph_mode: 0
   show_time: 0
 lang: go
-selected: sandbox@sandbox:00_rascunhos
+selected: ed@gomos

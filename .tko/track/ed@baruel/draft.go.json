@@ -1,0 +1,124 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-17_14-20-52",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -41,120 +41,28 @@\n     \n-var asize, bsize int%0A%0A    fmt.Scan(&asize)%0A    fmt.Scan(&bsize)%0A%0A    for i := 0; i %3C bsize; i++ %7B%0A        %0A    %7D%0A\n+fmt.Println(%22qxcode%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-03-17_14-32-05",
+            "content": "@@ -59,57 +59,12 @@\n size\n-, cartasb int%0A%0A    cartas := make(%5B%5Dint, cartasb)\n+ int\n %0A%0A  \n@@ -149,116 +149,14 @@\n     \n-fmt.Scanf(%22%25d%22, &cartas%5Bi%5D)%0A    %7D%0A%0A    for i := 0; i %3C bsize; i++ %7B%0A        fmt.Printf(%22%25d%22, cartas%5Bi%5D)\n %0A    %7D\n+%0A\n %0A%7D%0A\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-03-18_13-29-00",
+            "content": "@@ -35,17 +35,20 @@\n ain() %7B%0A\n-%09\n+    \n var asiz\n@@ -59,15 +59,63 @@\n size\n- int%0A%0A%09\n+, cartasb int%0A%0A    cartas := make(%5B%5Dint, cartasb)%0A%0A    \n fmt.\n@@ -127,17 +127,20 @@\n &asize)%0A\n-%09\n+    \n fmt.Scan\n@@ -153,40 +153,12 @@\n e)%0A%0A\n-%09cartas := make(%5B%5Dint, bsize)%0A%0A%09\n+    \n for \n@@ -186,10 +186,16 @@\n + %7B%0A\n-%09%09\n+        \n fmt.\n@@ -222,9 +222,12 @@\n i%5D)%0A\n-%09\n+    \n %7D%0A%0A \n@@ -271,173 +271,34 @@\n    f\n-or j := 0; j %3C bsize; j++ %7B%0A            if cartas%5Bi%5D %3E 0 %7B%0A                if cartas%5Bi%5D == cartas%5Bj%5D %7B%0A                    %0A                %7D%0A            %7D%0A        %7D\n+mt.Printf(%22%25d%22, cartas%5Bi%5D)\n %0A   \n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-03-18_13-35-35",
+            "content": "@@ -130,45 +130,8 @@\n e)%0A%0A\n-    repcartas := make(%5B%5Dint, asize)%0A%0A\n %09for\n@@ -359,32 +359,8 @@\n     \n-repcartas%5Bi%5D = cartas%5Bi%5D\n %0A   \n@@ -407,35 +407,7 @@\n    %7D\n-%0A%0A    fmt.Println(repcartas)\n %0A%7D%0A\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-18_13-46-00",
+            "content": "@@ -39,33 +39,21 @@\n ) %7B%0A\n-    \n+%09\n var a\n-lbum\n size, \n-possui\n+b\n size\n@@ -58,28 +58,25 @@\n ze int%0A%0A\n-    \n+%09\n fmt.Scan\n f(%22%25d %25d\n@@ -71,54 +71,41 @@\n Scan\n-f(%22%25d %25d%22, &albumsize, &possuisize)%0A%0A    figur\n+(&asize)%0A%09fmt.Scan(&bsize)%0A%0A%09cart\n as :\n@@ -118,22 +118,17 @@\n (%5B%5Dint, \n-possui\n+b\n size)%0A%0A \n@@ -134,41 +134,73 @@\n     \n-for i := range figuras %7B%0A        \n+repcartas := make(%5B%5Dint, asize)%0A%0A%09for i := 0; i %3C bsize; i++ %7B%0A%09%09\n fmt.\n@@ -215,311 +215,288 @@\n d%22, \n-figur\n+&cart\n as%5Bi%5D)%0A\n-    %7D%0A%0A%09unicos := make(map%5Bint%5Dbool)%0A    repetidos := make(%5B%5Dint, 0, possuisize)%0A%0A\n+%09%7D%0A%0A    for i := 0; i %3C bsize; i++ %7B%0A \n     \n+   \n for \n-_, figura := range figuras %7B%0A        _, existe := unicos%5Bfigura%5D%0A%0A        if existe %7B%0A            repetidos = append(repetidos, figura)%0A        %7D else %7B%0A            unicos%5Bfigura%5D = true%0A        %7D%0A    %7D\n+j := 0; j %3C bsize; j++ %7B%0A            if cartas%5Bi%5D %3E 0 %7B%0A                if cartas%5Bi%5D == cartas%5Bj%5D %7B%0A                    repcartas%5Bi%5D = cartas%5Bi%5D%0A                %7D%0A            %7D%0A        %7D%0A    %7D%0A%0A    fmt.Println(repcartas)\n %0A%7D%0A\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-23_02-09-42",
+            "content": "@@ -355,10 +355,20 @@\n     \n-if\n+_, existe :=\n  uni\n@@ -378,16 +378,35 @@\n %5Bfigura%5D\n+%0A%0A        if existe\n  %7B%0A     \n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-03-23_02-12-00",
+            "content": "@@ -491,74 +491,7 @@\n    %7D\n-%0A%0A    saida := fmt.Sprintf(%22%25v%22, repetidos)%0A%0A    fmt.Println(saida)\n %0A%7D%0A\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-23_02-13-08",
+            "content": "@@ -557,26 +557,8 @@\n aida\n-%5B1 : len(saida)-1%5D\n )%0A%7D%0A\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-23_02-13-55",
+            "content": "@@ -163,57 +163,8 @@\n e)%0A%0A\n-    fmt.Println(albumsize, possuisize, figuras)%0A%0A\n     \n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-23_02-15-16",
+            "content": "@@ -82,17 +82,28 @@\n fmt.Scan\n-(\n+f(%22%25d %25d%22, &\n albumsiz\n@@ -97,32 +97,33 @@\n d%22, &albumsize, \n+&\n possuisize)%0A%0A   \n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-23_02-15-45",
+            "content": "@@ -83,17 +83,16 @@\n mt.Scan(\n-&\n albumsiz\n@@ -98,9 +98,8 @@\n ze, \n-&\n poss\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-23_02-15-56",
+            "content": "@@ -141,32 +141,81 @@\n t, possuisize)%0A%0A\n+    fmt.Println(albumsize, possuisize, figuras)%0A%0A\n     for i := ran\n@@ -274,57 +274,8 @@\n  %7D%0A%0A\n-    fmt.Println(albumsize, possuisize, figuras)%0A%0A\n %09uni\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-23_02-16-20",
+            "content": "@@ -202,17 +202,16 @@\n f(%22%25d%22, \n-&\n figuras%5B\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-23_02-16-40",
+            "content": "@@ -222,16 +222,65 @@\n %0A    %7D%0A%0A\n+    fmt.Println(albumsize, possuisize, figuras)%0A%0A\n %09unicos \n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-23_02-16-46",
+            "content": "@@ -35,17 +35,20 @@\n ain() %7B%0A\n-%09\n+    \n var albu\n@@ -70,17 +70,20 @@\n ze int%0A%0A\n-%09\n+    \n fmt.Scan\n@@ -109,17 +109,20 @@\n isize)%0A%0A\n-%09\n+    \n figuras \n@@ -145,25 +145,28 @@\n ossuisize)%0A%0A\n-%09\n+    \n for i := ran\n@@ -178,18 +178,24 @@\n guras %7B%0A\n-%09%09\n+        \n fmt.Scan\n@@ -215,17 +215,20 @@\n ras%5Bi%5D)%0A\n-%09\n+    \n %7D%0A%0A%09unic\n@@ -252,17 +252,20 @@\n t%5Dbool)%0A\n-%09\n+    \n repetido\n@@ -297,17 +297,20 @@\n isize)%0A%0A\n-%09\n+    \n for _, f\n@@ -334,18 +334,24 @@\n guras %7B%0A\n-%09%09\n+        \n if unico\n@@ -362,19 +362,28 @@\n gura%5D %7B%0A\n-%09%09%09\n+            \n repetido\n@@ -416,128 +416,22 @@\n ra)%0A\n-%09%09%7D else %7B%0A%09%09%09unicos%5Bfigura%5D = true%0A%09%09%7D%0A%09%7D%0A%0A%09faltantes := make(%5B%5Dint, 0, albumsize)%0A%0A    for i := 1; i %3C= albumsize; i++\n+        %7D else\n  %7B%0A \n@@ -441,68 +441,33 @@\n     \n-if !\n+    \n unicos%5B\n-i%5D %7B%0A            faltantes = append(faltantes, i)\n+figura%5D = true\n %0A   \n@@ -480,17 +480,20 @@\n %0A    %7D%0A%0A\n-%09\n+    \n saida :=\n@@ -526,83 +526,13 @@\n os)%0A\n-%09fmt.Println(saida%5B1 : len(saida)-1%5D)%0A%0A%09saida = fmt.Sprintf(%22%25v%22, unicos)%0A%09\n+%0A    \n fmt.\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-23_02-19-54",
+            "content": "@@ -684,24 +684,21 @@\n f(%22%25v%22, \n-faltante\n+unico\n s)%0A%09fmt.\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-03-23_02-20-11",
+            "content": "@@ -583,63 +583,8 @@\n  %7D%0A%0A\n-    if saida == %22%5B%5D%22 %7B%0A        fmt.Println(%22N%22)%0A    %7D%0A%0A\n %09sai\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-03-23_02-21-15",
+            "content": "@@ -579,16 +579,71 @@\n %0A    %7D%0A%0A\n+    if saida == %22%5B%5D%22 %7B%0A        fmt.Println(%22N%22)%0A    %7D%0A%0A\n %09saida :\n@@ -753,68 +753,8 @@\n tes)\n-%0A%0A    if saida == %22%5B%5D%22 %7B%0A        fmt.Println(%22N%22)%0A    %7D%0A    \n %0A%09fm\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-03-23_02-21-30",
+            "content": "@@ -736,16 +736,18 @@\n mt.Print\n+ln\n (%22N%22)%0A  \n@@ -750,16 +750,20 @@\n )%0A    %7D%0A\n+    \n %0A%09fmt.Pr\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-03-23_02-21-38",
+            "content": "@@ -622,60 +622,8 @@\n os)%0A\n-    if saida == %22%5B%5D%22 %7B%0A        fmt.Print(%22N%22)%0A    %7D%0A\n %09fmt\n@@ -695,16 +695,70 @@\n tantes)%0A\n+%0A    if saida == %22%5B%5D%22 %7B%0A        fmt.Print(%22N%22)%0A    %7D%0A%0A\n %09fmt.Pri\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-03-23_02-22-09",
+            "content": "@@ -673,24 +673,10 @@\n    %7D\n- else %7B%0A        \n+%0A%09\n fmt.\n@@ -707,22 +707,16 @@\n ida)-1%5D)\n-%0A    %7D\n %0A%0A%09saida\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-03-23_02-22-34",
+            "content": "@@ -771,75 +771,9 @@\n es)%0A\n-    if saida == %22%5B%5D%22 %7B%0A        fmt.Print(%22N%22)%0A    %7D else %7B%0A        \n+%09\n fmt.\n@@ -805,17 +805,10 @@\n da)-1%5D)%0A\n-    %7D%0A%0A\n %7D%0A\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-03-23_02-22-56",
+            "content": "@@ -650,34 +650,32 @@\n        fmt.Print\n-ln\n (%22N%22)%0A    %7D else\n@@ -807,18 +807,16 @@\n mt.Print\n-ln\n (%22N%22)%0A  \n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-03-23_02-23-06",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar albumsize, possuisize int\n\n\tfmt.Scan(&albumsize, &possuisize)\n\n\tfiguras := make([]int, possuisize)\n\n\tfor i := range figuras {\n\t\tfmt.Scanf(\"%d\", &figuras[i])\n\t}\n\n\tunicos := make(map[int]bool)\n\trepetidos := make([]int, 0, possuisize)\n\n\tfor _, figura := range figuras {\n\t\tif unicos[figura] {\n\t\t\trepetidos = append(repetidos, figura)\n\t\t} else {\n\t\t\tunicos[figura] = true\n\t\t}\n\t}\n\n\tfaltantes := make([]int, 0, albumsize)\n\n    for i := 1; i <= albumsize; i++ {\n        if !unicos[i] {\n            faltantes = append(faltantes, i)\n        }\n    }\n\n\tsaida := fmt.Sprintf(\"%v\", repetidos)\n    if saida == \"[]\" {\n        fmt.Println(\"N\")\n    } else {\n        fmt.Println(saida[1 : len(saida)-1])\n    }\n\n\tsaida = fmt.Sprintf(\"%v\", faltantes)\n    if saida == \"[]\" {\n        fmt.Println(\"N\")\n    } else {\n        fmt.Println(saida[1 : len(saida)-1])\n    }\n\n}\n",
+            "lines": "49"
+        }
+    ]
+}

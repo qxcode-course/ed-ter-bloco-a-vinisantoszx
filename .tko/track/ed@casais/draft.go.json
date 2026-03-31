@@ -1,0 +1,44 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-17_13-49-57",
+            "content": "@@ -10,27 +10,21 @@\n ain%0A\n-%0A\n import \n-(%0A%09\n %22fmt%22%0A\n-)%0A\n func\n@@ -41,148 +41,28 @@\n     \n-var vsize int%0A    fmt.Scanf(%22%25d%22, &vsize)%0A%0A    animal := make(%5B%5D int, vsize)%0A%0A    for i := 0; i %3C vsize; i++ %7B%0A        fmt.Scan(animal)%0A    %7D\n+fmt.Println(%22qxcode%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-03-17_14-01-03",
+            "content": "@@ -69,17 +69,24 @@\n fmt.Scan\n-(\n+f(%22%25d%22, \n &vsize)%0A\n@@ -90,22 +90,22 @@\n e)%0A%0A    \n-casais\n+animal\n  := make\n@@ -107,16 +107,17 @@\n  make(%5B%5D\n+ \n int, vsi\n@@ -175,60 +175,15 @@\n can(\n-&casais%5Bi%5D)%0A    %7D%0A%0A    for i := 0; i %3C vsize; i++ %7B%0A\n+animal)\n %0A   \n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-03-17_14-07-01",
+            "content": "@@ -56,17 +56,8 @@\n size\n-, ncasais\n  int\n@@ -219,229 +219,13 @@\n + %7B%0A\n-        for j := 0; j %3C vsize; j++ %7B%0A            if casais%5Bi%5D %3E 0 %7B%0A                if casais%5Bi%5D == (casais%5Bj%5D * -1) %7B%0A                    ncasais++%0A                %7D%0A            %7D%0A        %7D%0A    %7D%0A%0A    fmt.Println(ncasais)\n+%0A    %7D\n %0A%7D%0A\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-03-17_14-15-31",
+            "content": "@@ -347,39 +347,8 @@\n ) %7B%0A\n-                    ncasais =0%0A\n     \n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-17_14-16-01",
+            "content": "@@ -339,24 +339,55 @@\n %5Bj%5D * -1) %7B%0A\n+                    ncasais =0%0A\n             \n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-03-17_14-16-11",
+            "content": "@@ -347,42 +347,8 @@\n ) %7B%0A\n-                    casais%5Bj%5D = 0%0A\n     \n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-17_14-16-40",
+            "content": "@@ -341,13 +341,11 @@\n %5D * \n-(\n -1)\n-)\n  %7B%0A \n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-03-17_14-19-42",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\nfunc main() {\n    var vsize, ncasais int\n    fmt.Scan(&vsize)\n\n    casais := make([]int, vsize)\n\n    for i := 0; i < vsize; i++ {\n        fmt.Scan(&casais[i])\n    }\n\n    for i := 0; i < vsize; i++ {\n        for j := 0; j < vsize; j++ {\n            if casais[i] > 0 {\n                if casais[i] == (casais[j] * (-1)) {\n                    casais[j] = 0\n                    ncasais++\n                }\n            }\n        }\n    }\n\n    fmt.Println(ncasais)\n}\n",
+            "lines": "28"
+        }
+    ]
+}

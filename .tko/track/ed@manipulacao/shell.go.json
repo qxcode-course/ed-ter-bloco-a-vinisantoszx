@@ -1,0 +1,114 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-31_02-40-12",
+            "content": "@@ -99,115 +99,15 @@\n  %7B%0A%09\n-var homem %5B%5Dint%0A%0A%09for _, pessoa := range homem %7B%0A%09%09if pessoa %3E 0 %7B%0A%09%09%09homem = append(homem, pessoa)%0A%09%09%7D%0A%09%7D%0A\n+_ = vet\n %0A%09re\n@@ -115,13 +115,11 @@\n urn \n-homem\n+nil\n %0A%7D%0A%0A\n",
+            "lines": "106"
+        },
+        {
+            "label": "2026-03-31_11-30-44",
+            "content": "@@ -128,35 +128,37 @@\n pessoa := range \n-vet\n+homem\n  %7B%0A%09%09if pessoa %3E\n",
+            "lines": "113"
+        },
+        {
+            "label": "2026-03-31_11-31-06",
+            "content": "@@ -1656,8 +1656,9 @@\n n vet%0A%7D%0A\n+%0A\n",
+            "lines": "113"
+        },
+        {
+            "label": "2026-03-31_11-31-17",
+            "content": "@@ -260,132 +260,15 @@\n  %7B%0A%09\n-var mulher %5B%5Dint%0A%0A%09for _, pessoa := range vet %7B%0A%09%09if pessoa %3C 0 && pessoa %3E -10 %7B%0A%09%09%09mulher = append(mulher, pessoa)%0A%09%09%7D%0A%09%7D%0A\n+_ = vet\n %0A%09re\n@@ -276,14 +276,11 @@\n urn \n-mulher\n+nil\n %0A%7D%0A%0A\n",
+            "lines": "112"
+        },
+        {
+            "label": "2026-03-31_11-33-05",
+            "content": "@@ -436,26 +436,27 @@\n  %7B%0A%09\n-var ordem %5B%5Dint%0A%0A%09\n+_ = vet%0A%09return nil\n %0A%7D%0A%0A\n",
+            "lines": "119"
+        },
+        {
+            "label": "2026-03-31_11-34-26",
+            "content": "@@ -454,72 +454,8 @@\n t%0A%0A%09\n-ordem = append(ordem, vet...)%0A%0A%09sort.Ints(ordem)%0A%09%0A%09return ordem\n %0A%7D%0A%0A\n",
+            "lines": "120"
+        },
+        {
+            "label": "2026-03-31_11-38-01",
+            "content": "@@ -64,16 +64,8 @@\n gs%22%0A\n-%09%22sort%22%0A\n )%0A%0Af\n",
+            "lines": "124"
+        },
+        {
+            "label": "2026-03-31_11-38-24",
+            "content": "@@ -566,146 +566,27 @@\n  %7B%0A%09\n-var ordem %5B%5Dint%0A%0A%09ordem = append(ordem, vet...)%0A%0A%09sort.Slice(ordem, func(i, j int) bool %7B%0A%09%09return ordem%5Bi%5D %3C ordem%5Bj%5D%0A%09%7D)%0A%09%0A%09return ordem\n+_ = vet%0A%09return nil\n %0A%7D%0A%0A\n",
+            "lines": "125"
+        },
+        {
+            "label": "2026-03-31_11-40-46",
+            "content": "@@ -72,16 +72,8 @@\n rt%22%0A\n-%09%22math%22%0A\n )%0A%0Af\n@@ -665,33 +665,16 @@\n urn \n-math.Abs(float64(\n ordem%5Bi%5D\n )) %3C\n@@ -673,38 +673,19 @@\n m%5Bi%5D\n-))\n  %3C \n-math.Abs(float64(\n ordem%5Bj%5D\n ))%0A%09\n@@ -680,18 +680,16 @@\n ordem%5Bj%5D\n-))\n %0A%09%7D)%0A%09%0A%09\n",
+            "lines": "132"
+        },
+        {
+            "label": "2026-03-31_11-44-02",
+            "content": "@@ -787,103 +787,15 @@\n  %7B%0A%09\n-var reverso %5B%5Dint%0A%0A%09for i := len(vet) - 1; i %3E= 0; i-- %7B%0A%09%09reverso = append(reverso, vet%5Bi%5D)%0A%09%7D\n+_ = vet\n %0A%09re\n@@ -803,15 +803,11 @@\n urn \n-reverso\n+nil\n %0A%7D%0A%0A\n",
+            "lines": "133"
+        },
+        {
+            "label": "2026-03-31_11-48-02",
+            "content": "@@ -38,26 +38,10 @@\n %22%0A%09%22\n-math%22%0A%09%22os%22%0A%09%22sort\n+os\n %22%0A%09%22\n@@ -60,16 +60,32 @@\n trings%22%0A\n+%09%22sort%22%0A%09%22math%22%0A\n )%0A%0Afunc \n@@ -515,17 +515,18 @@\n (ordem)%0A\n+%09\n %0A\n-\n %09return \n@@ -731,17 +731,18 @@\n %5D))%0A%09%7D)%0A\n+%09\n %0A\n-\n %09return \n@@ -875,25 +875,24 @@\n  vet%5Bi%5D)%0A%09%7D%0A\n-%0A\n %09return reve\n@@ -934,22 +934,14 @@\n  %7B%0A%09\n-var unico %5B%5Din\n+_ = ve\n t%0A%09r\n@@ -950,13 +950,11 @@\n urn \n-u\n ni\n-co\n+l\n %0A%7D%0A%0A\n",
+            "lines": "137"
+        },
+        {
+            "label": "2026-03-31_11-49-09",
+            "content": "@@ -949,86 +949,8 @@\n int%0A\n-%0A%09visto := make(map%5Bint%5Dbool)%0A%0A%09for _, p := range vet %7B%0A%09%09visto%5Bp%5D = true%0A%09%7D%0A%0A\n %09ret\n",
+            "lines": "138"
+        },
+        {
+            "label": "2026-03-31_11-51-39",
+            "content": "@@ -1005,65 +1005,8 @@\n t %7B%0A\n-%09%09if !visto%5Bp%5D %7B%0A%09%09%09unico = append(unico, p)%0A%09%09%7D else %7B%0A%09\n %09%09vi\n@@ -1019,20 +1019,16 @@\n  = true%0A\n-%09%09%7D%0A\n %09%7D%0A%0A%09ret\n",
+            "lines": "145"
+        },
+        {
+            "label": "2026-03-31_11-52-45",
+            "content": "@@ -1006,16 +1006,17 @@\n  %7B%0A%09%09if \n+!\n visto%5Bp%5D\n",
+            "lines": "149"
+        },
+        {
+            "label": "2026-03-31_11-53-19",
+            "content": "@@ -1045,16 +1045,27 @@\n ico, p)%0A\n+%09%09%7D else %7B%0A\n %09%09%09visto\n",
+            "lines": "149"
+        },
+        {
+            "label": "2026-03-31_11-53-47",
+            "content": "@@ -1006,17 +1006,16 @@\n  %7B%0A%09%09if \n-!\n visto%5Bp%5D\n",
+            "lines": "148"
+        },
+        {
+            "label": "2026-03-31_11-53-58",
+            "content": "@@ -1128,159 +1128,15 @@\n  %7B%0A%09\n-var repetido %5B%5Dint%0A%0A%09visto := make(map%5Bint%5Dbool)%0A%0A%09for _, p := range vet %7B%0A%09%09if visto%5Bp%5D %7B%0A%09%09%09repetido = append(repetido, p)%0A%09%09%09visto%5Bp%5D = true%0A%09%09%7D%0A%09%7D%0A\n+_ = vet\n %0A%09re\n@@ -1144,16 +1144,11 @@\n urn \n-repetido\n+nil\n %0A%7D%0A%0A\n",
+            "lines": "148"
+        },
+        {
+            "label": "2026-03-31_11-55-13",
+            "content": "@@ -1267,12 +1267,11 @@\n %5D = \n-fals\n+tru\n e%0A%09%09\n",
+            "lines": "158"
+        },
+        {
+            "label": "2026-03-31_11-55-21",
+            "content": "@@ -1255,35 +1255,36 @@\n )%0A%09%09%09visto%5Bp%5D = \n-tru\n+fals\n e%0A%09%09%7D%0A%09%7D%0A%0A%09retur\n",
+            "lines": "158"
+        },
+        {
+            "label": "2026-03-31_11-55-53",
+            "content": "@@ -1250,19 +1250,16 @@\n do, p)%0A%09\n-%09%7D%0A\n %09%09visto%5B\n@@ -1268,16 +1268,20 @@\n  = true%0A\n+%09%09%7D%0A\n %09%7D%0A%0A%09ret\n",
+            "lines": "158"
+        },
+        {
+            "label": "2026-03-31_11-56-03",
+            "content": "@@ -1043,27 +1043,24 @@\n (unico, p)%0A%09\n-%09%7D%0A\n %09%09visto%5Bp%5D =\n@@ -1057,32 +1057,36 @@\n visto%5Bp%5D = true%0A\n+%09%09%7D%0A\n %09%7D%0A%0A%09return unic\n",
+            "lines": "158"
+        },
+        {
+            "label": "2026-03-31_11-56-19",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"math\"\n\t\"os\"\n\t\"sort\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc getMen(vet []int) []int {\n\tvar homem []int\n\n\tfor _, pessoa := range vet {\n\t\tif pessoa > 0 {\n\t\t\thomem = append(homem, pessoa)\n\t\t}\n\t}\n\n\treturn homem\n}\n\nfunc getCalmWomen(vet []int) []int {\n\tvar mulher []int\n\n\tfor _, pessoa := range vet {\n\t\tif pessoa < 0 && pessoa > -10 {\n\t\t\tmulher = append(mulher, pessoa)\n\t\t}\n\t}\n\n\treturn mulher\n}\n\nfunc sortVet(vet []int) []int {\n\tvar ordem []int\n\n\tordem = append(ordem, vet...)\n\n\tsort.Ints(ordem)\n\n\treturn ordem\n}\n\nfunc sortStress(vet []int) []int {\n\tvar ordem []int\n\n\tordem = append(ordem, vet...)\n\n\tsort.Slice(ordem, func(i, j int) bool {\n\t\treturn math.Abs(float64(ordem[i])) < math.Abs(float64(ordem[j]))\n\t})\n\n\treturn ordem\n}\n\nfunc reverse(vet []int) []int {\n\tvar reverso []int\n\n\tfor i := len(vet) - 1; i >= 0; i-- {\n\t\treverso = append(reverso, vet[i])\n\t}\n\n\treturn reverso\n}\n\nfunc unique(vet []int) []int {\n\tvar unico []int\n\n\tvisto := make(map[int]bool)\n\n\tfor _, p := range vet {\n\t\tif !visto[p] {\n\t\t\tunico = append(unico, p)\n\t\t}\n\t\tvisto[p] = true\n\t}\n\n\treturn unico\n}\n\nfunc repeated(vet []int) []int {\n\tvar repetido []int\n\n\tvisto := make(map[int]bool)\n\n\tfor _, p := range vet {\n\t\tif visto[p] {\n\t\t\trepetido = append(repetido, p)\n\t\t}\n\t\tvisto[p] = true\n\t}\n\n\treturn repetido\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\tfor {\n\t\tif !scanner.Scan() {\n\t\t\tbreak\n\t\t}\n\t\tfmt.Print(\"$\")\n\t\tline := scanner.Text()\n\t\targs := strings.Split(line, \" \")\n\t\tfmt.Println(line)\n\n\t\tswitch args[0] {\n\t\tcase \"get_men\":\n\t\t\tprintVec(getMen(str2vet(args[1])))\n\t\tcase \"get_calm_women\":\n\t\t\tprintVec(getCalmWomen(str2vet(args[1])))\n\t\tcase \"sort\":\n\t\t\tprintVec(sortVet(str2vet(args[1])))\n\t\tcase \"sort_stress\":\n\t\t\tprintVec(sortStress(str2vet(args[1])))\n\t\tcase \"reverse\":\n\t\t\tarray := str2vet(args[1])\n\t\t\tother := reverse(array)\n\t\t\tprintVec(array)\n\t\t\tprintVec(other)\n\t\tcase \"unique\":\n\t\t\tprintVec(unique(str2vet(args[1])))\n\t\tcase \"repeated\":\n\t\t\tprintVec(repeated(str2vet(args[1])))\n\t\tcase \"end\":\n\t\t\treturn\n\t\t}\n\t}\n}\n\nfunc printVec(vet []int) {\n\tfmt.Print(\"[\")\n\tfor i, val := range vet {\n\t\tif i > 0 {\n\t\t\tfmt.Print(\", \")\n\t\t}\n\t\tfmt.Print(val)\n\t}\n\tfmt.Println(\"]\")\n}\n\nfunc str2vet(s string) []int {\n\tif s == \"[]\" {\n\t\treturn nil\n\t}\n\ts = s[1 : len(s)-1]\n\tparts := strings.Split(s, \",\")\n\tvar vet []int\n\tfor _, part := range parts {\n\t\tn, _ := strconv.Atoi(part)\n\t\tvet = append(vet, n)\n\t}\n\treturn vet\n}\n",
+            "lines": "158"
+        }
+    ]
+}

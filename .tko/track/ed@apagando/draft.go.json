@@ -1,0 +1,179 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-30_20-50-18",
+            "content": "@@ -37,33 +37,6 @@\n ) %7B%0A\n-%09var n, m, a int%0A%0A%09fmt.S%0A%09%0A\n %7D%0A\n",
+            "lines": "4"
+        },
+        {
+            "label": "2026-03-31_01-58-04",
+            "content": "@@ -61,36 +61,9 @@\n mt.S\n-canf(%22%25d %25d %25d%22, &n, &m, &a)\n %0A\n+%09\n %0A%7D%0A\n",
+            "lines": "8"
+        },
+        {
+            "label": "2026-03-31_01-58-57",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -43,153 +43,54 @@\n ar n\n- int%0A%09a := make(%5B%5Dint, n)%0A%0A%09fmt.Scanf(%22%25d%22, &n)%0A%0A%09for i := 0; i %3C n; i++ %7B%0A%09%09fmt.Scan(&a%5Bi%5D)%0A%09%7D%0A%0A%09for i := 0; i %3C n; i++ %7B%0A%09%09fmt.Println(a%5Bi%5D)%0A%09%7D\n+, m, a int%0A%0A%09fmt.Scanf(%22%25d %25d %25d%22, &n, &m, &a)\n %0A%0A%7D%0A\n",
+            "lines": "8"
+        },
+        {
+            "label": "2026-03-31_02-03-27",
+            "content": "@@ -138,16 +138,43 @@\n i%5D)%0A%09%7D%0A%0A\n+%09for i := 0; i %3C n; i++ %7B%0A%09\n %09fmt.Pri\n@@ -179,14 +179,19 @@\n rintln(a\n-)%0A\n+%5Bi%5D)%0A%09%7D\n %0A%0A%7D%0A\n",
+            "lines": "19"
+        },
+        {
+            "label": "2026-03-31_02-03-47",
+            "content": "@@ -50,13 +50,9 @@\n int%0A\n-%0A%09fil\n+%09\n a :=\n@@ -67,16 +67,39 @@\n int, n)%0A\n+%0A%09fmt.Scanf(%22%25d%22, &n)%0A%0A\n %09for i :\n@@ -132,18 +132,15 @@\n an(&\n-fil\n a%5Bi%5D)%0A%09%7D\n %0A%7D%0A\n@@ -136,11 +136,30 @@\n a%5Bi%5D)%0A%09%7D\n+%0A%0A%09fmt.Println(a)%0A%0A\n %0A%7D%0A\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-03-31_02-13-41",
+            "content": "@@ -45,39 +45,14 @@\n ar n\n-, m\n  int%0A%0A\n-%09fmt.Scanf(%22%25d%22, &n)%0A%0A\n %09fil\n@@ -124,29 +124,7 @@\n )%0A%09%7D\n-%0A%0A%09fmt.Scanf(%22%25d%22, &m)\n %0A%7D%0A\n",
+            "lines": "12"
+        },
+        {
+            "label": "2026-03-31_02-15-10",
+            "content": "@@ -171,23 +171,7 @@\n  &m)\n-%0A%0A%09println(fila)\n %0A%7D%0A\n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-03-31_02-15-26",
+            "content": "@@ -170,20 +170,16 @@\n , &m)%0A%0A%09\n-fmt.\n println(\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-03-31_02-15-32",
+            "content": "@@ -178,9 +178,9 @@\n fmt.\n-P\n+p\n rint\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-03-31_02-15-44",
+            "content": "@@ -48,12 +48,8 @@\n n, m\n-, id\n  int\n@@ -174,112 +174,24 @@\n )%0A%0A%09\n-desistiu := make%5Bmap%5Bint%5Dbool%5D%0A%0A%09for i := 0; i %3C m; i++ %7B%0A%09%09fmt.Scanf(%22%25d%22, &id)%0A%09%09desistiu%5Bid%5D = true%0A%09%7D\n+fmt.Println(fila)\n %0A%7D%0A\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-03-31_02-19-40",
+            "content": "@@ -190,17 +190,17 @@\n  := make\n-(\n+%5B\n map%5Bint%5D\n@@ -203,17 +203,17 @@\n int%5Dbool\n-)\n+%5D\n %0A%0A%09for i\n@@ -283,173 +283,7 @@\n e%0A%09%7D\n-%0A%0A%09primeiro := true%0A%0A%09for _, pessoa := range fila %7B%0A%09%09if !desistiu%5Bpessoa%5D %7B%0A%09%09%09if !primeiro %7B%0A%09%09%09%09fmt.Print(%22 %22)%0A%09%09%09%7D%0A%09%09%09fmt.Print(pessoa)%0A%09%09%09primeiro = false%0A%09%09%7D%0A%09%7D\n %0A%7D%0A\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-03-31_02-23-26",
+            "content": "@@ -449,23 +449,7 @@\n %7D%0A%09%7D\n-%0A%0A%09fmt.Println()\n %0A%7D%0A\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-31_02-24-02",
+            "content": "@@ -44,16 +44,20 @@\n var n, m\n+, id\n  int%0A%0A%09f\n@@ -236,21 +236,8 @@\n + %7B%0A\n-%09%09var id int%0A\n %09%09fm\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-03-31_02-24-43",
+            "content": "@@ -54,62 +54,8 @@\n nt%0A%0A\n-%09if _, err := fmt.Scan(&n); err != nil %7B%0A%09%09return%0A%09%7D%0A%0A\n %09fmt\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-03-31_02-24-58",
+            "content": "@@ -50,16 +50,70 @@\n  m int%0A%0A\n+%09if _, err := fmt.Scan(&n); err != nil %7B%0A%09%09return%0A%09%7D%0A%0A\n %09fmt.Sca\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-03-31_02-25-04",
+            "content": "@@ -48,12 +48,8 @@\n n, m\n-, id\n  int\n@@ -59,17 +59,24 @@\n fmt.Scan\n-(\n+f(%22%25d%22, \n &n)%0A%0A%09fi\n@@ -156,17 +156,24 @@\n fmt.Scan\n-(\n+f(%22%25d%22, \n &m)%0A%0A%09de\n@@ -230,25 +230,45 @@\n i++ %7B%0A%09%09\n-fmt.Scan(\n+var id int%0A%09%09fmt.Scanf(%22%25d%22, \n &id)%0A%09%09d\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-03-31_02-28-54",
+            "content": "@@ -424,11 +424,27 @@\n e%0A%09%09%7D%0A%09%7D\n+%0A%0A%09fmt.Println()\n %0A%7D%0A\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-03-31_02-29-06",
+            "content": "@@ -393,10 +393,8 @@\n rint\n-ln\n (pes\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-31_02-29-15",
+            "content": "@@ -389,16 +389,18 @@\n mt.Print\n+ln\n (pessoa)\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-31_02-29-21",
+            "content": "@@ -428,23 +428,7 @@\n %7D%0A%09%7D\n-%0A%0A%09fmt.Println()\n %0A%7D%0A\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-31_02-29-39",
+            "content": "@@ -439,15 +439,12 @@\n Println(\n-%22 %22\n )%0A%7D%0A\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-03-31_02-29-56",
+            "content": "@@ -63,24 +63,17 @@\n fmt.Scan\n-f(%22%25d%22, \n+(\n &n)%0A%0A%09fi\n@@ -157,16 +157,9 @@\n Scan\n-f(%22%25d%22, \n+(\n &m)%0A\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-03-31_02-31-02",
+            "content": "@@ -63,17 +63,24 @@\n fmt.Scan\n-(\n+f(%22%25d%22, \n &n)%0A%0A%09fi\n@@ -160,17 +160,24 @@\n fmt.Scan\n-(\n+f(%22%25d%22, \n &m)%0A%0A%09de\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-03-31_02-31-40",
+            "content": "@@ -25,107 +25,8 @@\n t%22%0A%0A\n-// ANOTA%C3%87%C3%83O PESSOAL - O SCANF N%C3%83O FUNCIONOU NESSE CASO, TIRAR D%C3%9AVIDA COM O PROFESSOR NA AULA DE ED%0A\n func\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-03-31_02-32-34",
+            "content": "@@ -359,16 +359,34 @@\n rue%0A%09%7D%0A%0A\n+%09primeiro := true%0A\n %0A%09for _,\n@@ -441,25 +441,87 @@\n %0A%09%09%09\n-fmt.Print(pessoa)\n+if !primeiro %7B%0A%09%09%09%09fmt.Print(%22 %22)%0A%09%09%09%7D%0A%09%09%09fmt.Print(pessoa)%0A%09%09%09primeiro = false\n %0A%09%09%7D\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-03-31_02-33-49",
+            "content": "@@ -441,26 +441,8 @@\n oa)%0A\n-%09%09%09fmt.Print(%22 %22)%0A\n %09%09%7D%0A\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-31_02-34-09",
+            "content": "@@ -476,12 +476,15 @@\n Println(\n+%22 %22\n )%0A%7D%0A\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-31_02-34-18",
+            "content": "@@ -432,23 +432,33 @@\n rint\n-f(%22%25d %22, pessoa\n+(pessoa)%0A%09%09%09fmt.Print(%22 %22\n )%0A%09%09\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-31_02-34-53",
+            "content": "@@ -451,11 +451,27 @@\n )%0A%09%09%7D%0A%09%7D\n+%0A%0A%09fmt.Println()\n %0A%7D%0A\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-31_02-35-10",
+            "content": "@@ -453,8 +453,9 @@\n %09%09%7D%0A%09%7D%0A%7D\n+%0A\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-31_02-38-48",
+            "content": "@@ -453,9 +453,8 @@\n %09%09%7D%0A%09%7D%0A%7D\n-%0A\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-31_02-38-54",
+            "content": "@@ -456,21 +456,6 @@\n %0A%09%7D%0A\n-%0A%09fmt.Println()%0A\n %7D\n+%0A\n",
+            "lines": "31"
+        },
+        {
+            "label": "2026-03-31_02-39-19",
+            "content": "@@ -359,16 +359,17 @@\n rue%0A%09%7D%0A%0A\n+%0A\n %09for _, \n@@ -452,10 +452,25 @@\n %0A%09%09%7D%0A%09%7D%0A\n-%7D\n %0A\n+%09fmt.Println()%0A%7D\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-31_02-39-24",
+            "content": "@@ -454,23 +454,7 @@\n %7D%0A%09%7D\n-%0A%0A%09fmt.Println()\n %0A%7D%0A\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-31_02-39-41",
+            "content": "package main\n\nimport \"fmt\"\n\n// ANOTA\u00c7\u00c3O PESSOAL - O SCANF N\u00c3O FUNCIONOU NESSE CASO, TIRAR D\u00daVIDA COM O PROFESSOR NA AULA DE ED\nfunc main() {\n\tvar n, m, id int\n\n\tfmt.Scan(&n)\n\n\tfila := make([]int, n)\n\tfor i := 0; i < n; i++ {\n\t\tfmt.Scan(&fila[i])\n\t}\n\n\tfmt.Scan(&m)\n\n\tdesistiu := make(map[int]bool)\n\n\tfor i := 0; i < m; i++ {\n\t\tfmt.Scan(&id)\n\t\tdesistiu[id] = true\n\t}\n\n\tfor _, pessoa := range fila {\n\t\tif !desistiu[pessoa] {\n\t\t\tfmt.Printf(\"%d \", pessoa)\n\t\t}\n\t}\n\n\tfmt.Println()\n}\n",
+            "lines": "32"
+        }
+    ]
+}
