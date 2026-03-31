@@ -3,44 +3,97 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"math"
 	"os"
+	"sort"
 	"strconv"
 	"strings"
 )
 
 func getMen(vet []int) []int {
-	_ = vet
-	return nil
+	var homem []int
+
+	for _, pessoa := range vet {
+		if pessoa > 0 {
+			homem = append(homem, pessoa)
+		}
+	}
+
+	return homem
 }
 
 func getCalmWomen(vet []int) []int {
-	_ = vet
-	return nil
+	var mulher []int
+
+	for _, pessoa := range vet {
+		if pessoa < 0 && pessoa > -10 {
+			mulher = append(mulher, pessoa)
+		}
+	}
+
+	return mulher
 }
 
 func sortVet(vet []int) []int {
-	_ = vet
-	return nil
+	var ordem []int
+
+	ordem = append(ordem, vet...)
+
+	sort.Ints(ordem)
+
+	return ordem
 }
 
 func sortStress(vet []int) []int {
-	_ = vet
-	return nil
+	var ordem []int
+
+	ordem = append(ordem, vet...)
+
+	sort.Slice(ordem, func(i, j int) bool {
+		return math.Abs(float64(ordem[i])) < math.Abs(float64(ordem[j]))
+	})
+
+	return ordem
 }
 
 func reverse(vet []int) []int {
-	_ = vet
-	return nil
+	var reverso []int
+
+	for i := len(vet) - 1; i >= 0; i-- {
+		reverso = append(reverso, vet[i])
+	}
+
+	return reverso
 }
 
 func unique(vet []int) []int {
-	_ = vet
-	return nil
+	var unico []int
+
+	visto := make(map[int]bool)
+
+	for _, p := range vet {
+		if !visto[p] {
+			unico = append(unico, p)
+		}
+		visto[p] = true
+	}
+
+	return unico
 }
 
 func repeated(vet []int) []int {
-	_ = vet
-	return nil
+	var repetido []int
+
+	visto := make(map[int]bool)
+
+	for _, p := range vet {
+		if visto[p] {
+			repetido = append(repetido, p)
+		}
+		visto[p] = true
+	}
+
+	return repetido
 }
 
 func main() {
@@ -103,4 +156,3 @@ func str2vet(s string) []int {
 	}
 	return vet
 }
-
