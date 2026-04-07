@@ -20,8 +20,20 @@ func equals(a []int, b []int) bool {
 	// e não pode usar nenhum tipo de laço
 	// Use recursao para consultar os outros elementos equals(a[1:], b[1:])
 	// não altere o protótipo da função nem crie funções auxiliares
-	_, _ = a, b
-	return false
+
+	if EhVazio(a) && EhVazio(b) {
+		return true
+	}
+
+	if EhVazio(a) || EhVazio(b) {
+		return false
+	}
+
+	if a[0] != b[0] {
+		return false
+	}
+
+	return equals(a[1:], b[1:])
 }
 
 func main() {
