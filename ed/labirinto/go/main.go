@@ -6,8 +6,38 @@ import (
 	"os"
 )
 
-	_, _, _ = grid, startPos, endPos
+type Pos struct {
+	l, c int
+}
+
+func search(grid [][]rune, curr Pos, end Pos) bool {
+	if curr.l < 0 || curr.l >= len(grid) || curr.c < 0 || curr.c >= len(grid[0]) || grid[curr.l][curr.c] != ' ' {
+		return false
+	}
+
+	grid[curr.l][curr.c] = '.'
+
+	if curr == end {
+		return true
+	}
+
+	vizinhos := []Pos{
+		{curr.l - 1, curr.c},
+		{curr.l + 1, curr.c},
+		{curr.l, curr.c - 1},
+		{curr.l, curr.c + 1},
+	}
+
+	for _, vizinho := range vizinhos {
+		if search(grid, vizinho, end) {
+			return true
+		}
+	}
+
+	grid[curr.l][curr.c] = ' '
 	return false
+}
+
 func main() {
 	scanner := bufio.NewScanner(os.Stdin)
 	scanner.Scan()
