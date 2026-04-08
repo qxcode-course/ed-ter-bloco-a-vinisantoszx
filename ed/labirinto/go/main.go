@@ -35,6 +35,7 @@ func search(grid [][]rune, curr Pos, end Pos) bool {
 	}
 
 	grid[curr.l][curr.c] = ' '
+
 	return false
 }
 
