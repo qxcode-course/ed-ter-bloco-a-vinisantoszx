@@ -15,7 +15,7 @@ type Pen struct {
 
 func NewPen(width, height int) *Pen {
 	dc := gg.NewContext(width, height)
-	dc.SetRGB(1, 1, 1)
+	dc.SetRGB(255, 0, 0)
 	dc.Clear()
 	dc.SetRGB(0, 0, 0)
 	dc.SetLineWidth(2)
