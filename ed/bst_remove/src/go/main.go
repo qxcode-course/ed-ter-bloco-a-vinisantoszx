@@ -15,15 +15,72 @@ type Node struct {
 }
 
 func BstInsert(values []int) *Node {
-	// TODO
-	_ = values
-	return nil
+	if len(values) == 0 {
+		return nil
+	}
+
+	raiz := &Node{Value: values[0]}
+
+	for _, v := range values[1:] {
+		atual := raiz
+
+		for {
+			if v < atual.Value {
+				if atual.Left == nil {
+					atual.Left = &Node{Value: v}
+					break
+				}
+
+				atual = atual.Left
+			} else if v > atual.Value {
+				if atual.Right == nil {
+					atual.Right = &Node{Value: v}
+					break
+				}
+
+				atual = atual.Right
+			} else {
+				break
+			}
+		}
+	}
+
+	return raiz
 }
 
 func BstRemove(node *Node, value int) *Node {
-	// TODO
-	_, _ = node, value
-	return nil
+	if node == nil {
+		return nil
+	}
+
+	if value < node.Value {
+		node.Left = BstRemove(node.Left, value)
+	} else if value > node.Value {
+		node.Right = BstRemove(node.Right, value)
+	} else {
+		if node.Left == nil && node.Right == nil {
+			return nil
+		}
+
+		if node.Left == nil {
+			return node.Right
+		}
+
+		if node.Right == nil {
+			return node.Left
+		}
+
+		antecessor := node.Left
+
+		for antecessor.Right != nil {
+			antecessor = antecessor.Right
+		}
+
+		node.Value = antecessor.Value
+		node.Left = BstRemove(node.Left, antecessor.Value)
+	}
+
+	return node
 }
 
 // -----------------------------------------------------------------------------------

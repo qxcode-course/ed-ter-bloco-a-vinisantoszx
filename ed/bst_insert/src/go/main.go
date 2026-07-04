@@ -15,9 +15,37 @@ type Node struct {
 }
 
 func BstInsert(values []int) *Node {
-	// TODO
-	_ = values
-	return nil
+	if len(values) == 0 {
+		return nil
+	}
+
+	raiz := &Node{Value: values[0]}
+
+	for _, v := range values[1:] {
+		atual := raiz
+
+		for {
+			if v < atual.Value {
+				if atual.Left == nil {
+					atual.Left = &Node{Value: v}
+					break
+				}
+
+				atual = atual.Left
+			} else if v > atual.Value {
+				if atual.Right == nil {
+					atual.Right = &Node{Value: v}
+					break
+				}
+
+				atual = atual.Right
+			} else {
+				break
+			}
+		}
+	}
+
+	return raiz
 }
 
 // -----------------------------------------------------------------------------------
