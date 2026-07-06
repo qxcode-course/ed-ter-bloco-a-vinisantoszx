@@ -9,9 +9,71 @@ import (
 )
 
 func longestIncreasingPath(matrix [][]int) int {
-	//
-	_ := matrix
-	return 0
+	if len(matrix) == 0 || len(matrix[0]) == 0 {
+		return 0
+	}
+
+	rows := len(matrix)
+	cols := len(matrix[0])
+
+	salva := make([][]int, rows)
+
+	for i := 0; i < rows; i++ {
+		salva[i] = make([]int, cols)
+	}
+
+	directions := [][]int {
+		{-1, 0},
+		{1, 0},
+		{0, -1},
+		{0, 1},
+	}
+
+	var dfs func(linha int, coluna int) int
+
+	dfs = func (linha int, coluna int) int {
+		if salva[linha][coluna] != 0 {
+			return salva[linha][coluna]
+		}
+
+		melhor := 1
+
+		for _, direction := range directions {
+			proximaLinha := linha + direction[0]
+			proximaColuna := coluna + direction[1]
+
+			if proximaLinha < 0 || proximaLinha >= rows || proximaColuna < 0 || proximaColuna >= cols {
+				continue
+			}
+
+			if matrix[proximaLinha][proximaColuna] <= matrix[linha][coluna] {
+				continue
+			}
+
+			tamCaminho := 1 + dfs(proximaLinha, proximaColuna)
+
+			if tamCaminho > melhor {
+				melhor = tamCaminho
+			}
+		}
+
+		salva[linha][coluna] = melhor
+		return melhor
+	}
+
+	maiorCaminho := 0
+
+	for i := 0; i < rows; i++ {
+		for j := 0; j < cols; j++ {
+			caminhoAtual := dfs(i, j)
+
+			if caminhoAtual > maiorCaminho {
+				maiorCaminho = caminhoAtual
+			}
+		}
+	}
+
+	return maiorCaminho
 }
 
 // Não modifique a função main

@@ -17,6 +17,16 @@ type Iterator struct {
 	index int
 }
 
+type ReverseIterator struct {
+	data  []int
+	index int
+}
+
+type CyclicIterator struct {
+	data  []int
+	index int
+}
+
 func NewMyList(values []int) *MyList {
 	return &MyList{data: values}
 }
@@ -34,6 +44,42 @@ func (i *Iterator) Next() int {
 		panic(fmt.Errorf("No more elements"))
 	}
 	i.index += 1
+	return i.data[i.index]
+}
+
+func (l *MyList) ReverseIterator() *ReverseIterator {
+	return &ReverseIterator{data: l.data, index: len(l.data)}
+}
+
+func (i *ReverseIterator) HasNext() bool {
+	return i.index > 0
+}
+
+func (i *ReverseIterator) Next() int {
+	if !i.HasNext() {
+		panic(fmt.Errorf("No more elements"))
+	}
+
+	i.index--
+
+	return i.data[i.index]
+}
+
+func (l *MyList) CyclicIterator() *CyclicIterator {
+	return &CyclicIterator{data: l.data, index: -1}
+}
+
+func (i *CyclicIterator) HasNext() bool {
+	return len(i.data) > 0
+}
+
+func (i *CyclicIterator) Next() int {
+	if !i.HasNext() {
+		panic(fmt.Errorf("No more elements"))
+	}
+
+	i.index = (i.index + 1) % len(i.data)
+
 	return i.data[i.index]
 }
 
@@ -63,19 +109,19 @@ func main() {
 			}
 			fmt.Println("]")
 		case "reverse":
-			// fmt.Print("[ ")
-			// for it := mylist.ReverseIterator(); it.HasNext(); {
-			// 	fmt.Printf("%v ", it.Next())
-			// }
-			// fmt.Println("]")
+			fmt.Print("[ ")
+			for it := mylist.ReverseIterator(); it.HasNext(); {
+				fmt.Printf("%v ", it.Next())
+			}
+			fmt.Println("]")
 		case "cyclic":
-			// qtd, _ := strconv.Atoi(args[1])
-			// fmt.Print("[ ")
-			// it := mylist.CyclicIterator()
-			// for range qtd {
-			// 	fmt.Printf("%v ", it.Next())
-			// }
-			// fmt.Println("]")
+			qtd, _ := strconv.Atoi(args[1])
+			fmt.Print("[ ")
+			it := mylist.CyclicIterator()
+			for range qtd {
+				fmt.Printf("%v ", it.Next())
+			}
+			fmt.Println("]")
 		}
 	}
 

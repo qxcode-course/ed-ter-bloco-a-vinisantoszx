@@ -8,9 +8,22 @@ import (
 
 // Função que será chamada no LeetCode
 func countBattleships(board [][]byte) int {
-	//
-	_ := board
-	return 0
+	contador := 0
+
+	for i := 0; i < len(board); i++ {
+		for j := 0; j < len(board[i]); j++ {
+			if board[i][j] == 'X' {
+				temAcima := i > 0 && board[i-1][j] == 'X'
+				temEsquerda := j > 0 && board[i][j-1] == 'X'
+
+				if !temAcima && !temEsquerda {
+					contador++
+				}
+			}
+		}
+	}
+
+	return contador
 }
 
 // Não modifique a função main
