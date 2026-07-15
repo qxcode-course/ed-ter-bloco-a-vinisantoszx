@@ -1,0 +1,44 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-07_01-21-00",
+            "content": "@@ -94,49 +94,16 @@\n ) %7B%0A\n-%09if len(vet) == 0 %7B%0A%09%09return%0A%09%7D%0A%0A\n %09_ = vet\n %0A%09//\n@@ -98,16 +98,17 @@\n %09_ = vet\n+;\n %0A%09// 1. \n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-04-07_02-27-52",
+            "content": "@@ -128,173 +128,15 @@\n %7D%0A%0A%09\n-aux := make(%5B%5Dint, 0, len(vet)-1)%0A%09for i := 0; i %3C len(vet)-1; i++ %7B%0A%09%09aux = append(aux, vet%5Bi%5D+vet%5Bi+1%5D)%0A%09%7D%0A%0A%09processa(aux)%0A%0A%09fmt.Printf(%22%5B %25s %5D%5Cn%22, Join(vet, %22 %22))\n+_ = vet\n %0A%09//\n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-04-07_02-30-36",
+            "content": "@@ -94,198 +94,8 @@\n ) %7B%0A\n-%09// 1. defina o ponto de parada%0A%09// 2. monte o vetor auxiliar com os resultados das somas%0A%09// 3. chame recursivamente a fun%C3%A7%C3%A3o processa para o vetor auxiliar%0A%09// 4. imprima o vetor original%0A\n %09if \n@@ -290,16 +290,206 @@\n , %22 %22))%0A\n+%09// 1. defina o ponto de parada%0A%09// 2. monte o vetor auxiliar com os resultados das somas%0A%09// 3. chame recursivamente a fun%C3%A7%C3%A3o processa para o vetor auxiliar%0A%09// 4. imprima o vetor original%0A\n %7D%0A%0Afunc \n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-04-07_02-31-17",
+            "content": "@@ -280,16 +280,49 @@\n riginal%0A\n+%09if len(vet) == 0 %7B%0A%09%09return%0A%09%7D%0A%0A\n %09aux := \n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-04-07_02-32-10",
+            "content": "@@ -284,41 +284,8 @@\n nal%0A\n-%09if len(vet) == 0 %7B%0A%09%09return%0A%09%7D%0A%0A\n %09aux\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-04-07_02-32-15",
+            "content": "@@ -392,31 +392,39 @@\n %09aux\n-%5Bi%5D\n  = a\n-ux%5Bi%5D + aux\n+ppend(aux, vet%5Bi%5D+vet\n %5Bi+1%5D\n+)\n %0A%09%7D%0A\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-04-07_13-28-53",
+            "content": "@@ -392,39 +392,31 @@\n %09aux\n+%5Bi%5D\n  = a\n-ppend(aux, vet%5Bi%5D+vet\n+ux%5Bi%5D + aux\n %5Bi+1%5D\n-)\n %0A%09%7D%0A\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-04-07_13-29-09",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc processa(vet []int) {\n\t// 1. defina o ponto de parada\n\t// 2. monte o vetor auxiliar com os resultados das somas\n\t// 3. chame recursivamente a fun\u00e7\u00e3o processa para o vetor auxiliar\n\t// 4. imprima o vetor original\n\tif len(vet) == 0 {\n\t\treturn\n\t}\n\n\taux := make([]int, 0, len(vet)-1)\n\tfor i := 0; i < len(vet)-1; i++ {\n\t\taux = append(aux, vet[i]+vet[i+1])\n\t}\n\n\tprocessa(aux)\n\n\tfmt.Printf(\"[ %s ]\\n\", Join(vet, \" \"))\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tif !scanner.Scan() {\n\t\treturn\n\t}\n\tline := scanner.Text()\n\tparts := strings.Fields(line)\n\tvet := []int{}\n\tfor _, part := range parts {\n\t\tif value, err := strconv.Atoi(part); err == nil {\n\t\t\tvet = append(vet, value)\n\t\t}\n\t}\n\tprocessa(vet)\n}\n\nfunc Join[T any](v []T, sep string) string {\n\tif len(v) == 0 {\n\t\treturn \"\"\n\t}\n\ts := \"\"\n\tfor i, x := range v {\n\t\tif i > 0 {\n\t\t\ts += sep\n\t\t}\n\t\ts += fmt.Sprintf(\"%v\", x)\n\t}\n\treturn s\n}\n",
+            "lines": "58"
+        }
+    ]
+}

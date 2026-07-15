@@ -1,0 +1,54 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-07_00-41-52",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -23,21 +23,8 @@\n mt%22%0A\n-%0Afunc div()%0A%0A\n func\n@@ -37,32 +37,11 @@\n ) %7B%0A\n-%09var n int%0A%0A%09fmt.Scan(&n)\n+    \n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-04-07_01-02-31",
+            "content": "@@ -77,22 +77,6 @@\n &n)%0A\n-%09fmt.Println(n)%0A\n %7D%0A\n",
+            "lines": "11"
+        },
+        {
+            "label": "2026-04-07_01-02-47",
+            "content": "@@ -77,10 +77,8 @@\n &n)%0A\n-%09%0A\n %09fmt\n",
+            "lines": "12"
+        },
+        {
+            "label": "2026-04-07_01-03-10",
+            "content": "@@ -34,26 +34,9 @@\n div(\n-n int) %7B%0A%09return%0A%7D\n+)\n %0A%0Afu\n@@ -77,13 +77,22 @@\n &n)%0A\n+%09\n %0A%09\n-div\n+fmt.Println\n (n)%0A\n",
+            "lines": "13"
+        },
+        {
+            "label": "2026-04-07_01-04-11",
+            "content": "@@ -43,30 +43,16 @@\n ) %7B%0A\n-%09if n == 0 %7B%0A%09\n %09return%0A\n %09%7D%0A%7D\n@@ -51,11 +51,8 @@\n urn%0A\n-%09%7D%0A\n %7D%0A%0Af\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-04-07_01-04-32",
+            "content": "@@ -67,83 +67,8 @@\n n%0A%09%7D\n-%0A%0A%09resultado := n / 2%0A%09resto := n %25 2%0A%0A%09div(resultado)%0A%0A%09fmt.Println(resto)\n %0A%7D%0A%0A\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-04-07_01-05-58",
+            "content": "@@ -123,30 +123,8 @@\n o)%0A%0A\n-%09fmt.Print(resultado)%0A\n %09fmt\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-04-07_01-06-17",
+            "content": "@@ -133,30 +133,33 @@\n rint\n-f(%22%25d %25d%22, resultado, \n+(resultado)%0A%09fmt.Println(\n rest\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-04-07_01-06-57",
+            "content": "@@ -141,10 +141,8 @@\n d %25d\n-%5Cn\n %22, r\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-04-07_01-07-06",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc div(n int) {\n\tif n == 0 {\n\t\treturn\n\t}\n\n\tresultado := n / 2\n\tresto := n % 2\n\n\tdiv(resultado)\n\n\tfmt.Printf(\"%d %d\\n\", resultado, resto)\n}\n\nfunc main() {\n\tvar n int\n\n\tfmt.Scan(&n)\n\n\tdiv(n)\n}\n",
+            "lines": "24"
+        }
+    ]
+}

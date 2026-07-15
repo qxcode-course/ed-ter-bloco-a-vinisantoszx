@@ -1,0 +1,44 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-14_14-20-13",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -37,148 +37,6 @@\n ) %7B%0A\n-%09var nlista int%0A%0A%09fmt.Scan(&nlista)%0A%0A%09fila := make(%5B%5Dint, nlista)%0A%0A%09for i := 0; i %3C nlista; i++ %7B%0A%09%09fmt.Scan(&fila%5Bi%5D)%0A%09%7D%0A%0A%09fmt.Println(fila)%0A\n %7D%0A\n",
+            "lines": "4"
+        },
+        {
+            "label": "2026-04-14_14-22-16",
+            "content": "@@ -50,20 +50,13 @@\n ista\n-, nsaiu\n  int%0A\n+\n %0A%09fm\n@@ -167,142 +167,20 @@\n fmt.\n-Scan(&nsaiu)%0A%0A%09saiu := make(%5B%5Dint, nsaiu)%0A%0A%09for i := 0; i %3C nsaiu; i++ %7B%0A%09%09fmt.Scan(&saiu%5Bi%5D)%0A%09%7D%0A%0A%09fmt.Println(fila)%0A%09fmt.Println(saiu\n+Println(fila\n )%0A%7D%0A\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-04-14_14-28-15",
+            "content": "@@ -41,19 +41,20 @@\n %7B%0A%09var n\n-fil\n+list\n a, nsaiu\n@@ -71,19 +71,20 @@\n .Scan(&n\n-fil\n+list\n a)%0A%0A%09fil\n@@ -101,19 +101,20 @@\n %5B%5Dint, n\n-fil\n+list\n a)%0A%0A%09for\n@@ -119,35 +119,36 @@\n or i := 0; i %3C n\n-fil\n+list\n a; i++ %7B%0A%09%09fmt.S\n@@ -273,176 +273,43 @@\n %7D%0A%0A%09\n-saiuM := make(map%5Bint%5Dbool)%0A%0A%09for i := 0; i %3C nsaiu; i++ %7B%0A%09%09saiuM%5Bsaiu%5Bi%5D%5D = true%0A%09%7D%0A%0A%09for i := 0; i %3C nfila; i++ %7B%0A%09%09if !saiuM%5Bfila%5Bi%5D%5D %7B%0A%09%09%09fmt.Print(fila%5Bi%5D)%0A%09%09%7D%0A%09%7D%0A\n+fmt.Println(fila)%0A%09fmt.Println(saiu)\n %0A%7D%0A\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-04-14_14-47-17",
+            "content": "@@ -266,21 +266,20 @@\n )%0A%09%7D%0A%0A%09s\n-obrou\n+aiuM\n  := make\n@@ -327,21 +327,20 @@\n ++ %7B%0A%09%09s\n-obrou\n+aiuM\n %5Bsaiu%5Bi%5D\n@@ -393,13 +393,12 @@\n f !s\n-obrou\n+aiuM\n %5Bfil\n@@ -421,15 +421,9 @@\n rint\n-f(%22%25d %22\n+(\n fila\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-04-14_14-48-05",
+            "content": "@@ -420,17 +420,23 @@\n mt.Print\n-(\n+f(%22%25d %22\n fila%5Bi%5D)\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-04-14_14-48-21",
+            "content": "@@ -434,26 +434,8 @@\n i%5D)%0A\n-%09%09%09fmt.Print(%22 %22)%0A\n %09%09%7D%0A\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-04-14_14-48-39",
+            "content": "@@ -460,21 +460,6 @@\n %09%7D%0A%0A\n-%09fmt.Println()%0A\n %7D%0A\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-04-14_14-48-53",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar nfila, nsaiu int\n\n\tfmt.Scan(&nfila)\n\n\tfila := make([]int, nfila)\n\n\tfor i := 0; i < nfila; i++ {\n\t\tfmt.Scan(&fila[i])\n\t}\n\n\tfmt.Scan(&nsaiu)\n\n\tsaiu := make([]int, nsaiu)\n\n\tfor i := 0; i < nsaiu; i++ {\n\t\tfmt.Scan(&saiu[i])\n\t}\n\n\tsobrou := make(map[int]bool)\n\n\tfor i := 0; i < nsaiu; i++ {\n\t\tsobrou[saiu[i]] = true\n\t}\n\n\tfor i := 0; i < nfila; i++ {\n\t\tif !sobrou[fila[i]] {\n\t\t\tfmt.Print(fila[i])\n\t\t\tfmt.Print(\" \")\n\t\t}\n\t}\n\n\tfmt.Println()\n}\n",
+            "lines": "38"
+        }
+    ]
+}

@@ -1,0 +1,94 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-10_01-25-14",
+            "content": "@@ -41,94 +41,35 @@\n     \n-var sequencia string%0A    var limite int%0A%0A    fmt.Scan(&sequencia)%0A    fmt.Scan(&limite\n+fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-06-10_01-36-13",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -23,95 +23,26 @@\n mt%22%0A\n-%0A\n func \n-resolver(textoEdit %5B%5Dbyte, l int, i int) bool %7B%0A%0A%09return false%0A%7D%0A%0Afunc main() %7B%0A%09\n+main() %7B%0A    \n var \n@@ -58,17 +58,20 @@\n  string%0A\n-%09\n+    \n var limi\n@@ -78,17 +78,20 @@\n te int%0A%0A\n-%09\n+    \n fmt.Scan\n@@ -103,17 +103,20 @@\n uencia)%0A\n-%09\n+    \n fmt.Scan\n@@ -128,36 +128,7 @@\n ite)\n-%0A%0A%09texto := %5B%5Dbyte, sequencia\n %0A%7D%0A\n",
+            "lines": "9"
+        },
+        {
+            "label": "2026-06-10_01-45-00",
+            "content": "@@ -87,11 +87,12 @@\n urn \n-tru\n+fals\n e%0A%7D%0A\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-06-10_01-45-20",
+            "content": "@@ -77,43 +77,8 @@\n ol %7B\n-%0A    if resolver() %7B%0A        %0A    %7D\n %0A%0A%09r\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-06-10_01-47-34",
+            "content": "@@ -85,97 +85,34 @@\n  if \n-i == len(textoEdit) %7B%0A%09%09return true%0A%09%7D%0A%0A%09if resolver(textoEdit, l, i+1) %7B%0A%09%09return true%0A%09\n+resolver() %7B%0A        %0A    \n %7D%0A%0A%09\n@@ -227,20 +227,16 @@\n %0A%0A%09texto\n-Edit\n  := %5B%5Dby\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-06-10_01-49-10",
+            "content": "@@ -177,89 +177,19 @@\n %09%7D%0A%0A\n-    if textoEdit%5Bi%5D != '.'%7B%0A%09%09return resolver(textoEdit, l, i+1)%0A%09%7D%0A%0A%09return fals\n+%09return tru\n e%0A%7D%0A\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-06-10_01-52-22",
+            "content": "@@ -18,18 +18,13 @@\n ort \n-(%0A%09\n %22fmt%22\n-%0A)\n %0A%0Afu\n@@ -74,17 +74,20 @@\n  bool %7B%0A\n-%09\n+    \n if i == \n@@ -173,17 +173,20 @@\n rue%0A%09%7D%0A%0A\n-%09\n+    \n if texto\n@@ -199,17 +199,16 @@\n %5D != '.'\n- \n %7B%0A%09%09retu\n@@ -246,104 +246,8 @@\n %09%7D%0A%0A\n-%09for num := 0; num %3C= l; num++ %7B%0A%09%09charAtual := byte('0' + num)%0A%0A%09%09textoEdit%5Bi%5D = charAtual%0A%09%7D%0A%0A\n %09ret\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-06-10_01-54-47",
+            "content": "@@ -313,256 +313,50 @@\n %0A%0A%09%09\n-if colocar(textoEdit, l, i, charAtual) %7B%0A%09%09%09textoEdit%5Bi%5D = charAtual%0A%0A%09%09%09if resolver(textoEdit, l, i+1) %7B%0A%09%09%09%09return true%0A%09%09%09%7D%0A%0A%09%09%09textoEdit%5Bi%5D = '.'%0A%09%09%7D%0A%0A%09%7D%0A%0A%09return false%0A%7D%0A%0Afunc colocar(textoEdit %5B%5Dbyte, l int, i int, charAtual byte) bool %7B%0A    \n+textoEdit%5Bi%5D = charAtual%0A%09%7D%0A%0A%09return false\n %0A%7D%0A%0A\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-06-10_01-56-43",
+            "content": "@@ -557,91 +557,12 @@\n l %7B%0A\n-%09for i := 1; i %3C l; i++ %7B%0A        if i - 1 %7B%0A            %0A        %7D%0A%09%7D%0A%09return true\n+    \n %0A%7D%0A%0A\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-06-10_01-58-52",
+            "content": "@@ -591,21 +591,18 @@\n     \n-esq :=\n+if\n  i - \n-i%0A\n+1 %7B\n %0A   \n@@ -610,71 +610,21 @@\n     \n-if esq %3E= 0 && textoEdit%5Besq%5D == charAtual %7B%0A%09%09%09return false%0A%09%09\n+    %0A        \n %7D%0A%09%7D\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-06-10_01-59-52",
+            "content": "@@ -579,18 +579,24 @@\n ; i++ %7B%0A\n-%09%09\n+        \n esq := i\n@@ -601,18 +601,24 @@\n  i - i%0A%0A\n-%09%09\n+        \n if esq %3E\n@@ -677,104 +677,8 @@\n %0A%09%09%7D\n-%0A%0A%09%09dir := i + i%0A%0A%09%09if dir %3C len(textoEdit) && textoEdit%5Bdir%5D == charAtual %7B%0A%09%09%09return false%0A%09%09%7D\n %0A%09%7D%0A\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-06-10_02-00-55",
+            "content": "@@ -892,17 +892,18 @@\n = %5B%5Dbyte\n-(\n+, \n sequenci\n@@ -907,44 +907,7 @@\n ncia\n-)%0A%0A    resolver(textoEdit, limite, 0)\n %0A%7D%0A\n",
+            "lines": "63"
+        },
+        {
+            "label": "2026-06-10_02-01-44",
+            "content": "@@ -943,43 +943,7 @@\n , 0)\n-%0A%0A    fmt.Println(string(textoEdit))\n %0A%7D%0A\n",
+            "lines": "65"
+        },
+        {
+            "label": "2026-06-10_02-02-04",
+            "content": "@@ -562,25 +562,17 @@\n for \n-passo\n+i\n  := 1; \n-passo\n+i\n  %3C l\n@@ -592,21 +592,17 @@\n  := i - \n-passo\n+i\n %0A%0A%09%09if e\n@@ -680,13 +680,9 @@\n i + \n-passo\n+i\n %0A%0A%09%09\n",
+            "lines": "67"
+        },
+        {
+            "label": "2026-06-10_02-02-47",
+            "content": "@@ -123,16 +123,68 @@\n rue%0A%09%7D%0A%0A\n+%09if resolver(textoEdit, l, i+1) %7B%0A%09%09return true%0A%09%7D%0A%0A\n %09if text\n@@ -921,17 +921,20 @@\n encia)%0A%0A\n-%09\n+    \n resolver\n@@ -957,17 +957,20 @@\n te, 0)%0A%0A\n-%09\n+    \n fmt.Prin\n",
+            "lines": "67"
+        },
+        {
+            "label": "2026-06-10_02-03-55",
+            "content": "@@ -529,21 +529,17 @@\n so %3C l; \n-passo\n+i\n ++ %7B%0A%09%09e\n",
+            "lines": "63"
+        },
+        {
+            "label": "2026-06-10_02-04-18",
+            "content": "@@ -411,16 +411,17 @@\n '.'%0A%09%09%7D%0A\n+%0A\n %09%7D%0A%0A%09ret\n@@ -525,17 +525,16 @@\n  passo %3C\n-=\n  l; pass\n",
+            "lines": "63"
+        },
+        {
+            "label": "2026-06-10_02-06-07",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n)\n\nfunc resolver(textoEdit []byte, l int, i int) bool {\n\tif i == len(textoEdit) {\n\t\treturn true\n\t}\n\n\tif textoEdit[i] != '.' {\n\t\treturn resolver(textoEdit, l, i+1)\n\t}\n\n\tfor num := 0; num <= l; num++ {\n\t\tcharAtual := byte('0' + num)\n\n\t\tif colocar(textoEdit, l, i, charAtual) {\n\t\t\ttextoEdit[i] = charAtual\n\n\t\t\tif resolver(textoEdit, l, i+1) {\n\t\t\t\treturn true\n\t\t\t}\n\n\t\t\ttextoEdit[i] = '.'\n\t\t}\n\t}\n\n\treturn false\n}\n\nfunc colocar(textoEdit []byte, l int, i int, charAtual byte) bool {\n\tfor passo := 1; passo <= l; passo++ {\n\t\tesq := i - passo\n\n\t\tif esq >= 0 && textoEdit[esq] == charAtual {\n\t\t\treturn false\n\t\t}\n\n\t\tdir := i + passo\n\n\t\tif dir < len(textoEdit) && textoEdit[dir] == charAtual {\n\t\t\treturn false\n\t\t}\n\t}\n\treturn true\n}\n\nfunc main() {\n\tvar sequencia string\n\tvar limite int\n\n\tfmt.Scan(&sequencia)\n\tfmt.Scan(&limite)\n\n\ttextoEdit := []byte(sequencia)\n\n\tresolver(textoEdit, limite, 0)\n\n\tfmt.Println(string(textoEdit))\n}\n",
+            "lines": "62"
+        }
+    ]
+}

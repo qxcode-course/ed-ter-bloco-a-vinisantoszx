@@ -1,0 +1,64 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-10_23-02-30",
+            "content": "@@ -263,69 +263,18 @@\n  %7B%0A%09\n-if it.Next() != nil %7B%0A%09%09return it.Next()%0A%09%7D%0A%09return l.Front()\n+return nil\n %0A%7D%0A%0A\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-06-10_23-07-39",
+            "content": "@@ -423,66 +423,22 @@\n  %7B%0A%09\n-if it.Prev() != nil %7B%0A%09%09return it.Prev()%0A%09%7D%0A%09return l.Back\n+return l.Front\n ()%0A%7D\n",
+            "lines": "49"
+        },
+        {
+            "label": "2026-06-10_23-07-59",
+            "content": "@@ -155,60 +155,15 @@\n %0A%09re\n-sultado := %22%5B%22%0A%0A%09resultado += %22 %5D%22%0A%09return resultado\n+turn %22%22\n %0A%7D%0A%0A\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-06-10_23-13-01",
+            "content": "@@ -171,83 +171,8 @@\n %5B%22%0A%0A\n-%09for e := l.Front(); e != nil; e = e.Next() %7B%0A%09%09valor := e.Value.(int)%0A%09%7D%0A%0A\n %09res\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-06-10_23-13-47",
+            "content": "@@ -215,16 +215,38 @@\n t() %7B%0A%09%09\n+valor := e.Value.(int)\n %0A%09%7D%0A%0A%09re\n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-06-10_23-13-55",
+            "content": "@@ -219,30 +219,8 @@\n %7B%0A%09%09\n-valor := e.Value.(int)\n %0A%09%7D%0A\n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-06-10_23-14-00",
+            "content": "@@ -241,98 +241,8 @@\n int)\n-%0A%0A%09%09if e == sword %7B%0A%09%09%09if valor %3E 0 %7B%0A%09%09%09%09resultado += fmt.Sprintf(%22 %25d%3E%22, valor)%0A%09%09%09%7D%0A%09%09%7D\n %0A%09%7D%0A\n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-06-10_23-21-11",
+            "content": "@@ -328,61 +328,8 @@\n %09%09%7D%0A\n-%09%09%7D else %7B%0A%09%09%09resultado += fmt.Sprintf(%22 %25d%22, valor)%0A\n %09%09%7D%0A\n",
+            "lines": "65"
+        },
+        {
+            "label": "2026-06-10_23-29-13",
+            "content": "@@ -323,64 +323,8 @@\n or)%0A\n-%09%09%09%7D else %7B%0A%09%09%09%09resultado += fmt.Sprintf(%22 %3C%25d%22, valor)%0A\n %09%09%09%7D\n",
+            "lines": "67"
+        },
+        {
+            "label": "2026-06-10_23-38-22",
+            "content": "@@ -166,16 +166,17 @@\n  := %22%5B%22%0A\n+%0A\n %09for e :\n",
+            "lines": "69"
+        },
+        {
+            "label": "2026-06-10_23-38-41",
+            "content": "@@ -170,10 +170,8 @@\n %22%5B%22%0A\n-%09%0A\n %09for\n",
+            "lines": "68"
+        },
+        {
+            "label": "2026-06-10_23-38-56",
+            "content": "package main\n\nimport (\n\t\"container/list\"\n\t\"fmt\"\n)\n\n// mostra a lista com o elemento sword destacado\nfunc ToStr(l *list.List, sword *list.Element) string {\n\tresultado := \"[\"\n\t\n\tfor e := l.Front(); e != nil; e = e.Next() {\n\t\tvalor := e.Value.(int)\n\n\t\tif e == sword {\n\t\t\tif valor > 0 {\n\t\t\t\tresultado += fmt.Sprintf(\" %d>\", valor)\n\t\t\t} else {\n\t\t\t\tresultado += fmt.Sprintf(\" <%d\", valor)\n\t\t\t}\n\t\t} else {\n\t\t\tresultado += fmt.Sprintf(\" %d\", valor)\n\t\t}\n\t}\n\n\tresultado += \" ]\"\n\treturn resultado\n}\n\n// move para frente na lista circular\nfunc Next(l *list.List, it *list.Element) *list.Element {\n\tif it.Next() != nil {\n\t\treturn it.Next()\n\t}\n\treturn l.Front()\n}\n\n// move para tras na lista circular\nfunc Prev(l *list.List, it *list.Element) *list.Element {\n\tif it.Prev() != nil {\n\t\treturn it.Prev()\n\t}\n\treturn l.Back()\n}\n\nfunc main() {\n\tvar qtd, chosen, fase int\n\tfmt.Scan(&qtd, &chosen, &fase)\n\tl := list.New()\n\tfor i := 1; i <= qtd; i++ {\n\t\tl.PushBack(i * fase)\n\t\tfase = -fase\n\t}\n\tsword := l.Front()\n\tfor range chosen - 1 {\n\t\tsword = Next(l, sword)\n\t}\n\tfor range qtd - 1 {\n\t\tfmt.Println(ToStr(l, sword))\n\t\tif sword.Value.(int) > 0 {\n\t\t\tl.Remove(Next(l, sword))\n\t\t\tsword = Next(l, sword)\n\t\t} else {\n\t\t\tl.Remove(Prev(l, sword))\n\t\t\tsword = Prev(l, sword)\n\t\t}\n\t}\n\tfmt.Println(ToStr(l, sword))\n}\n",
+            "lines": "69"
+        }
+    ]
+}

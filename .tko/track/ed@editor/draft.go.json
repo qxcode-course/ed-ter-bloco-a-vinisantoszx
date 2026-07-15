@@ -1,0 +1,79 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-05_13-26-58",
+            "content": "@@ -10,189 +10,66 @@\n ain%0A\n-%0A\n import \n-(%0A%09%22bufio%22%0A%09%22os%22%0A)%0A%0Afunc main() %7B%0A%09scanner := bufio.NewScanner(os.Stdin)%0A%0A%09for scanner.Scan() %7B%0A%09%09textoEntrada := scanner.Text()%0A%0A%09%09if textoEntrada == %22%22 %7B%0A%09%09%09continue%0A%09%09%7D%0A%09%7D\n+%22fmt%22%0Afunc main() %7B%0A    fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-05-19_01-40-22",
+            "content": "@@ -29,26 +29,8 @@\n io%22%0A\n-%09%22container/list%22%0A\n %09%22os\n@@ -189,27 +189,8 @@\n %0A%09%09%7D\n-%0A%0A%09%09l := list.New()\n %0A%09%7D%0A\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-05-19_01-40-31",
+            "content": "@@ -226,47 +226,8 @@\n ew()\n-%0A%0A%09%09cursor := l.PushBack('%7C')%0A%0A        \n %0A%09%7D%0A\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-05-19_01-40-49",
+            "content": "@@ -257,117 +257,16 @@\n ')%0A%0A\n-%09%09for _, char := range textoEntrada %7B%0A%09%09%09switch char %7B%0A%09%09%09case 'R':%0A%09%09%09%09l.InsertBefore('%5Cn', cursor)%0A%09%09%09%7D%0A%09%09%7D\n+        \n %0A%09%7D%0A\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-05-19_01-41-13",
+            "content": "@@ -358,119 +358,8 @@\n or)%0A\n-%09%09%09case 'B':%0A%09%09%09%09if vizinhoDeTras := cursor.Prev(); vizinhoDeTras != nil %7B%0A%09%09%09%09%09l.Remove(vizinhoDeTras)%0A%09%09%09%09%7D%0A%0A\n %09%09%09%7D\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-05-19_01-42-17",
+            "content": "@@ -47,15 +47,8 @@\n st%22%0A\n-%09%22fmt%22%0A\n %09%22os\n@@ -473,131 +473,8 @@\n %09%09%09%7D\n-%0A%0A%09%09%09for node := l.Front(); node != nil; node = node.Next() %7B%0A%09%09%09%09fmt.Printf(%22%25c%22, node.Value.(rune))%0A%09%09%09%7D%0A%09%09%09fmt.Println()\n %0A%09%09%7D\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-05-19_01-42-40",
+            "content": "@@ -474,124 +474,8 @@\n %09%09%09%7D\n-%0A%09%09%09case 'D':%0A%09%09%09%09if vizinhoDaFrente := cursor.Next(); vizinhoDaFrente != nil %7B%0A%09%09%09%09%09l.Remove(vizinhoDaFrente)%0A%09%09%09%09%7D\n %0A%0A%09%09\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-05-19_01-43-13",
+            "content": "@@ -592,53 +592,8 @@\n %09%7D%0A%0A\n-%09%09%09default:%0A%09%09%09%09l.InsertBefore(char, cursor)%0A\n %09%09%09%7D\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-05-19_01-43-39",
+            "content": "@@ -637,16 +637,139 @@\n or)%0A%09%09%09%7D\n+%0A%0A%09%09%09for node := l.Front(); node != nil; node = node.Next() %7B%0A%09%09%09%09fmt.Printf(%22%25c%22, node.Value.(rune))%0A%09%09%09%7D%0A%09%09%09fmt.Println()\n %0A%09%09%7D%0A%09%7D%0A\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-05-19_01-44-48",
+            "content": "@@ -43,16 +43,23 @@\n r/list%22%0A\n+%09%22fmt%22%0A\n %09%22os%22%0A)%0A\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-05-19_01-44-56",
+            "content": "@@ -1,653 +1,112 @@\n-package main%0A%0Aimport (%0A%09%22bufio%22%0A%09%22container/list%22%0A%09%22fmt%22%0A%09%22os%22%0A)%0A%0Afunc main() %7B%0A%09scanner := bufio.NewScanner(os.Stdin)%0A%0A%09for scanner.Scan() %7B%0A%09%09textoEntrada := scanner.Text()%0A%0A%09%09if textoEntrada == %22%22 %7B%0A%09%09%09continue%0A%09%09%7D%0A%0A%09%09l := list.New()%0A%0A%09%09cursor := l.PushBack('%7C')%0A%0A%09%09for _, char := range textoEntrada %7B%0A%09%09%09switch char %7B%0A%09%09%09case 'R':%0A%09%09%09%09l.InsertBefore('%5Cn', cursor)%0A%09%09%09case 'B':%0A%09%09%09%09if vizinhoDeTras := cursor.Prev(); vizinhoDeTras != nil %7B%0A%09%09%09%09%09l.Remove(vizinhoDeTras)%0A%09%09%09%09%7D%0A%09%09%09case 'D':%0A%09%09%09%09if vizinhoDaFrente := cursor.Next(); vizinhoDaFrente != nil %7B%0A%09%09%09%09%09l.Remove(vizinhoDaFrente)%0A%09%09%09%09%7D%0A%0A%09%09%09default:%0A%09%09%09%09l.InsertBefore(char, cursor)%0A%09%09%09%7D%0A%0A%09%09%09\n+@@ -47,15 +47,8 @@%0A st%2522%250A%0A-%2509%2522fmt%2522%250A%0A %2509%2522os%0A@@ -634,131 +634,8 @@%0A %2509%2509%2509%257D%0A-%250A%250A%2509%2509%2509\n for \n@@ -160,14 +160,26 @@\n t() \n-%7B%0A%09%09%09%09\n+%257B%250A%2509%2509%2509%2509\n fmt.\n@@ -189,12 +189,18 @@\n ntf(\n-%22%25c%22\n+%2522%2525c%2522\n , no\n@@ -219,17 +219,35 @@\n ne))\n-%0A%09%09%09%7D%0A%09%09%09\n+%250A%2509%2509%2509%257D%250A%2509%2509%2509\n fmt.\n@@ -260,13 +260,18 @@\n n()%0A\n-%09%09%7D%0A%09%7D%0A%7D\n+ %250A%2509%2509%257D\n %0A\n",
+            "lines": "8"
+        },
+        {
+            "label": "2026-05-19_01-45-13",
+            "content": "@@ -590,130 +590,8 @@\n %09%09%09%7D\n-%0A%09%09%09case '%3C':%0A%09%09%09%09if vizinhoDeTras := cursor.Prev(); vizinhoDeTras != nil %7B%0A%09%09%09%09%09l.MoveBefore(cursor, vizinhoDeTras)%0A%09%09%09%09%7D\n %0A%0A%09%09\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-05-19_01-45-37",
+            "content": "@@ -713,134 +713,8 @@\n %09%09%7D%0A\n-%09%09%09case '%3E':%0A%09%09%09%09if vizinhoDaFrente := cursor.Next(); vizinhoDaFrente != nil %7B%0A%09%09%09%09%09l.MoveAfter(cursor, vizinhoDaFrente)%0A%09%09%09%09%7D\n %0A%09%09%09\n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-05-19_01-46-05",
+            "content": "@@ -886,21 +886,18 @@\n r)%0A%09%09%09%7D%0A\n-%09%09%7D%0A\n %0A\n+%09\n %09%09for no\n@@ -947,16 +947,17 @@\n ext() %7B%0A\n+%09\n %09%09%09fmt.P\n@@ -989,18 +989,20 @@\n une))%0A%09%09\n+%09\n %7D%0A\n+%09\n %09%09fmt.Pr\n@@ -1009,13 +1009,17 @@\n intln()%0A\n+%09%09%7D%0A\n %09%7D%0A%7D%0A\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-05-19_01-46-21",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"container/list\"\n\t\"fmt\"\n\t\"os\"\n)\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\tfor scanner.Scan() {\n\t\ttextoEntrada := scanner.Text()\n\n\t\tif textoEntrada == \"\" {\n\t\t\tcontinue\n\t\t}\n\n\t\tl := list.New()\n\n\t\tcursor := l.PushBack('|')\n\n\t\tfor _, char := range textoEntrada {\n\t\t\tswitch char {\n\t\t\tcase 'R':\n\t\t\t\tl.InsertBefore('\\n', cursor)\n\t\t\tcase 'B':\n\t\t\t\tif vizinhoDeTras := cursor.Prev(); vizinhoDeTras != nil {\n\t\t\t\t\tl.Remove(vizinhoDeTras)\n\t\t\t\t}\n\t\t\tcase 'D':\n\t\t\t\tif vizinhoDaFrente := cursor.Next(); vizinhoDaFrente != nil {\n\t\t\t\t\tl.Remove(vizinhoDaFrente)\n\t\t\t\t}\n\t\t\tcase '<':\n\t\t\t\tif vizinhoDeTras := cursor.Prev(); vizinhoDeTras != nil {\n\t\t\t\t\tl.MoveBefore(cursor, vizinhoDeTras)\n\t\t\t\t}\n\t\t\tcase '>':\n\t\t\t\tif vizinhoDaFrente := cursor.Next(); vizinhoDaFrente != nil {\n\t\t\t\t\tl.MoveAfter(cursor, vizinhoDaFrente)\n\t\t\t\t}\n\t\t\tdefault:\n\t\t\t\tl.InsertBefore(char, cursor)\n\t\t\t}\n\t\t}\n\n\t\tfor node := l.Front(); node != nil; node = node.Next() {\n\t\t\tfmt.Printf(\"%c\", node.Value.(rune))\n\t\t}\n\t\tfmt.Println()\n\t}\n}\n",
+            "lines": "54"
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-05_19-23-41",
+            "content": "@@ -124,16 +124,32 @@\n ) int %7B%0A\n+%09//%0A%09_ := board%0A\n %09return \n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-07-05_19-23-50",
+            "content": "@@ -36,21 +36,8 @@\n mt%22%0A\n-%09%22go/format%22%0A\n %09%22os\n@@ -128,67 +128,8 @@\n t %7B%0A\n-%09contador := 0%0A%0A%09for i := 0; i %3C len(board); i++ %7B%0A%09%09%0A%09%7D%0A%09%0A\n %09ret\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-07-05_19-53-21",
+            "content": "@@ -194,196 +194,8 @@\n %7B%0A%09%09\n-for j := 0; j %3C len(board%5Bi%5D); j++ %7B%0A%09%09%09temAcima := i %3E 0 && board%5Bi-1%5D%5Bj%5D == 'X'%0A%09%09%09temEsquerda := j %3E 0 && board%5Bi%5D%5Bj-1%5D == 'X'%0A%0A%09%09%09if !temAcima && !temEsquerda %7B%0A%09%09%09%09contador++%0A%09%09%09%7D%0A%09%09%7D\n %0A%09%7D%0A\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-07-05_19-58-18",
+            "content": "@@ -392,24 +392,17 @@\n %09return \n-contador\n+0\n %0A%7D%0A%0A// N\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-07-05_19-58-32",
+            "content": "@@ -32,16 +32,29 @@\n %0A%09%22fmt%22%0A\n+%09%22go/format%22%0A\n %09%22os%22%0A)%0A\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-07-05_19-58-38",
+            "content": "@@ -218,36 +218,8 @@\n + %7B%0A\n-%09%09%09if board%5Bi%5D%5Bj%5D == 'X' %7B%0A%09\n %09%09%09t\n@@ -262,17 +262,16 @@\n  'X'%0A%09%09%09\n-%09\n temEsque\n@@ -311,17 +311,16 @@\n 'X'%0A%0A%09%09%09\n-%09\n if !temA\n@@ -342,17 +342,16 @@\n uerda %7B%0A\n-%09\n %09%09%09%09cont\n@@ -361,14 +361,8 @@\n r++%0A\n-%09%09%09%09%7D%0A\n %09%09%09%7D\n@@ -365,24 +365,25 @@\n %09%09%09%7D%0A%09%09%7D%0A%09%7D%0A\n+%09\n %0A%09return con\n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-07-05_19-59-44",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\n// Fun\u00e7\u00e3o que ser\u00e1 chamada no LeetCode\nfunc countBattleships(board [][]byte) int {\n\tcontador := 0\n\n\tfor i := 0; i < len(board); i++ {\n\t\tfor j := 0; j < len(board[i]); j++ {\n\t\t\tif board[i][j] == 'X' {\n\t\t\t\ttemAcima := i > 0 && board[i-1][j] == 'X'\n\t\t\t\ttemEsquerda := j > 0 && board[i][j-1] == 'X'\n\n\t\t\t\tif !temAcima && !temEsquerda {\n\t\t\t\t\tcontador++\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n\n\treturn contador\n}\n\n// N\u00e3o modifique a fun\u00e7\u00e3o main\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tline := scanner.Text()\n\tvar nl, nc int\n\tfmt.Sscanf(line, \"%d %d\", &nl, &nc)\n\n\tboard := make([][]byte, nl)\n\tfor i := 0; i < nl; i++ {\n\t\tscanner.Scan()\n\t\tboard[i] = []byte(scanner.Text())\n\t}\n\n\tresult := countBattleships(board)\n\tfmt.Println(result)\n}\n",
+            "lines": "45"
+        }
+    ]
+}

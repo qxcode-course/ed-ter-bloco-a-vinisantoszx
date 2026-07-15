@@ -1,0 +1,19 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-05_23-01-30",
+            "content": "@@ -23,356 +23,53 @@\n mt%22%0A\n-%0A\n func \n-quadrado(n int) int\n+main()\n  %7B%0A    \n-anterior := n - 1%0A%0A    fmt.Printf(%22%25d%5E2 = %25d%5E2 + 2*%25d + 1 = ?%5Cn%22, n, anterior, anterior)%0A%0A    resultado := quadrado(anterior) + 2*anterior + 1%0A%0A    fmt.Printf(%22%25d%5E2 = %25d%5E2 + 2*%25d + 1 = %25d%5Cn%22, n, anterior, anterior, resultado)%0A%0A    return resultado%0A%7D%0A%0Afunc main() %7B%0A    var n int%0A%0A    fmt.Scan(&n)%0A    %0A    quadrado(n\n+fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-07-05_23-17-09",
+            "content": "@@ -51,79 +51,8 @@\n t %7B%0A\n-    if n == 1 %7B%0A        fmt.Println(%221%5E2 = 1%22)%0A        return 1%0A    %7D%0A%0A\n     \n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-07-05_23-17-56",
+            "content": "package main\nimport \"fmt\"\n\nfunc quadrado(n int) int {\n    if n == 1 {\n        fmt.Println(\"1^2 = 1\")\n        return 1\n    }\n\n    anterior := n - 1\n\n    fmt.Printf(\"%d^2 = %d^2 + 2*%d + 1 = ?\\n\", n, anterior, anterior)\n\n    resultado := quadrado(anterior) + 2*anterior + 1\n\n    fmt.Printf(\"%d^2 = %d^2 + 2*%d + 1 = %d\\n\", n, anterior, anterior, resultado)\n\n    return resultado\n}\n\nfunc main() {\n    var n int\n\n    fmt.Scan(&n)\n    \n    quadrado(n)\n}\n",
+            "lines": "27"
+        }
+    ]
+}

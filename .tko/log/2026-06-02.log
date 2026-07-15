@@ -1,0 +1,37 @@
+2026-06-02 00:30:02, MOVE, v:1, k:ed@vetbuild, mode:PICK
+2026-06-02 00:30:31, MOVE, v:1, k:ed@vetbuild, mode:BACK
+2026-06-02 00:30:37, MOVE, v:1, k:ed@setbuild, mode:PICK
+2026-06-02 00:30:50, MOVE, v:1, k:ed@setbuild, mode:BACK
+2026-06-02 00:30:54, MOVE, v:1, k:ed@bettersearch, mode:PICK
+2026-06-02 00:31:07, MOVE, v:1, k:ed@bettersearch, mode:BACK
+2026-06-02 00:31:09, MOVE, v:1, k:ed@multiset, mode:PICK
+2026-06-02 00:32:42, MOVE, v:1, k:ed@multiset, mode:BACK
+2026-06-02 00:33:03, MOVE, v:1, k:ed@ilhas, mode:PICK
+2026-06-02 00:33:05, EXEC, v:1, k:ed@ilhas, mode:FULL, rate:100
+2026-06-02 00:33:07, MOVE, v:1, k:ed@ilhas, mode:BACK
+2026-06-02 00:33:22, SELF, v:1, k:ed@ilhas, self:1, rate:100, study:40, concept:1
+2026-06-02 00:33:46, MOVE, v:1, k:ed@cercado, mode:PICK
+2026-06-02 00:33:05, MOVE, v:1, k:ed@ilhas, mode:EDIT
+2026-06-02 00:50:48, MOVE, v:1, k:ed@cercado, mode:BACK
+2026-06-02 00:51:02, MOVE, v:1, k:ed@cercado, mode:PICK
+2026-06-02 00:51:03, EXEC, v:1, k:ed@cercado, mode:FULL, rate:33, size:29
+2026-06-02 00:51:06, MOVE, v:1, k:ed@cercado, mode:BACK
+2026-06-02 00:51:03, MOVE, v:1, k:ed@cercado, mode:EDIT
+2026-06-02 02:00:24, MOVE, v:1, k:ed@cercado, mode:PICK
+2026-06-02 02:00:27, EXEC, v:1, k:ed@cercado, mode:FULL, rate:33, size:36
+2026-06-02 02:00:29, MOVE, v:1, k:ed@cercado, mode:BACK
+2026-06-02 02:00:34, MOVE, v:1, k:ed@cercado, mode:PICK
+2026-06-02 02:00:39, EXEC, v:1, k:ed@cercado, mode:FULL, rate:33
+2026-06-02 02:01:07, EXEC, v:1, k:ed@cercado, mode:FULL, rate:33, size:42
+2026-06-02 02:01:20, EXEC, v:1, k:ed@cercado, mode:FULL, rate:33, size:42
+2026-06-02 02:02:26, MOVE, v:1, k:ed@cercado, mode:BACK
+2026-06-02 02:02:29, MOVE, v:1, k:ed@cercado, mode:PICK
+2026-06-02 02:02:37, EXEC, v:1, k:ed@cercado, mode:FULL, size:49, fail:COMP
+2026-06-02 02:01:20, MOVE, v:1, k:ed@cercado, mode:EDIT
+2026-06-02 02:03:16, MOVE, v:1, k:ed@cercado, mode:EDIT
+2026-06-02 02:19:11, EXEC, v:1, k:ed@cercado, mode:FULL, rate:33, size:58
+2026-06-02 02:19:30, EXEC, v:1, k:ed@cercado, mode:FULL, rate:100, size:68
+2026-06-02 02:19:32, MOVE, v:1, k:ed@cercado, mode:BACK
+2026-06-02 02:19:48, SELF, v:1, k:ed@cercado, self:1, rate:100, study:30, concept:1
+2026-06-02 13:18:01, MOVE, v:1, k:ed@pintura, mode:PICK
+2026-06-02 13:26:47, MOVE, v:1, k:ed@pintura, mode:BACK

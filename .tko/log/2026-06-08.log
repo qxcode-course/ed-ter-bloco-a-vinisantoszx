@@ -1,0 +1,32 @@
+2026-06-08 00:54:55, MOVE, v:1, k:ed@pintura, mode:PICK
+2026-06-08 00:55:04, EXEC, v:1, k:ed@pintura, mode:FULL, size:57, fail:COMP
+2026-06-08 00:55:07, MOVE, v:1, k:ed@pintura, mode:BACK
+2026-06-08 00:55:13, MOVE, v:1, k:ed@pintura, mode:PICK
+2026-06-08 00:58:28, EXEC, v:1, k:ed@pintura, mode:FULL, rate:50, size:61
+2026-06-08 00:59:39, EXEC, v:1, k:ed@pintura, mode:FULL, rate:50, size:71
+2026-06-08 00:59:38, MOVE, v:1, k:ed@pintura, mode:EDIT
+2026-06-08 00:59:39, MOVE, v:1, k:ed@pintura, mode:EDIT
+2026-06-08 00:59:42, MOVE, v:1, k:ed@pintura, mode:BACK
+2026-06-08 00:59:47, MOVE, v:1, k:ed@pintura, mode:PICK
+2026-06-08 00:59:49, EXEC, v:1, k:ed@pintura, mode:FULL, rate:50
+2026-06-08 00:59:49, MOVE, v:1, k:ed@pintura, mode:EDIT
+2026-06-08 01:03:30, MOVE, v:1, k:ed@pintura, mode:EDIT
+2026-06-08 01:11:02, EXEC, v:1, k:ed@pintura, mode:FULL, rate:100, size:78
+2026-06-08 01:11:04, MOVE, v:1, k:ed@pintura, mode:BACK
+2026-06-08 01:11:36, MOVE, v:1, k:ed@pintura, mode:PICK
+2026-06-08 01:11:36, EXEC, v:1, k:ed@pintura, mode:FULL, rate:100
+2026-06-08 01:11:37, MOVE, v:1, k:ed@pintura, mode:BACK
+2026-06-08 01:11:48, SELF, v:1, k:ed@pintura, self:1, rate:100, study:35, concept:1
+2026-06-08 01:12:03, MOVE, v:1, k:ed@dfs_read, mode:DOWN
+2026-06-08 01:12:49, MOVE, v:1, k:ed@subset_sum, mode:PICK
+2026-06-08 01:14:09, MOVE, v:1, k:ed@subset_sum, mode:BACK
+2026-06-08 23:53:42, MOVE, v:1, k:ed@mdc, mode:PICK
+2026-06-08 23:53:44, EXEC, v:1, k:ed@mdc, mode:FULL, rate:100
+2026-06-08 23:53:45, MOVE, v:1, k:ed@mdc, mode:BACK
+2026-06-08 23:54:05, SELF, v:1, k:ed@fractais_png, self:1, rate:40
+2026-06-08 23:54:17, SELF, v:1, k:ed@fractais_png, self:1, rate:100
+2026-06-08 23:54:26, SELF, v:1, k:ed@fractais_png, self:1
+2026-06-08 23:54:46, MOVE, v:1, k:ed@especiais, mode:PICK
+2026-06-08 23:54:48, EXEC, v:1, k:ed@especiais, mode:FULL, rate:0, size:132
+2026-06-08 23:53:44, MOVE, v:1, k:ed@mdc, mode:EDIT
+2026-06-08 23:54:48, MOVE, v:1, k:ed@especiais, mode:EDIT

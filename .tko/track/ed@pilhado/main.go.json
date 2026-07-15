@@ -1,0 +1,74 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-02_03-24-27",
+            "content": "@@ -45,153 +45,4 @@\n %0A)%0A%0A\n-type Point struct %7B%0A%09row int%0A%09col int%0A%7D%0A%0Afunc main() %7B%0A%09reader := bufio.NewReader(os.Stdin)%0A%0A%09var rows, cols int%0A%0A%09fmt.Fscan(reader, &rows, &cols)%0A%7D%0A\n",
+            "lines": "8"
+        },
+        {
+            "label": "2026-07-02_03-29-32",
+            "content": "@@ -42,19 +42,8 @@\n os%22%0A\n-%09%22strings%22%0A\n )%0A%0At\n@@ -154,16 +154,17 @@\n ols int%0A\n+%0A\n %09fmt.Fsc\n@@ -191,294 +191,7 @@\n ols)\n-%0A%0A%09reader.ReadString('%5Cn')%0A%0A%09maze := make(%5B%5D%5B%5Drune, rows)%0A%0A%09start := Point%7B%7D%0A%09end := Point%7B%7D%0A%0A%09for i := 0; i %3C rows; i++ %7B%0A%09%09line, _ := reader.ReadString('%5Cn')%0A%09%09line = strings.TrimRight(line, %22%5Cr%5Cn%22)%0A%0A%09%09maze%5Bi%5D = %5B%5Drune(line)%0A%09%7D%0A%0A%09fmt.Println(%22inicio:%22, start)%0A%09fmt.Println(%22fim:%22, end)\n %0A%7D%0A\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-07-02_03-35-11",
+            "content": "@@ -427,151 +427,8 @@\n ine)\n-%0A%0A%09%09for j := 0; j %3C cols; j++ %7B%0A%09%09%09if maze%5Bi%5D%5Bj%5D == 'I' %7B%0A%09%09%09%09start = Point%7Bi, j%7D%0A%09%09%09%7D%0A%0A%09%09%09if maze%5Bi%5D%5Bj%5D == 'F' %7B%0A%09%09%09%09end = Point%7Bi,j%7D%0A%09%09%09%7D%0A%09%09%7D\n %0A%09%7D%0A\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-07-02_03-38-27",
+            "content": "@@ -576,136 +576,62 @@\n %7D%0A%0A%09\n-caminho := NewStack%5BPoint%5D()%0A%0A%09visited := make(%5B%5D%5B%5Dbool, rows\n+fmt.Println(%22inicio:%22, start\n )%0A\n-%0A\n %09f\n-or i := 0; i %3C rows; i++ %7B%0A%09%09visited%5Bi%5D = make(%5B%5Dbool, cols)%0A%09%7D\n+mt.Println(%22fim:%22, end)\n %0A%7D%0A\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-07-02_03-41-54",
+            "content": "@@ -97,242 +97,8 @@\n %0A%7D%0A%0A\n-func resolveMaze(maze %5B%5D%5B%5Drune, start Point, end Point, rows int, cols int) %7B%0A%09caminho := NewStack%5BPoint%5D()%0A%0A%09visited := make(%5B%5D%5B%5Dbool, rows)%0A%0A%09for i := 0; i %3C rows; i++ %7B%0A%09%09visited%5Bi%5D = make(%5B%5Dbool, cols)%0A%09%7D%0A%0A%09caminho.Push(start)%0A%7D%0A%0A\n func\n@@ -569,11 +569,143 @@\n %7D%0A%09%09%7D%0A%09%7D\n+%0A%0A%09caminho := NewStack%5BPoint%5D()%0A%0A%09visited := make(%5B%5D%5B%5Dbool, rows)%0A%0A%09for i := 0; i %3C rows; i++ %7B%0A%09%09visited%5Bi%5D = make(%5B%5Dbool, cols)%0A%09%7D\n %0A%7D%0A\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-07-02_03-44-40",
+            "content": "@@ -97,464 +97,8 @@\n %0A%7D%0A%0A\n-func leMaze(reader *bufio.Reader, rows int, cols int) (%5B%5D%5B%5Drune, Point, Point) %7B%0A%09maze := make(%5B%5D%5B%5Drune, rows)%0A%0A%09start := Point%7B%7D%0A%09end := Point%7B%7D%0A%0A%09for i := 0; i %3C rows; i++ %7B%0A%09%09line, _ := reader.ReadString('%5Cn')%0A%09%09line = strings.TrimRight(line, %22%5Cr%5Cn%22)%0A%0A%09%09maze%5Bi%5D = %5B%5Drune(line)%0A%0A%09%09for j := 0; j %3C cols; j++ %7B%0A%09%09%09if maze%5Bi%5D%5Bj%5D == 'I' %7B%0A%09%09%09%09start = Point%7Bi, j%7D%0A%09%09%09%7D%0A%0A%09%09%09if maze%5Bi%5D%5Bj%5D == 'F' %7B%0A%09%09%09%09end = Point%7Bi,j%7D%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%09%0A%09return maze, start, end%0A%7D%0A%0A\n func\n@@ -457,11 +457,357 @@\n ng('%5Cn')\n+%0A%0A%09maze := make(%5B%5D%5B%5Drune, rows)%0A%0A%09start := Point%7B%7D%0A%09end := Point%7B%7D%0A%0A%09for i := 0; i %3C rows; i++ %7B%0A%09%09line, _ := reader.ReadString('%5Cn')%0A%09%09line = strings.TrimRight(line, %22%5Cr%5Cn%22)%0A%0A%09%09maze%5Bi%5D = %5B%5Drune(line)%0A%0A%09%09for j := 0; j %3C cols; j++ %7B%0A%09%09%09if maze%5Bi%5D%5Bj%5D == 'I' %7B%0A%09%09%09%09start = Point%7Bi, j%7D%0A%09%09%09%7D%0A%0A%09%09%09if maze%5Bi%5D%5Bj%5D == 'F' %7B%0A%09%09%09%09end = Point%7Bi,j%7D%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D\n %0A%7D%0A\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-07-02_03-47-06",
+            "content": "@@ -553,281 +553,8 @@\n %0A%7D%0A%0A\n-func isValid(point Point, maze %5B%5D%5B%5Drune, visited %5B%5D%5B%5Dbool, rows int, cols int) bool %7B%0A%09if point.row %3C 0 %7C%7C point.row %3E= rows %7C%7C point.col %3C 0 %7C%7C point.col %3E= cols %7C%7C %0A%09maze%5Bpoint.row%5D%5Bpoint.col%5D == '#' %7C%7C visited%5Bpoint.row%5D%5Bpoint.col%5D %7B%0A%09%09return false%0A%09%7D%0A%09%0A%09return true%0A%7D%0A%0A\n func\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-07-02_03-52-48",
+            "content": "@@ -42,16 +42,8 @@\n os%22%0A\n-%09%22path%22%0A\n %09%22st\n@@ -49,16 +49,16 @@\n trings%22%0A\n+\n )%0A%0Atype \n@@ -98,20 +98,18 @@\n %7D%0A%0Afunc \n-read\n+le\n Maze(rea\n@@ -496,33 +496,32 @@\n %09%09end = Point%7Bi,\n- \n j%7D%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A\n@@ -515,25 +515,26 @@\n %09%09%09%7D%0A%09%09%7D%0A%09%7D%0A\n+%09\n %0A\n-\n %09return maze\n@@ -714,18 +714,18 @@\n  cols %7C%7C\n+ \n %0A\n-%09\n %09maze%5Bpo\n@@ -804,17 +804,18 @@\n alse%0A%09%7D%0A\n+%09\n %0A\n-\n %09return \n@@ -1032,16 +1032,16 @@\n ls)%0A%09%7D%0A%0A\n+\n %09caminho\n@@ -1056,525 +1056,8 @@\n art)\n-%0A%0A%09directions := %5B%5DPoint %7B%0A%09%09%7B-1, 0%7D,%0A%09%09%7B1, 0%7D,%0A%09%09%7B0, -1%7D,%0A%09%09%7B0, 1%7D,%0A%09%7D%0A%0A%09for !caminho.IsEmpty() %7B%0A%09%09current := path.Top()%0A%09%09visited%5Bcurret.row%5D%5Bcurrent.col%5D = true%0A%0A%09%09if current == end %7B%0A%09%09%09break%0A%09%09%7D%0A%0A%09%09foundNext := false%0A%0A%09%09for _, direction := range directions %7B%0A%09%09%09next := Point %7B%0A%09%09%09%09row: current.row + direction.row,%0A%09%09%09%09col: current.col + direction.col,%0A%09%09%09%7D%0A%0A%09%09%09if isValid(next, maze, visited, rows, cols) %7B%0A%09%09%09%09caminho.Push(next)%0A%09%09%09%09foundNext = true%0A%09%09%09%09break%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%7D%0A%0Afunc printMaze(maze %5B%5D%5B%5Drune) %7B%0A%09\n %0A%7D%0A%0A\n",
+            "lines": "69"
+        },
+        {
+            "label": "2026-07-02_04-07-19",
+            "content": "@@ -1582,74 +1582,8 @@\n  %7B%0A%09\n-for i := 0; i %3C len(maze); i++ %7B%0A%09%09fmt.Println(string(maze%5Bi%5D))%0A%09%7D\n %0A%7D%0A%0A\n",
+            "lines": "105"
+        },
+        {
+            "label": "2026-07-02_04-08-06",
+            "content": "@@ -38,16 +38,24 @@\n %22%0A%09%22os%22%0A\n+%09%22path%22%0A\n %09%22string\n@@ -1173,23 +1173,20 @@\n rent := \n-caminho\n+path\n .Top()%0A%09\n@@ -1195,25 +1195,24 @@\n isited%5Bcurre\n-n\n t.row%5D%5Bcurre\n@@ -1542,48 +1542,8 @@\n %0A%09%09%7D\n-%0A%0A%09%09if !foundNext %7B%0A%09%09%09caminho.Pop()%0A%09%09%7D\n %0A%09%7D%0A\n",
+            "lines": "107"
+        },
+        {
+            "label": "2026-07-02_04-09-47",
+            "content": "@@ -1818,120 +1818,7 @@\n %5Cn')\n-%0A%0A%09maze, start, end := readMaze(reader, rows, cols)%0A%0A%09resolveMaze(maze, start, end, rows, cols)%0A%0A%09printMaze(maze)\n %0A%7D%0A\n",
+            "lines": "110"
+        },
+        {
+            "label": "2026-07-02_04-11-06",
+            "content": "@@ -1578,102 +1578,8 @@\n %0A%09%09%7D\n-%0A%0A%09%09for !caminho.IsEmpty() %7B%0A%09%09%09point := caminho.Pop()%0A%09%09%09maze%5Bpoint.row%5D%5Bpoint.col%5D = '.'%0A%09%09%7D\n %0A%09%7D%0A\n",
+            "lines": "116"
+        },
+        {
+            "label": "2026-07-02_04-14-00",
+            "content": "@@ -1073,24 +1073,25 @@\n s := %5B%5DPoint\n+ \n %7B%0A%09%09%7B-1, 0%7D,\n@@ -1338,16 +1338,17 @@\n := Point\n+ \n %7B%0A%09%09%09%09ro\n@@ -1575,20 +1575,18 @@\n p()%0A%09%09%7D%0A\n-%09%7D%0A\n %0A\n+%09\n %09for !ca\n@@ -1603,16 +1603,17 @@\n pty() %7B%0A\n+%09\n %09%09point \n@@ -1631,16 +1631,17 @@\n Pop()%0A%09%09\n+%09\n maze%5Bpoi\n@@ -1665,16 +1665,20 @@\n %5D = '.'%0A\n+%09%09%7D%0A\n %09%7D%0A%7D%0A%0Afu\n",
+            "lines": "121"
+        },
+        {
+            "label": "2026-07-02_04-15-09",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strings\"\n)\n\ntype Point struct {\n\trow int\n\tcol int\n}\n\nfunc readMaze(reader *bufio.Reader, rows int, cols int) ([][]rune, Point, Point) {\n\tmaze := make([][]rune, rows)\n\n\tstart := Point{}\n\tend := Point{}\n\n\tfor i := 0; i < rows; i++ {\n\t\tline, _ := reader.ReadString('\\n')\n\t\tline = strings.TrimRight(line, \"\\r\\n\")\n\n\t\tmaze[i] = []rune(line)\n\n\t\tfor j := 0; j < cols; j++ {\n\t\t\tif maze[i][j] == 'I' {\n\t\t\t\tstart = Point{i, j}\n\t\t\t}\n\n\t\t\tif maze[i][j] == 'F' {\n\t\t\t\tend = Point{i, j}\n\t\t\t}\n\t\t}\n\t}\n\n\treturn maze, start, end\n}\n\nfunc isValid(point Point, maze [][]rune, visited [][]bool, rows int, cols int) bool {\n\tif point.row < 0 || point.row >= rows || point.col < 0 || point.col >= cols ||\n\t\tmaze[point.row][point.col] == '#' || visited[point.row][point.col] {\n\t\treturn false\n\t}\n\n\treturn true\n}\n\nfunc resolveMaze(maze [][]rune, start Point, end Point, rows int, cols int) {\n\tcaminho := NewStack[Point]()\n\n\tvisited := make([][]bool, rows)\n\n\tfor i := 0; i < rows; i++ {\n\t\tvisited[i] = make([]bool, cols)\n\t}\n\n\tcaminho.Push(start)\n\n\tdirections := []Point{\n\t\t{-1, 0},\n\t\t{1, 0},\n\t\t{0, -1},\n\t\t{0, 1},\n\t}\n\n\tfor !caminho.IsEmpty() {\n\t\tcurrent := caminho.Top()\n\t\tvisited[current.row][current.col] = true\n\n\t\tif current == end {\n\t\t\tbreak\n\t\t}\n\n\t\tfoundNext := false\n\n\t\tfor _, direction := range directions {\n\t\t\tnext := Point{\n\t\t\t\trow: current.row + direction.row,\n\t\t\t\tcol: current.col + direction.col,\n\t\t\t}\n\n\t\t\tif isValid(next, maze, visited, rows, cols) {\n\t\t\t\tcaminho.Push(next)\n\t\t\t\tfoundNext = true\n\t\t\t\tbreak\n\t\t\t}\n\t\t}\n\n\t\tif !foundNext {\n\t\t\tcaminho.Pop()\n\t\t}\n\t}\n\n\tfor !caminho.IsEmpty() {\n\t\tpoint := caminho.Pop()\n\t\tmaze[point.row][point.col] = '.'\n\t}\n}\n\nfunc printMaze(maze [][]rune) {\n\tfor i := 0; i < len(maze); i++ {\n\t\tfmt.Println(string(maze[i]))\n\t}\n}\n\nfunc main() {\n\treader := bufio.NewReader(os.Stdin)\n\n\tvar rows, cols int\n\tfmt.Fscan(reader, &rows, &cols)\n\n\treader.ReadString('\\n')\n\n\tmaze, start, end := readMaze(reader, rows, cols)\n\n\tresolveMaze(maze, start, end, rows, cols)\n\n\tprintMaze(maze)\n}\n",
+            "lines": "121"
+        }
+    ]
+}

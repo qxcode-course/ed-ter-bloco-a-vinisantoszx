@@ -1,0 +1,93 @@
+2026-07-06 00:00:43, MOVE, v:1, k:ed@sudoku, mode:PICK
+2026-07-06 00:00:43, EXEC, v:1, k:ed@sudoku, mode:FULL, rate:0, size:18
+2026-07-06 00:00:44, MOVE, v:1, k:ed@sudoku, mode:BACK
+2026-07-06 00:00:53, MOVE, v:1, k:ed@sudoku, mode:PICK
+2026-07-06 00:00:55, EXEC, v:1, k:ed@sudoku, mode:FULL, rate:0
+2026-07-06 00:00:55, MOVE, v:1, k:ed@sudoku, mode:BACK
+2026-07-06 00:01:03, MOVE, v:1, k:ed@sudoku, mode:PICK
+2026-07-06 00:01:06, EXEC, v:1, k:ed@sudoku, mode:FULL, rate:0
+2026-07-06 00:01:06, MOVE, v:1, k:ed@sudoku, mode:EDIT
+2026-07-06 00:14:44, MOVE, v:1, k:ed@sudoku, mode:PICK
+2026-07-06 00:14:44, EXEC, v:1, k:ed@sudoku, mode:FULL, rate:0, size:30
+2026-07-06 00:14:45, MOVE, v:1, k:ed@sudoku, mode:BACK
+2026-07-06 00:14:49, MOVE, v:1, k:ed@sudoku, mode:PICK
+2026-07-06 00:15:04, MOVE, v:1, k:ed@sudoku, mode:PICK
+2026-07-06 00:19:53, MOVE, v:1, k:ed@sudoku, mode:EDIT
+2026-07-06 00:20:25, EXEC, v:1, k:ed@sudoku, mode:FULL, rate:0, size:38
+2026-07-06 00:22:42, EXEC, v:1, k:ed@sudoku, mode:FULL, rate:0, size:40
+2026-07-06 00:22:45, MOVE, v:1, k:ed@sudoku, mode:BACK
+2026-07-06 00:22:57, MOVE, v:1, k:ed@sudoku, mode:PICK
+2026-07-06 00:22:58, EXEC, v:1, k:ed@sudoku, mode:FULL, rate:0
+2026-07-06 00:22:58, MOVE, v:1, k:ed@sudoku, mode:EDIT
+2026-07-06 01:05:18, EXEC, v:1, k:ed@sudoku, mode:FULL, size:42, fail:COMP
+2026-07-06 01:05:20, MOVE, v:1, k:ed@sudoku, mode:BACK
+2026-07-06 01:05:22, MOVE, v:1, k:ed@sudoku, mode:PICK
+2026-07-06 01:05:23, EXEC, v:1, k:ed@sudoku, mode:FULL, fail:COMP
+2026-07-06 01:05:24, MOVE, v:1, k:ed@sudoku, mode:BACK
+2026-07-06 01:05:37, MOVE, v:1, k:ed@sudoku, mode:PICK
+2026-07-06 01:05:38, EXEC, v:1, k:ed@sudoku, mode:FULL, size:42, fail:COMP
+2026-07-06 01:05:46, MOVE, v:1, k:ed@sudoku, mode:EDIT
+2026-07-06 01:17:54, MOVE, v:1, k:ed@sudoku, mode:EDIT
+2026-07-06 01:19:23, EXEC, v:1, k:ed@sudoku, mode:FULL, size:54, fail:COMP
+2026-07-06 01:19:38, MOVE, v:1, k:ed@sudoku, mode:PICK
+2026-07-06 01:19:38, EXEC, v:1, k:ed@sudoku, mode:FULL, rate:0, size:56
+2026-07-06 01:19:39, MOVE, v:1, k:ed@sudoku, mode:BACK
+2026-07-06 01:19:41, MOVE, v:1, k:ed@sudoku, mode:PICK
+2026-07-06 01:19:42, EXEC, v:1, k:ed@sudoku, mode:FULL, rate:0
+2026-07-06 01:19:42, MOVE, v:1, k:ed@sudoku, mode:BACK
+2026-07-06 01:19:44, MOVE, v:1, k:ed@sudoku, mode:PICK
+2026-07-06 01:20:20, SELF, v:1, k:ed@pilha, self:1, rate:100, concept:1, problem:1, debug:1
+2026-07-06 01:20:29, SELF, v:1, k:ed@bufferring, self:1, rate:100, concept:1, debug:1
+2026-07-06 01:20:55, MOVE, v:1, k:ed@sudoku, mode:PICK
+2026-07-06 01:20:55, EXEC, v:1, k:ed@sudoku, mode:FULL, rate:0
+2026-07-06 01:24:30, EXEC, v:1, k:ed@sudoku, mode:FULL, rate:0, size:72
+2026-07-06 01:24:31, MOVE, v:1, k:ed@sudoku, mode:BACK
+2026-07-06 01:24:35, MOVE, v:1, k:ed@sudoku, mode:PICK
+2026-07-06 01:24:37, EXEC, v:1, k:ed@sudoku, mode:FULL, rate:0
+2026-07-06 01:24:36, MOVE, v:1, k:ed@sudoku, mode:EDIT
+2026-07-06 01:24:47, MOVE, v:1, k:ed@sudoku, mode:EDIT
+2026-07-06 01:29:56, MOVE, v:1, k:ed@sudoku, mode:EDIT
+2026-07-06 01:33:56, EXEC, v:1, k:ed@sudoku, mode:FULL, rate:0, size:101
+2026-07-06 01:34:54, MOVE, v:1, k:ed@sudoku, mode:EDIT
+2026-07-06 01:33:56, MOVE, v:1, k:ed@sudoku, mode:EDIT
+2026-07-06 01:35:42, EXEC, v:1, k:ed@sudoku, mode:FULL, size:111, fail:COMP
+2026-07-06 01:38:21, EXEC, v:1, k:ed@sudoku, mode:FULL, rate:0, size:126
+2026-07-06 01:39:02, EXEC, v:1, k:ed@sudoku, mode:FULL, rate:100, size:126
+2026-07-06 01:39:04, MOVE, v:1, k:ed@sudoku, mode:BACK
+2026-07-06 01:39:06, MOVE, v:1, k:ed@sudoku, mode:PICK
+2026-07-06 01:39:07, EXEC, v:1, k:ed@sudoku, mode:FULL, rate:100
+2026-07-06 01:39:07, MOVE, v:1, k:ed@sudoku, mode:BACK
+2026-07-06 01:39:18, SELF, v:1, k:ed@sudoku, self:1, rate:100, study:120, concept:1, problem:1, debug:1
+2026-07-06 01:39:01, MOVE, v:1, k:ed@sudoku, mode:EDIT
+2026-07-06 01:39:07, MOVE, v:1, k:ed@sudoku, mode:EDIT
+2026-07-06 01:41:21, MOVE, v:1, k:ed@iterador, mode:PICK
+2026-07-06 01:41:23, EXEC, v:1, k:ed@iterador, mode:FULL, rate:33
+2026-07-06 01:41:23, MOVE, v:1, k:ed@iterador, mode:EDIT
+2026-07-06 01:55:48, EXEC, v:1, k:ed@iterador, mode:FULL, rate:33
+2026-07-06 01:55:49, MOVE, v:1, k:ed@iterador, mode:BACK
+2026-07-06 01:56:07, MOVE, v:1, k:ed@iterador, mode:PICK
+2026-07-06 01:56:08, EXEC, v:1, k:ed@iterador, mode:FULL, rate:33
+2026-07-06 01:56:08, MOVE, v:1, k:ed@iterador, mode:EDIT
+2026-07-06 02:05:05, MOVE, v:1, k:ed@iterador, mode:EDIT
+2026-07-06 02:10:57, MOVE, v:1, k:ed@iterador, mode:EDIT
+2026-07-06 02:15:56, MOVE, v:1, k:ed@iterador, mode:EDIT
+2026-07-06 02:16:32, EXEC, v:1, k:ed@iterador, mode:FULL, rate:66, size:122
+2026-07-06 02:16:36, EXEC, v:1, k:ed@iterador, mode:FULL, rate:66
+2026-07-06 02:16:36, EXEC, v:1, k:ed@iterador, mode:FULL, rate:66
+2026-07-06 02:16:37, EXEC, v:1, k:ed@iterador, mode:FULL, rate:66
+2026-07-06 02:18:18, EXEC, v:1, k:ed@iterador, mode:FULL, rate:66, size:128
+2026-07-06 02:18:30, EXEC, v:1, k:ed@iterador, mode:FULL, rate:100, size:128
+2026-07-06 02:18:31, MOVE, v:1, k:ed@iterador, mode:BACK
+2026-07-06 02:18:32, MOVE, v:1, k:ed@iterador, mode:PICK
+2026-07-06 02:18:33, EXEC, v:1, k:ed@iterador, mode:FULL, rate:100
+2026-07-06 02:18:34, MOVE, v:1, k:ed@iterador, mode:BACK
+2026-07-06 02:18:44, SELF, v:1, k:ed@iterador, self:1, rate:100, study:50, concept:1, problem:1, debug:1
+2026-07-06 02:18:51, MOVE, v:1, k:ed@iterador, mode:PICK
+2026-07-06 02:18:51, EXEC, v:1, k:ed@iterador, mode:FULL, rate:100
+2026-07-06 02:18:52, MOVE, v:1, k:ed@iterador, mode:BACK
+2026-07-06 02:19:43, MOVE, v:1, k:ed@prin_list1, mode:PICK
+2026-07-06 02:19:44, EXEC, v:1, k:ed@prin_list1, mode:LOCK, rate:0
+2026-07-06 02:19:54, EXEC, v:1, k:ed@prin_list1, mode:LOCK, rate:0
+2026-07-06 02:19:54, MOVE, v:1, k:ed@prin_list1, mode:EDIT
+2026-07-06 02:25:42, EXEC, v:1, k:ed@prin_list1, mode:LOCK, rate:0
+2026-07-06 02:25:43, MOVE, v:1, k:ed@prin_list1, mode:BACK

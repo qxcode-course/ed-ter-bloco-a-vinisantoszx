@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-05_04-44-14",
+            "content": "@@ -115,22 +115,27 @@\n  %7B%0A%09\n-left := 0%0A%09r%0A%0A\n+_, _ = slice, value\n %0A%09re\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-07-05_13-50-54",
+            "content": "@@ -127,33 +127,9 @@\n 0%0A%09r\n-ight := len(slice) - 1%0A%0A%09\n+%0A\n %0A%0A%09r\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-07-05_13-51-15",
+            "content": "@@ -152,266 +152,19 @@\n 1%0A%0A%09\n-for left %3C= right %7B%0A%09%09mid := (left + right) / 2%0A%0A%09%09if slice%5Bmid%5D == value %7B%0A%09%09%09for mid+1 %3C len(slice) && slice%5Bmid+1%5D == value %7B%0A%09%09%09%09mid++%0A%09%09%09%7D%0A%0A%09%09%09return mid%0A%09%09%7D%0A%0A%09%09if slice%5Bmid%5D %3C value %7B%0A%09%09%09left = mid + 1%0A%09%09%7D else %7B%0A%09%09%09right = mid - 1%0A%09%09%7D%0A%09%7D%0A%0A%09return left\n+%0A%0A%09return 0\n %0A%7D%0A%0A\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-07-05_13-59-51",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc MagicSearch(slice []int, value int) int {\n\tleft := 0\n\tright := len(slice) - 1\n\n\tfor left <= right {\n\t\tmid := (left + right) / 2\n\n\t\tif slice[mid] == value {\n\t\t\tfor mid+1 < len(slice) && slice[mid+1] == value {\n\t\t\t\tmid++\n\t\t\t}\n\n\t\t\treturn mid\n\t\t}\n\n\t\tif slice[mid] < value {\n\t\t\tleft = mid + 1\n\t\t} else {\n\t\t\tright = mid - 1\n\t\t}\n\t}\n\n\treturn left\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tparts := strings.Fields(scanner.Text())\n\tslice := make([]int, 0, 1)\n\tfor _, elem := range parts[1 : len(parts)-1] {\n\t\tvalue, _ := strconv.Atoi(elem)\n\t\tslice = append(slice, value)\n\t}\n\n\tscanner.Scan()\n\tvalue, _ := strconv.Atoi(scanner.Text())\n\tresult := MagicSearch(slice, value)\n\tfmt.Println(result)\n}\n",
+            "lines": "50"
+        }
+    ]
+}

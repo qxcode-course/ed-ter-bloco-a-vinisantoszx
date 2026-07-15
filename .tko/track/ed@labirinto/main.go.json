@@ -1,0 +1,89 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-07_01-45-49",
+            "content": "@@ -45,39 +45,8 @@\n %0A)%0A%0A\n-type Pos struct %7B%0A%09l, c int%0A%7D%0A%0A\n %09_, \n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-04-08_01-30-55",
+            "content": "@@ -76,49 +76,38 @@\n %0A%7D%0A%0A\n-func procura(grid %5B%5D%5B%5Drune, curr \n+%09_, _, _ = grid, start\n Pos, end\n  Pos\n@@ -106,24 +106,25 @@\n  end\n- \n Pos\n-) bool %7B%0A%0A%7D%0A\n+%0A%09return false\n %0Afun\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-04-08_01-31-53",
+            "content": "@@ -130,21 +130,8 @@\n l %7B%0A\n-%09return false\n %0A%7D%0A%0A\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-04-08_01-32-05",
+            "content": "@@ -77,22 +77,23 @@\n %7D%0A%0Afunc \n-search\n+procura\n (grid %5B%5D\n@@ -130,138 +130,8 @@\n l %7B%0A\n-%09if curr.l %3C 0 %7C%7C curr.l %3E= len(grid) %7C%7C curr.c %3C 0 %7C%7C curr.c %3E= len(grid%5B0%5D) %7C%7C grid%5Bcurr.l%5D%5Bcurr.c%5D != ' ' %7B%0A%09%09return false%0A%09%7D%0A%0A\n %09ret\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-04-08_01-32-51",
+            "content": "@@ -259,37 +259,8 @@\n %09%7D%0A%0A\n-%09grid%5Bcurr.l%5D%5Bcurr.c%5D = '.'%0A%0A\n %09ret\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-04-08_01-34-28",
+            "content": "@@ -288,44 +288,8 @@\n .'%0A%0A\n-%09if curr == end %7B%0A%09%09return true%0A%09%7D%0A%0A\n %09ret\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-04-08_01-38-21",
+            "content": "@@ -324,128 +324,8 @@\n %09%7D%0A%0A\n-%09vizinhos := %5B%5DPos%7B%0A%09%09%7Bcurr.l - 1, curr.c%7D,%0A%09%09%7Bcurr.l + 1, curr.c%7D,%0A%09%09%7Bcurr.l, curr.c - 1%7D,%0A%09%09%7Bcurr.l, curr.c + 1%7D,%0A%09%7D%0A%0A\n %09ret\n",
+            "lines": "62"
+        },
+        {
+            "label": "2026-04-08_01-39-00",
+            "content": "@@ -254,16 +254,17 @@\n alse%0A%09%7D%0A\n+%0A\n %09grid%5Bcu\n@@ -283,16 +283,17 @@\n %5D = '.'%0A\n+%0A\n %09if curr\n",
+            "lines": "69"
+        },
+        {
+            "label": "2026-04-08_01-46-43",
+            "content": "@@ -282,17 +282,16 @@\n %5D = '.'%0A\n-%0A\n %09if curr\n",
+            "lines": "67"
+        },
+        {
+            "label": "2026-04-08_01-47-05",
+            "content": "@@ -254,17 +254,16 @@\n alse%0A%09%7D%0A\n-%0A\n %09grid%5Bcu\n@@ -444,60 +444,20 @@\n %7D%0A%0A%09\n-for _, vizinho := range vizinhos %7B%0A%09%09return true%0A%09%7D%0A\n+return false\n %0A%7D%0A%0A\n",
+            "lines": "68"
+        },
+        {
+            "label": "2026-04-08_01-47-53",
+            "content": "@@ -494,30 +494,16 @@\n rue%0A%09%7D%0A%0A\n-%09return false%0A\n %7D%0A%0Afunc \n",
+            "lines": "72"
+        },
+        {
+            "label": "2026-04-08_01-48-03",
+            "content": "@@ -482,44 +482,19 @@\n %7B%0A%09%09\n-if search(grid, vizinho, end) %7B%0A%0A%09%09%7D\n+return true\n %0A%09%7D%0A\n",
+            "lines": "73"
+        },
+        {
+            "label": "2026-04-08_01-49-16",
+            "content": "@@ -514,22 +514,8 @@\n ) %7B%0A\n-%09%09%09return true\n %0A%09%09%7D\n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-04-08_01-49-28",
+            "content": "@@ -202,16 +202,47 @@\n grid%5B0%5D)\n+ %7C%7C grid%5Bcurr.l%5D%5Bcurr.c%5D != ' '\n  %7B%0A%09%09ret\n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-04-08_01-49-53",
+            "content": "@@ -206,39 +206,8 @@\n %5B0%5D)\n- %7C%7C grid%5Bcurr.l%5D%5Bcurr.c%5D != ' '\n  %7B%0A%09\n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-04-08_01-49-58",
+            "content": "@@ -537,36 +537,8 @@\n %09%7D%0A%0A\n-%09grid%5Bcurr.l%5D%5Bcurr.c%5D = ' '%0A\n %09ret\n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-04-08_01-52-42",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\ntype Pos struct {\n\tl, c int\n}\n\nfunc search(grid [][]rune, curr Pos, end Pos) bool {\n\tif curr.l < 0 || curr.l >= len(grid) || curr.c < 0 || curr.c >= len(grid[0]) || grid[curr.l][curr.c] != ' ' {\n\t\treturn false\n\t}\n\n\tgrid[curr.l][curr.c] = '.'\n\n\tif curr == end {\n\t\treturn true\n\t}\n\n\tvizinhos := []Pos{\n\t\t{curr.l - 1, curr.c},\n\t\t{curr.l + 1, curr.c},\n\t\t{curr.l, curr.c - 1},\n\t\t{curr.l, curr.c + 1},\n\t}\n\n\tfor _, vizinho := range vizinhos {\n\t\tif search(grid, vizinho, end) {\n\t\t\treturn true\n\t\t}\n\t}\n\n\tgrid[curr.l][curr.c] = ' '\n\treturn false\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tnl_nc := scanner.Text()\n\tvar nl, nc int\n\tfmt.Sscanf(nl_nc, \"%d %d\", &nl, &nc)\n\tgrid := make([][]rune, nl)\n\n\t// L\u00ea a gridriz\n\tfor i := range nl {\n\t\tscanner.Scan()\n\t\tgrid[i] = []rune(scanner.Text())\n\t}\n\n\t// Procura posi\u00e7\u00f5es de in\u00edcio e endPos e conserta para _\n\tvar startPos, endPos Pos\n\tfor l := range nl {\n\t\tfor c := range nc {\n\t\t\tif grid[l][c] == 'I' {\n\t\t\t\tgrid[l][c] = ' '\n\t\t\t\tstartPos = Pos{l, c}\n\t\t\t}\n\t\t\tif grid[l][c] == 'F' {\n\t\t\t\tgrid[l][c] = ' '\n\t\t\t\tendPos = Pos{l, c}\n\t\t\t}\n\t\t}\n\t}\n\n\tsearch(grid, startPos, endPos)\n\n\t// Imprime o labirinto final\n\tfor _, line := range grid {\n\t\tfmt.Println(string(line))\n\t}\n}\n",
+            "lines": "76"
+        }
+    ]
+}

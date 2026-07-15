@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-20_14-17-15",
+            "content": "@@ -75,152 +75,11 @@\n byte\n-, l, c int) %7B%0A%09linhas := len(grid)%0A%09colunas := len(grid%5B0%5D)%0A%0A%09if l %3C 0 %7C%7C l %3E= linhas %7C%7C c %3C 0 %7C%7C c %3E= colunas %7C%7C grid%5Bl%5D%5Bc%5D == '0'%7B%0A%09%09return%0A%09%7D\n+) %7B\n %0A%0A%7D%0A\n@@ -257,53 +257,24 @@\n 0%0A%0A%09\n-linhas := len(grid)%0A%09colunas := len(grid%5B0%5D)%0A\n+_ := grid, nIlha\n %0A%09re\n@@ -278,21 +278,17 @@\n %09return \n-nIlha\n+0\n %0A%7D%0A%0A// N\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-05-20_14-23-58",
+            "content": "@@ -202,17 +202,16 @@\n %5D == '0'\n- \n %7B%0A%09%09retu\n@@ -221,135 +221,8 @@\n %09%7D%0A%0A\n-%09grid%5Bl%5D%5Bc%5D = '0'%0A%0A%09afundarIlha(grid, l-1, c)%0A%09afundarIlha(grid, l+1, c)%0A%09afundarIlha(grid, l, c-1)%0A%09afundarIlha(grid, l, c+1)%0A\n %7D%0A%0A/\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-05-20_14-25-06",
+            "content": "@@ -572,123 +572,8 @@\n %5D)%0A%0A\n-%09for l := 0; l %3C linhas; l++ %7B%0A%09%09for c := 0; c %3C colunas; c++ %7B%0A%09%09%09if grid%5Bl%5D%5Bc%5D == '1' %7B%0A%09%09%09%09nIlha++%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A\n %09ret\n",
+            "lines": "50"
+        },
+        {
+            "label": "2026-05-20_14-27-08",
+            "content": "@@ -673,37 +673,8 @@\n ha++\n-%0A%0A%09%09%09%09afundarIlha(grid, l, c)\n %0A%09%09%09\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-05-20_14-27-40",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\nfunc afundarIlha(grid [][]byte, l, c int) {\n\tlinhas := len(grid)\n\tcolunas := len(grid[0])\n\n\tif l < 0 || l >= linhas || c < 0 || c >= colunas || grid[l][c] == '0' {\n\t\treturn\n\t}\n\n\tgrid[l][c] = '0'\n\n\tafundarIlha(grid, l-1, c)\n\tafundarIlha(grid, l+1, c)\n\tafundarIlha(grid, l, c-1)\n\tafundarIlha(grid, l, c+1)\n}\n\n// N\u00e3o modifique a assinatura da fun\u00e7\u00e3o numIslands\n// Ela \u00e9 a fun\u00e7\u00e3o que ser\u00e1 chamada no LeetCode para resolver o problema\nfunc numIslands(grid [][]byte) int {\n\tnIlha := 0\n\n\tlinhas := len(grid)\n\tcolunas := len(grid[0])\n\n\tfor l := 0; l < linhas; l++ {\n\t\tfor c := 0; c < colunas; c++ {\n\t\t\tif grid[l][c] == '1' {\n\t\t\t\tnIlha++\n\n\t\t\t\tafundarIlha(grid, l, c)\n\t\t\t}\n\t\t}\n\t}\n\n\treturn nIlha\n}\n\n// N\u00e3o modifique a fun\u00e7\u00e3o main\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tline := scanner.Text()\n\tvar nl, nc int\n\tfmt.Sscanf(line, \"%d %d\", &nl, &nc)\n\tgrid := make([][]byte, nl)\n\tfor i := 0; i < nl; i++ {\n\t\tscanner.Scan()\n\t\tgrid[i] = []byte(scanner.Text())\n\t}\n\tresult := numIslands(grid)\n\tfmt.Println(result)\n}\n",
+            "lines": "60"
+        }
+    ]
+}

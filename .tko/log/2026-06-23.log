@@ -1,0 +1,21 @@
+2026-06-23 01:23:55, MOVE, v:1, k:ed@fila_enc, mode:PICK
+2026-06-23 01:23:56, EXEC, v:1, k:ed@fila_enc, mode:FULL, size:101, fail:COMP
+2026-06-23 01:29:32, MOVE, v:1, k:ed@fila_enc, mode:BACK
+2026-06-23 01:37:59, MOVE, v:1, k:ed@fila_enc, mode:PICK
+2026-06-23 01:38:45, MOVE, v:1, k:ed@fila_enc, mode:EDIT
+2026-06-23 01:43:45, MOVE, v:1, k:ed@fila_enc, mode:EDIT
+2026-06-23 01:43:49, EXEC, v:1, k:ed@fila_enc, mode:FULL, rate:33, size:115
+2026-06-23 01:45:02, EXEC, v:1, k:ed@fila_enc, mode:FULL, rate:66, size:115
+2026-06-23 01:45:02, MOVE, v:1, k:ed@fila_enc, mode:EDIT
+2026-06-23 01:48:34, MOVE, v:1, k:ed@fila_enc, mode:EDIT
+2026-06-23 01:50:05, EXEC, v:1, k:ed@fila_enc, mode:FULL, rate:100, size:125
+2026-06-23 01:50:07, MOVE, v:1, k:ed@fila_enc, mode:BACK
+2026-06-23 01:50:13, MOVE, v:1, k:ed@fila_enc, mode:PICK
+2026-06-23 01:50:14, EXEC, v:1, k:ed@fila_enc, mode:FULL, rate:100
+2026-06-23 01:50:14, EXEC, v:1, k:ed@fila_enc, mode:FULL, rate:100
+2026-06-23 01:50:15, MOVE, v:1, k:ed@fila_enc, mode:BACK
+2026-06-23 01:50:42, SELF, v:1, k:ed@fila_enc, self:1, rate:100, study:70, friend:Chrystian, concept:1
+2026-06-23 01:54:23, SELF, v:1, k:ed@dfs_read, self:1, rate:100
+2026-06-23 01:54:36, MOVE, v:1, k:ed@dfs_read, mode:PICK
+2026-06-23 01:54:56, MOVE, v:1, k:ed@dfs_read, mode:BACK
+2026-06-23 01:55:02, SELF, v:1, k:ed@dfs_read, self:1

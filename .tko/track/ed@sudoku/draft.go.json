@@ -1,0 +1,74 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-05_00-48-40",
+            "content": "@@ -23,240 +23,8 @@\n mt%22%0A\n-%0Afunc existeNaLinha(grid %5B%5D%5B%5Drune, linha int, value rune) bool %7B%0A    n := len(grid)%0A%0A    for coluna := 0; coluna %3C n; coluna++ %7B%0A        if grid%5Blinha%5D%5Bcoluna%5D == value %7B%0A            return true%0A        %7D%0A    %7D%0A%0A    return false%0A%7D%0A%0A\n func\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-07-06_00-00-43",
+            "content": "@@ -255,238 +255,8 @@\n %0A%7D%0A%0A\n-func existeNaColuna(grid %5B%5D%5B%5Drune, coluna int, value rune) bool %7B%0A    n := len(grid)%0A%0A    for linha := 0; linha %3C n; linha++ %7B%0A        if grid%5Blinha%5D%5Bcoluna%5D == value %7B%0A            return true%0A        %7D%0A    %7D%0A%0A    return false%0A%7D%0A%0A\n func\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-07-06_00-14-44",
+            "content": "@@ -485,99 +485,8 @@\n %0A%7D%0A%0A\n-func tamanhoQuadrante(n int) int %7B%0A    if n == 4 %7B%0A        return 2%0A    %7D%0A%0A    return 3%0A%7D%0A%0A\n func\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-07-06_00-20-25",
+            "content": "@@ -572,18 +572,16 @@\n rn 3%0A%7D%0A%0A\n-%0A%0A\n func mai\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-07-06_00-22-42",
+            "content": "@@ -576,95 +576,8 @@\n %0A%7D%0A%0A\n-func existeNoQuadrante(grid %5B%5D%5B%5Drune, linha int, coluna int, value rune) bool %7B%0A    %0A%7D \n %0A%0Afu\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-07-06_01-05-18",
+            "content": "@@ -656,21 +656,16 @@\n l %7B%0A    \n-n := \n %0A%7D %0A%0Afun\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-07-06_01-05-38",
+            "content": "@@ -665,337 +665,8 @@\n  := \n-len(grid)%0A    tam := tamanhoQuadrante(n)%0A%0A    linhaInicio := (linha / tam) * tam%0A    colunaInicio := (coluna / tam) * tam%0A%0A    for i := linhaInicio; i %3C linhaInicio+tam; i++ %7B%0A        for j := colunaInicio; j %3C colunaInicio+tam; j++ %7B%0A            if grid%5Bi%5D%5Bj%5D == value %7B%0A                return true%0A            %7D%0A        %7D%0A    %7D\n %0A%7D %0A\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-07-06_01-19-23",
+            "content": "@@ -990,34 +990,16 @@\n  %7D%0A    %7D\n-%0A%0A    return false\n %0A%7D %0A%0Afun\n",
+            "lines": "54"
+        },
+        {
+            "label": "2026-07-06_01-19-38",
+            "content": "@@ -1014,328 +1014,9 @@\n se%0A%7D\n-%0A%0Afunc podeColocar(grid %5B%5D%5B%5Drune, linha int, coluna int, value rune) bool %7B%0A    if existeNaLinha(grid, linha, value) %7B%0A        return false%0A    %7D%0A%0A    if existeNaColuna(grid, coluna, value) %7B%0A        return false%0A    %7D%0A%0A    if existeNoQuadrante(grid, linha, coluna, value) %7B%0A        return false%0A    %7D%0A%0A    return true%0A%7D\n+ \n %0A%0Afu\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-07-06_01-24-30",
+            "content": "@@ -1336,535 +1336,8 @@\n %0A%7D%0A%0A\n-func resolver(grid %5B%5D%5B%5Drune, i int) bool%7B%0A    n := len(grid)%0A%0A    if i == n*n %7B%0A        return true%0A    %7D%0A%0A    linha := i / n%0A    coluna := i %25 n%0A%0A    if grid%5Blinha%5D%5Bcoluna%5D != '.' %7B%0A        return resolver(grid, i+1)%0A    %7D%0A%0A    for value := '1'; value %3C rune('0'+n); value++ %7B%0A        if podeColocar(grid, linha, coluna, value) %7B%0A            grid%5Blinha%5D%5Bcoluna%5D = value%0A%0A            if resolver(grid, i+1) %7B%0A                return true%0A            %7D%0A%0A            grid%5Blinha%5D%5Bcoluna%5D = '.'%0A        %7D%0A    %7D%0A%0A    return false%0A%7D%0A%0A\n func\n",
+            "lines": "72"
+        },
+        {
+            "label": "2026-07-06_01-33-56",
+            "content": "@@ -10,37 +10,20 @@\n ain%0A\n-%0A\n import \n-(%0A%09\n %22fmt%22\n-%0A%09%22strings%22%0A)\n %0A%0Afu\n@@ -1863,122 +1863,8 @@\n %0A%7D%0A%0A\n-func imprimir(grid %5B%5D%5B%5Drune) %7B%0A    for i := 0; i %3C len(grid); i++ %7B%0A        fmt.Println(string(grid%5Bi%5D))%0A    %7D%0A%7D%0A%0A\n func\n",
+            "lines": "101"
+        },
+        {
+            "label": "2026-07-06_01-35-42",
+            "content": "@@ -20,17 +20,8 @@\n t (%0A\n-%09%22bufio%22%0A\n %09%22fm\n@@ -25,17 +25,22 @@\n %22fmt%22%0A%09%22\n-o\n+string\n s%22%0A)%0A%0Afu\n@@ -2012,272 +2012,35 @@\n     \n-scanner := bufio.NewScanner(os.Stdin)%0A%0A    var n int%0A    fmt.Scan(&n)%0A%0A    grid := make(%5B%5D%5B%5Drune, n)%0A%0A    for i := 0; i %3C n; i++ %7B%0A        scanner.Scan()%0A        linha := scanner.Text()%0A        grid%5Bi%5D = %5B%5Drune(linha)%0A    %7D%0A%0A    resolver(grid, 0)%0A    imprimir(grid\n+fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
+            "lines": "111"
+        },
+        {
+            "label": "2026-07-06_01-38-21",
+            "content": "@@ -1607,17 +1607,16 @@\n  value %3C\n-=\n  rune('0\n",
+            "lines": "126"
+        },
+        {
+            "label": "2026-07-06_01-39-02",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\nfunc existeNaLinha(grid [][]rune, linha int, value rune) bool {\n    n := len(grid)\n\n    for coluna := 0; coluna < n; coluna++ {\n        if grid[linha][coluna] == value {\n            return true\n        }\n    }\n\n    return false\n}\n\nfunc existeNaColuna(grid [][]rune, coluna int, value rune) bool {\n    n := len(grid)\n\n    for linha := 0; linha < n; linha++ {\n        if grid[linha][coluna] == value {\n            return true\n        }\n    }\n\n    return false\n}\n\nfunc tamanhoQuadrante(n int) int {\n    if n == 4 {\n        return 2\n    }\n\n    return 3\n}\n\nfunc existeNoQuadrante(grid [][]rune, linha int, coluna int, value rune) bool {\n    n := len(grid)\n    tam := tamanhoQuadrante(n)\n\n    linhaInicio := (linha / tam) * tam\n    colunaInicio := (coluna / tam) * tam\n\n    for i := linhaInicio; i < linhaInicio+tam; i++ {\n        for j := colunaInicio; j < colunaInicio+tam; j++ {\n            if grid[i][j] == value {\n                return true\n            }\n        }\n    }\n\n    return false\n}\n\nfunc podeColocar(grid [][]rune, linha int, coluna int, value rune) bool {\n    if existeNaLinha(grid, linha, value) {\n        return false\n    }\n\n    if existeNaColuna(grid, coluna, value) {\n        return false\n    }\n\n    if existeNoQuadrante(grid, linha, coluna, value) {\n        return false\n    }\n\n    return true\n}\n\nfunc resolver(grid [][]rune, i int) bool{\n    n := len(grid)\n\n    if i == n*n {\n        return true\n    }\n\n    linha := i / n\n    coluna := i % n\n\n    if grid[linha][coluna] != '.' {\n        return resolver(grid, i+1)\n    }\n\n    for value := '1'; value <= rune('0'+n); value++ {\n        if podeColocar(grid, linha, coluna, value) {\n            grid[linha][coluna] = value\n\n            if resolver(grid, i+1) {\n                return true\n            }\n\n            grid[linha][coluna] = '.'\n        }\n    }\n\n    return false\n}\n\nfunc imprimir(grid [][]rune) {\n    for i := 0; i < len(grid); i++ {\n        fmt.Println(string(grid[i]))\n    }\n}\n\nfunc main() {\n    scanner := bufio.NewScanner(os.Stdin)\n\n    var n int\n    fmt.Scan(&n)\n\n    grid := make([][]rune, n)\n\n    for i := 0; i < n; i++ {\n        scanner.Scan()\n        linha := scanner.Text()\n        grid[i] = []rune(linha)\n    }\n\n    resolver(grid, 0)\n    imprimir(grid)\n}\n",
+            "lines": "126"
+        }
+    ]
+}

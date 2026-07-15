@@ -1,0 +1,64 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-05_01-50-44",
+            "content": "@@ -115,89 +115,11 @@\n urn \n-%5B%5DPos%7B%0A%09%09%7Bp.l - 1, p.c%7D,%0A%09%09%7Bp.l + 1, p.c%7D,%0A%09%09%7Bp.l, p.c - 1%7D,%0A%09%09%7Bp.l, p.c + 1%7D,%0A%09%7D\n+nil\n %0A%7D%0A%0A\n",
+            "lines": "70"
+        },
+        {
+            "label": "2026-07-05_02-07-08",
+            "content": "@@ -573,11 +573,8 @@\n ar()\n- %7B%7D\n %0A%0Afu\n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-07-05_02-07-17",
+            "content": "@@ -524,55 +524,40 @@\n  %7B%0A%09\n-fila := NewQueue%5BPos%5D()%0A%09fila.Enqueue(startPos)\n+_, _, _ = grid, startPos, endPos\n %0A%7D%0A%0A\n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-07-05_02-18-49",
+            "content": "@@ -571,42 +571,8 @@\n Pos)\n-%0A%0A%09visitados := make(map%5BPos%5Dbool)\n %0A%7D%0A%0A\n",
+            "lines": "76"
+        },
+        {
+            "label": "2026-07-05_02-19-32",
+            "content": "@@ -606,36 +606,8 @@\n ol)%0A\n-%09visitados%5BstartPos%5D = true%0A\n %7D%0A%0Af\n",
+            "lines": "78"
+        },
+        {
+            "label": "2026-07-05_02-20-01",
+            "content": "@@ -633,168 +633,8 @@\n true\n-%0A%0A%09caminho := make(map%5BPos%5DPos)%0A%09sucesso := false%0A%0A%09for !fila.IsEmpty() %7B%0A%09%09atual, _ := fila.Dequeue()%0A%0A%09%09if atual == endPos %7B%0A%09%09%09sucesso = true%0A%09%09%09break%0A%09%09%7D%0A%09%7D\n %0A%7D%0A%0A\n",
+            "lines": "79"
+        },
+        {
+            "label": "2026-07-05_02-34-45",
+            "content": "@@ -790,208 +790,8 @@\n %0A%09%09%7D\n-%0A%0A%09%09for _, vizinho := range atual.getNeig() %7B%0A%09%09%09if inside(grid, vizinho) && !visitados%5Bvizinho%5D && grid%5Bvizinho.l%5D%5Bvizinho.c%5D != '#' %7B%0A%09%09%09%09visitados%5Bvizinho%5D = true%0A%09%09%09%09fila.Enqueue(vizinho)%0A%09%09%09%7D%0A%09%09%7D\n %0A%09%7D%0A\n",
+            "lines": "91"
+        },
+        {
+            "label": "2026-07-05_02-41-20",
+            "content": "@@ -982,37 +982,8 @@\n ho)%0A\n-%09%09%09%09caminho%5Bvizinho%5D = atual%0A\n %09%09%09%7D\n",
+            "lines": "98"
+        },
+        {
+            "label": "2026-07-05_02-41-47",
+            "content": "@@ -1022,29 +1022,8 @@\n %7D%0A%09%7D\n-%0A%0A%09if sucesso %7B%0A%09%09%0A%09%7D\n %0A%7D%0A%0A\n",
+            "lines": "99"
+        },
+        {
+            "label": "2026-07-05_02-42-28",
+            "content": "@@ -1040,112 +1040,8 @@\n %7B%0A%09%09\n-atual := endPos%0A%0A%09%09for atual != startPos %7B%0A%09%09%09grid%5Batual.l%5D%5Batual.c%5D = '.'%0A%09%09%09atual = caminho%5Batual%5D%0A%09%09%7D\n %0A%09%7D%0A\n",
+            "lines": "103"
+        },
+        {
+            "label": "2026-07-05_02-51-31",
+            "content": "@@ -1145,45 +1145,8 @@\n %09%09%7D%0A\n-%09%09grid%5BstartPos.l%5D%5BstartPos.c%5D = '.'%0A\n %09%7D%0A%7D\n",
+            "lines": "108"
+        },
+        {
+            "label": "2026-07-05_02-52-02",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\ntype Pos struct {\n\tl, c int\n}\n\nfunc (p Pos) getNeig() []Pos {\n\treturn []Pos{\n\t\t{p.l - 1, p.c},\n\t\t{p.l + 1, p.c},\n\t\t{p.l, p.c - 1},\n\t\t{p.l, p.c + 1},\n\t}\n}\n\nfunc inside(grid [][]rune, pos Pos) bool {\n\tnrows := len(grid)\n\tncols := len(grid[0])\n\treturn pos.l >= 0 && pos.l < nrows && pos.c >= 0 && pos.c < ncols\n}\n\nfunc match(grid [][]rune, pos Pos, char rune) bool {\n\treturn inside(grid, pos) && grid[pos.l][pos.c] == char\n}\n\nfunc search(grid [][]rune, startPos Pos, endPos Pos) {\n\tfila := NewQueue[Pos]()\n\tfila.Enqueue(startPos)\n\n\tvisitados := make(map[Pos]bool)\n\tvisitados[startPos] = true\n\n\tcaminho := make(map[Pos]Pos)\n\tsucesso := false\n\n\tfor !fila.IsEmpty() {\n\t\tatual, _ := fila.Dequeue()\n\n\t\tif atual == endPos {\n\t\t\tsucesso = true\n\t\t\tbreak\n\t\t}\n\n\t\tfor _, vizinho := range atual.getNeig() {\n\t\t\tif inside(grid, vizinho) && !visitados[vizinho] && grid[vizinho.l][vizinho.c] != '#' {\n\t\t\t\tvisitados[vizinho] = true\n\t\t\t\tfila.Enqueue(vizinho)\n\t\t\t\tcaminho[vizinho] = atual\n\t\t\t}\n\t\t}\n\t}\n\n\tif sucesso {\n\t\tatual := endPos\n\n\t\tfor atual != startPos {\n\t\t\tgrid[atual.l][atual.c] = '.'\n\t\t\tatual = caminho[atual]\n\t\t}\n\t\tgrid[startPos.l][startPos.c] = '.'\n\t}\n}\n\nfunc voltar() {}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\tvar nl, nc int\n\tscanner.Scan()\n\tline := scanner.Text()\n\tfmt.Sscanf(line, \"%d %d\", &nl, &nc)\n\tmat := make([][]rune, nl) // Inicializa a matriz de runes\n\n\t// Carregando matriz\n\tfor i := range nl {\n\t\tscanner.Scan()\n\t\tline := scanner.Text()\n\t\tmat[i] = []rune(line)\n\t}\n\n\tvar inicio, fim Pos\n\n\t// Procurando inicio e fim e colocando ' ' nas posi\u00e7\u00f5es iniciais\n\tfor l := range nl {\n\t\tfor c := range nc {\n\t\t\tif mat[l][c] == 'I' {\n\t\t\t\tmat[l][c] = ' '\n\t\t\t\tinicio = Pos{l, c}\n\t\t\t}\n\t\t\tif mat[l][c] == 'F' {\n\t\t\t\tmat[l][c] = ' '\n\t\t\t\tfim = Pos{l, c}\n\t\t\t}\n\t\t}\n\t}\n\n\tsearch(mat, inicio, fim)\n\n\tfor _, line := range mat {\n\t\tfmt.Println(string(line)) // Converte o slice de runes de volta para string para imprimir\n\t}\n}\n",
+            "lines": "109"
+        }
+    ]
+}

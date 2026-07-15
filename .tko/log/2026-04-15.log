@@ -1,0 +1,9 @@
+2026-04-15 12:06:03, MOVE, v:1, k:ed@fractais_png, mode:PICK
+2026-04-15 12:06:08, EXEC, v:1, k:ed@fractais_png, mode:LOCK, rate:0
+2026-04-15 12:06:08, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-15 12:06:08, MOVE, v:1, k:ed@fractais_png, mode:EDIT
+2026-04-15 13:24:09, SELF, v:1, k:ed@fractais_png, self:1, rate:20, study:60
+2026-04-15 13:24:58, SELF, v:1, k:ed@fractais_png, self:1, rate:100, study:60
+2026-04-15 13:25:06, SELF, v:1, k:ed@fractais_png, self:1, rate:60, study:60
+2026-04-15 13:25:12, SELF, v:1, k:ed@fractais_png, self:1, rate:20, study:60
+2026-04-15 13:28:59, MOVE, v:1, k:ed@fractais_png, mode:PICK

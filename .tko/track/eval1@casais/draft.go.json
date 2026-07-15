@@ -1,0 +1,189 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-14_13-18-30",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -33,17 +33,20 @@\n ain() %7B%0A\n-%09\n+    \n var numc\n@@ -63,17 +63,20 @@\n ze int%0A%0A\n-%09\n+    \n fmt.Scan\n@@ -85,17 +85,20 @@\n vsize)%0A%0A\n-%09\n+    \n casais :\n@@ -119,17 +119,20 @@\n vsize)%0A%0A\n-%09\n+    \n for i :=\n@@ -152,18 +152,24 @@\n ; i++ %7B%0A\n-%09%09\n+        \n fmt.Scan\n@@ -180,21 +180,27 @@\n ais%5Bi%5D)%0A\n-%09%7D%0A%0A%09\n+    %7D%0A%0A    \n for i :=\n@@ -220,18 +220,24 @@\n ; i++ %7B%0A\n-%09%09\n+        \n for j :=\n@@ -257,19 +257,28 @@\n ; j++ %7B%0A\n-%09%09%09\n+            \n if casai\n@@ -304,20 +304,32 @@\n * -1) %7B%0A\n-%09%09%09%09\n+                \n casais =\n@@ -359,59 +359,64 @@\n is)%0A\n-%09%09%09%09numcasais++%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A%09fmt.Println(numcasais)\n+                numcasais++%0A            %7D%0A        %7D%0A    %7D\n %0A%7D%0A\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-04-14_13-18-57",
+            "content": "@@ -267,16 +267,55 @@\n * -1) %7B%0A\n+%09%09%09%09casais = append(casais, numcasais)%0A\n %09%09%09%09numc\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-04-14_13-20-40",
+            "content": "@@ -169,19 +169,16 @@\n %5D)%0A%09%7D%0A%0A%09\n-// \n for i :=\n@@ -199,19 +199,16 @@\n  i++ %7B%0A%09\n-// \n %09for j :\n@@ -230,19 +230,16 @@\n  j++ %7B%0A%09\n-// \n %09%09if cas\n@@ -268,19 +268,16 @@\n  -1) %7B%0A%09\n-// \n %09%09%09numca\n@@ -288,26 +288,17 @@\n ++%0A%09\n-// \n %09%09%7D%0A%09\n-// \n %09%7D%0A%09\n-// \n %7D%0A%0A%09\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-04-14_13-21-19",
+            "content": "@@ -330,16 +330,19 @@\n Println(\n+num\n casais)%0A\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-04-14_13-21-28",
+            "content": "@@ -39,16 +39,27 @@\n ) %7B%0A%09var\n+ numcasais,\n  vsize i\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-04-14_13-21-38",
+            "content": "@@ -157,16 +157,165 @@\n i%5D)%0A%09%7D%0A%0A\n+%09// for i := 0; i %3C vsize; i++ %7B%0A%09// %09for j := 0; j %3C vsize; j++ %7B%0A%09// %09%09if casais%5Bi%5D == (casais%5Bj%5D * -1) %7B%0A%09// %09%09%09numcasais++%0A%09// %09%09%7D%0A%09// %09%7D%0A%09// %7D%0A%0A\n %09fmt.Pri\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-04-14_13-22-57",
+            "content": "@@ -145,16 +145,9 @@\n Scan\n-f(%22%25d%22, \n+(\n casa\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-04-14_13-23-13",
+            "content": "@@ -168,46 +168,9 @@\n %09%7D%0A%0A\n-    for i := 0; i %3C vsize; i++ %7B%0A%09    \n+%09\n fmt.\n@@ -187,18 +187,8 @@\n sais\n-%5Bi%5D)%0A    %7D%0A\n+)\n %0A%7D%0A\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-04-14_13-23-40",
+            "content": "@@ -211,16 +211,18 @@\n mt.Print\n+ln\n (casais%5B\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-04-14_13-23-49",
+            "content": "@@ -43,13 +43,8 @@\n %09var\n- num,\n  vsi\n@@ -137,42 +137,77 @@\n %7B%0A%09%09\n-casais = append(\n+fmt.Scanf(%22%25d%22, \n casais\n-, num\n+%5Bi%5D\n )%0A%09%7D%0A%0A\n-%09\n+    for i := 0; i %3C vsize; i++ %7B%0A%09    \n fmt.\n@@ -215,18 +215,25 @@\n rint\n-ln\n (casais\n-)\n+%5Bi%5D)%0A    %7D\n %0A%0A%7D%0A\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-04-14_13-25-09",
+            "content": "@@ -158,21 +158,19 @@\n end(\n-num%5Bi%5D, vsize\n+casais, num\n )%0A%09%7D\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-14_13-25-49",
+            "content": "@@ -154,22 +154,22 @@\n  append(\n-casais\n+num%5Bi%5D\n , vsize)\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-14_13-26-05",
+            "content": "@@ -39,16 +39,21 @@\n ) %7B%0A%09var\n+ num,\n  vsize i\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-14_13-26-12",
+            "content": "@@ -70,16 +70,114 @@\n vsize)%0A%0A\n+%09casais := make(%5B%5Dint, vsize)%0A%0A%09for i := 0; i %3C vsize; i++ %7B%0A%09%09casais = append(casais, vsize)%0A%09%7D%0A%0A\n %09fmt.Pri\n@@ -181,18 +181,19 @@\n Println(\n-vsize\n+casais\n )%0A%0A%7D%0A\n",
+            "lines": "18"
+        },
+        {
+            "label": "2026-04-14_13-27-17",
+            "content": "@@ -87,11 +87,13 @@\n tln(\n-%221%22\n+vsize\n )%0A%0A%7D\n",
+            "lines": "12"
+        },
+        {
+            "label": "2026-04-14_13-27-29",
+            "content": "@@ -70,11 +70,29 @@\n vsize)%0A%0A\n+%09fmt.Println(%221%22)%0A\n %0A%7D%0A\n",
+            "lines": "12"
+        },
+        {
+            "label": "2026-04-14_13-27-36",
+            "content": "@@ -74,115 +74,7 @@\n e)%0A%0A\n-%09casais := make(%5B%5Dint, vsize)%0A%0A%09for i := 0; i %3C vsize; i++ %7B%0A%09%09fmt.Scan(&casais%5Bi%5D)%0A%09%7D%0A%0A%09fmt.Println(casais)\n %0A%7D%0A\n",
+            "lines": "11"
+        },
+        {
+            "label": "2026-04-14_13-36-42",
+            "content": "@@ -43,13 +43,8 @@\n %09var\n- num,\n  vsi\n@@ -50,16 +50,16 @@\n ize int%0A\n+\n %0A%09fmt.Sc\n@@ -162,128 +162,8 @@\n %09%7D%0A%0A\n-%09for i := 0; i %3C vsize; i++ %7B%0A%09%09for j := 0; j %3C vsize; j++ %7B%0A%09%09%09if casais%5Bi%5D == casais%5Bj%5D * -1 %7B%0A%09%09%09%09num++%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A\n %09fmt\n@@ -183,24 +183,6 @@\n is)%0A\n-%09fmt.Println(num)%0A\n %7D%0A\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-04-14_13-38-29",
+            "content": "@@ -244,9 +244,9 @@\n %5Bi%5D \n-!\n+=\n = ca\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-04-14_13-38-57",
+            "content": "@@ -240,17 +240,17 @@\n sais%5Bi%5D \n-=\n+!\n = casais\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-04-14_13-39-05",
+            "content": "@@ -227,16 +227,63 @@\n ++ %7B%0A%09%09%09\n+if casais%5Bi%5D == casais%5Bj%5D * -1 %7B%0A%09%09%09%09num++%0A%09%09%09%7D\n %0A%09%09%7D%0A%09%7D%0A\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-04-14_13-39-53",
+            "content": "@@ -231,13 +231,8 @@\n %0A%09%09%09\n-num++\n %0A%09%09%7D\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-04-14_13-40-10",
+            "content": "@@ -231,78 +231,13 @@\n %0A%09%09%09\n-if casais%5Bi%5D == casais%5Bj%5D * -1 %7B%0A%09%09%09%09casais = append(casais, num)%0A%09%09%09%7D\n+num++\n %0A%09%09%7D\n",
+            "lines": "24"
+        },
+        {
+            "label": "2026-04-14_13-40-50",
+            "content": "@@ -274,25 +274,30 @@\n sais\n-%5Bj%5D = 0%0A%09%09%09%09num++\n+ = append(casais, num)\n %0A%09%09%09\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-04-14_13-49-55",
+            "content": "@@ -279,20 +279,16 @@\n j%5D = 0%0A%09\n-%09%09%7D%0A\n %09%09%09num++\n@@ -288,16 +288,21 @@\n %09%09num++%0A\n+%09%09%09%7D%0A\n %09%09%7D%0A%09%7D%0A%0A\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-14_13-50-21",
+            "content": "@@ -279,16 +279,20 @@\n j%5D = 0%0A%09\n+%09%09%7D%0A\n %09%09%09num++\n@@ -298,18 +298,34 @@\n +%0A%09%09\n-%09\n %7D%0A\n-%09\n %09%7D%0A\n-%09%7D%0A\n+%0A%09fmt.Println(casais)\n %0A%09fm\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-04-14_13-50-58",
+            "content": "@@ -243,17 +243,16 @@\n s%5Bi%5D == \n-(\n casais%5Bj\n@@ -257,17 +257,16 @@\n %5Bj%5D * -1\n-)\n  %7B%0A%09%09%09%09c\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-04-14_13-51-20",
+            "content": "@@ -244,9 +244,9 @@\n %5Bi%5D \n-!\n+=\n = (c\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-04-14_13-51-51",
+            "content": "@@ -243,16 +243,17 @@\n s%5Bi%5D != \n+(\n casais%5Bj\n@@ -256,17 +256,16 @@\n is%5Bj%5D * \n-(\n -1) %7B%0A%09%09\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-04-14_13-52-57",
+            "content": "@@ -240,17 +240,17 @@\n sais%5Bi%5D \n-=\n+!\n = casais\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-04-14_13-53-26",
+            "content": "@@ -256,9 +256,11 @@\n s%5Bj%5D\n-*\n+ * \n (-1)\n@@ -287,21 +287,23 @@\n %0A%09%09%09\n-%7D\n+%09num++\n %0A%09%09\n+%09\n %7D%0A%09%09\n-num++\n+%7D\n %0A%09%7D%0A\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-04-14_13-54-55",
+            "content": "@@ -287,16 +287,24 @@\n %09%09%7D%0A%09%09%7D%0A\n+%09%09num++%0A\n %09%7D%0A%0A%09fmt\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-04-14_13-55-02",
+            "content": "@@ -282,32 +282,8 @@\n = 0%0A\n-%09%09%09%09fmt.Println(casais)%0A\n %09%09%09%7D\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-04-14_13-55-22",
+            "content": "@@ -244,9 +244,9 @@\n %5Bi%5D \n-!\n+=\n = ca\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-04-14_13-55-48",
+            "content": "@@ -243,31 +243,8 @@\n s%5Bi%5D\n- %3E 0 %7B%0A%09%09%09%09if casais%5Bi%5D\n  != \n@@ -264,17 +264,16 @@\n ) %7B%0A%09%09%09%09\n-%09\n casais%5Bj\n@@ -286,20 +286,27 @@\n %09%09%09%09\n-%09num++%0A%09%09%09%09%7D\n+fmt.Println(casais)\n %0A%09%09%09\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-04-14_14-01-34",
+            "content": "@@ -263,17 +263,17 @@\n sais%5Bi%5D \n-=\n+!\n = casais\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-04-14_14-01-42",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar num, vsize int\n\n\tfmt.Scan(&vsize)\n\n\tcasais := make([]int, vsize)\n\n\tfor i := 0; i < vsize; i++ {\n\t\tfmt.Scan(&casais[i])\n\t}\n\n\tfor i := 0; i < vsize; i++ {\n\t\tfor j := 0; j < vsize; j++ {\n\t\t\tif casais[i] > 0 {\n\t\t\t\tif casais[i] == casais[j]*(-1) {\n\t\t\t\t\tcasais[j] = 0\n\t\t\t\t\tnum++\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n\n\tfmt.Println(num)\n}\n",
+            "lines": "28"
+        }
+    ]
+}

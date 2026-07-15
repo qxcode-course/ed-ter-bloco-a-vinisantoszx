@@ -1,0 +1,49 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-02_23-28-46",
+            "content": "@@ -159,39 +159,16 @@\n  %7B%0A%09\n-if\n+_ =\n  node\n- == nil %7B%0A%09%09return 0%0A%09%7D%0A\n %0A%09re\n",
+            "lines": "83"
+        },
+        {
+            "label": "2026-07-02_23-48-55",
+            "content": "@@ -199,61 +199,9 @@\n urn \n-node.Value + rec_sum(node.Left) + rec_sum(node.Right)\n+0\n %0A%7D%0A%0A\n",
+            "lines": "86"
+        },
+        {
+            "label": "2026-07-02_23-52-24",
+            "content": "@@ -288,30 +288,16 @@\n  %7B%0A%09\n-if\n+_ =\n  node\n- == nil %7B%0A%09%09%0A%09%7D\n %0A%09re\n",
+            "lines": "86"
+        },
+        {
+            "label": "2026-07-02_23-54-08",
+            "content": "@@ -307,22 +307,12 @@\n %7B%0A%09%09\n-return 0\n %0A%09%7D%0A\n-%09%0A\n %09ret\n",
+            "lines": "88"
+        },
+        {
+            "label": "2026-07-02_23-54-21",
+            "content": "@@ -319,31 +319,9 @@\n %0A%09%7D%0A\n-%0A%09minimo := node.Value%0A\n+%09\n %0A%09re\n@@ -329,14 +329,9 @@\n urn \n-minimo\n+0\n %0A%7D%0A%0A\n",
+            "lines": "89"
+        },
+        {
+            "label": "2026-07-02_23-55-40",
+            "content": "@@ -343,116 +343,8 @@\n ue%0A%0A\n-%09if node.Left != nil %7B%0A%09%09leftMin := rec_min(node.Left)%0A%0A%09%09if leftMin %3C minimo %7B%0A%09%09%09minimo = leftMin%0A%09%09%7D%0A%09%7D%0A%0A\n %09ret\n",
+            "lines": "91"
+        },
+        {
+            "label": "2026-07-02_23-57-46",
+            "content": "@@ -451,76 +451,8 @@\n %09%7D%0A%0A\n-%09if node.Right != nil %7B%0A%09%09rightMin := rec_min(node.Right)%0A%0A%09%09if%0A%09%7D%0A%0A\n %09ret\n",
+            "lines": "99"
+        },
+        {
+            "label": "2026-07-03_00-00-25",
+            "content": "@@ -514,53 +514,8 @@\n %09%09if\n- rightMin %3C minimo %7B%0A%09%09%09minimo = rightMin%0A%09%09%7D\n %0A%09%7D%0A\n",
+            "lines": "105"
+        },
+        {
+            "label": "2026-07-03_00-00-42",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\n\t\"strconv\"\n\t\"strings\"\n)\n\ntype Node struct {\n\tValue int\n\tLeft  *Node\n\tRight *Node\n}\n\nfunc rec_sum(node *Node) int {\n\tif node == nil {\n\t\treturn 0\n\t}\n\n\treturn node.Value + rec_sum(node.Left) + rec_sum(node.Right)\n}\n\nfunc rec_min(node *Node) int {\n\tif node == nil {\n\t\treturn 0\n\t}\n\n\tminimo := node.Value\n\n\tif node.Left != nil {\n\t\tleftMin := rec_min(node.Left)\n\n\t\tif leftMin < minimo {\n\t\t\tminimo = leftMin\n\t\t}\n\t}\n\n\tif node.Right != nil {\n\t\trightMin := rec_min(node.Right)\n\n\t\tif rightMin < minimo {\n\t\t\tminimo = rightMin\n\t\t}\n\t}\n\n\treturn minimo\n}\n\n// MyShow imprime a \u00e1rvore bin\u00e1ria de forma formatada.\nfunc MyShow(node *Node, nivel int) {\n\t_, _ = node, nivel\n\t// TODO\n}\n\nfunc BShow(node *Node, heranca string) {\n\tif node != nil && (node.Left != nil || node.Right != nil) {\n\t\tBShow(node.Left, heranca+\"l\")\n\t}\n\tfor i := 0; i < len(heranca)-1; i++ {\n\t\tif heranca[i] != heranca[i+1] {\n\t\t\tfmt.Print(\"\u2502   \")\n\t\t} else {\n\t\t\tfmt.Print(\"    \")\n\t\t}\n\t}\n\tif heranca != \"\" {\n\t\tif heranca[len(heranca)-1] == 'l' {\n\t\t\tfmt.Print(\"\u256d\u2500\u2500\u2500\")\n\t\t} else {\n\t\t\tfmt.Print(\"\u2570\u2500\u2500\u2500\")\n\t\t}\n\t}\n\tif node == nil {\n\t\tfmt.Println(\"#\")\n\t\treturn\n\t}\n\tfmt.Println(node.Value)\n\tif node.Left != nil || node.Right != nil {\n\t\tBShow(node.Right, heranca+\"r\")\n\t}\n}\n\nfunc create(parts *[]string) *Node {\n\telem := (*parts)[0]\n\t*parts = (*parts)[1:]\n\tif elem == \"#\" {\n\t\treturn nil\n\t}\n\tvalue, _ := strconv.Atoi(elem)\n\tnode := &Node{Value: value}\n\tnode.Left = create(parts)\n\tnode.Right = create(parts)\n\treturn node\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tparts := strings.Split(scanner.Text(), \" \")\n\troot := create(&parts)\n\tfmt.Println(\"Arvore:\")\n\tBShow(root, \"\")\n\tfmt.Printf(\"Soma: %d, Minimo: %d\\n\", rec_sum(root), rec_min(root))\n}\n",
+            "lines": "107"
+        }
+    ]
+}

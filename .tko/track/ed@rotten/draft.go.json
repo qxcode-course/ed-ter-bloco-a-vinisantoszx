@@ -1,0 +1,74 @@
+{
+    "patches": [
+        {
+            "label": "2026-07-05_03-00-58",
+            "content": "@@ -23,43 +23,8 @@\n mt%22%0A\n-%0Atype Pos struct %7B%0A    l, c int%0A%7D%0A%0A\n func\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-07-05_03-16-47",
+            "content": "@@ -58,15 +58,8 @@\n %0A%7D%0A%0A\n-func %0A%0A\n func\n",
+            "lines": "10"
+        },
+        {
+            "label": "2026-07-05_03-22-21",
+            "content": "@@ -63,176 +63,8 @@\n unc \n-inside(grid %5B%5D%5B%5Dint, pos Pos) bool %7B%0A    nlinhas := len(grid)%0A    ncolunas := len(grid%5B0%5D)%0A%0A    return pos.l %3E= 0 && pos.l %3C nlinhas && pos.c %3E= 0 && pos.c %3C ncolunas%0A%7D\n %0A%0Afu\n",
+            "lines": "12"
+        },
+        {
+            "label": "2026-07-05_03-27-02",
+            "content": "@@ -233,183 +233,8 @@\n %0A%7D%0A%0A\n-func (pos Pos) getNeig() %5B%5DPos %7B%0A    return %5B%5DPos %7B%0A        %7Bpos.l - 1, pos.c%7D,%0A        %7Bpos.l + 1, pos.c%7D,%0A        %7Bpos.l, pos.c - 1%7D,%0A        %7Bpos.l, pos.c + 1%7D,%0A    %7D%0A%7D%0A%0A%0A%0A\n func\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-07-05_03-36-52",
+            "content": "@@ -406,109 +406,8 @@\n %0A%7D%0A%0A\n-func ehFresca(grid %5B%5D%5B%5Dint, pos Pos) bool %7B%0A    return inside(grid, pos) && grid%5Bpos.l%5D%5Bpos.c%5D == 1%0A%7D\n %0A%0Afu\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-07-05_03-55-32",
+            "content": "@@ -505,18 +505,16 @@\n == 1%0A%7D%0A%0A\n-%0A%0A\n func mai\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-07-05_03-56-33",
+            "content": "@@ -509,382 +509,8 @@\n %0A%7D%0A%0A\n-func prepEstadoInicial(grid %5B%5D%5B%5Dint) (%5B%5DPos, int) %7B%0A    fila := %5B%5DPos%7B%7D%0A    frescas := 0%0A%0A    for i := 0; i %3C len(grid); i++ %7B%0A        for j := 0; j %3C len(grid%5B0%5D); j++ %7B%0A            if grid%5Bi%5D%5Bj%5D == 2 %7B%0A                fila = append(fila, Pos%7Bi, j%7D)%0A            %7D else if grid%5Bi%5D%5Bj%5D == 1 %7B%0A                frescas++%0A            %7D%0A        %7D%0A    %7D%0A%0A    return fila, frescas%0A%7D\n %0A%0Afu\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-07-05_04-09-14",
+            "content": "@@ -885,651 +885,8 @@\n %0A%7D%0A%0A\n-func orangesRotting(grid %5B%5D%5B%5Dint) int %7B%0A    fila, frescas := prepEstadoInicial(grid)%0A%0A    if frescas == 0 %7B%0A        return 0%0A    %7D%0A%0A    minutos := 0%0A%0A    for len(fila) %3E 0 && frescas %3E 0 %7B%0A        tamanho := len(fila)%0A%0A        for i := 0; i %3C tamanho; i++ %7B%0A            atual := fila%5B0%5D%0A            fila = fila%5B1:%5D%0A%0A            for _, prox := range getNeig(atual) %7B%0A                if !ehFresca(grid, prox) %7B%0A                    continue%0A                %7D%0A%0A                grid%5Bprox.l%5D%5Bprox.c%5D = 2%0A                frescas--%0A                fila = append(fila, prox)%0A            %7D%0A        %7D%0A%0A        minutos++%0A    %7D%0A%0A    return minutos%0A    %0A%7D%0A%0A\n func\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-07-05_04-24-28",
+            "content": "@@ -1501,54 +1501,8 @@\n  %7D%0A%0A\n-    if frescas %3E 0 %7B%0A        return -1%0A    %7D%0A%0A\n     \n@@ -1516,16 +1516,21 @@\n minutos%0A\n+    %0A\n %7D%0A%0Afunc \n",
+            "lines": "81"
+        },
+        {
+            "label": "2026-07-05_04-25-15",
+            "content": "@@ -1234,22 +1234,16 @@\n nge \n-atual.\n getNeig(\n ) %7B%0A\n@@ -1238,16 +1238,21 @@\n getNeig(\n+atual\n ) %7B%0A    \n",
+            "lines": "84"
+        },
+        {
+            "label": "2026-07-05_04-26-22",
+            "content": "@@ -1588,69 +1588,35 @@\n     \n-var linhas, colunas int%0A%0A    fmt.Scan(&linhas, &colunas)%0A%0A    \n+fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
+            "lines": "84"
+        },
+        {
+            "label": "2026-07-05_04-27-33",
+            "content": "@@ -1650,157 +1650,7 @@\n     \n-grid := make(%5B%5D%5B%5Dint, linhas)%0A%0A    for i := 0; i %3C linhas; i++ %7B%0A        grid%5Bi%5D = make(%5B%5Dint, colunas)%0A%0A%0A    %7D%0A%0A    fmt.Println(orangesRotting(grid))\n %0A%7D%0A\n",
+            "lines": "88"
+        },
+        {
+            "label": "2026-07-05_04-28-54",
+            "content": "@@ -1755,90 +1755,8 @@\n s)%0A%0A\n-        for j := 0; j %3C colunas; j++ %7B%0A            fmt.Scan(&grid%5Bi%5D%5Bj%5D)%0A        %7D\n %0A   \n",
+            "lines": "96"
+        },
+        {
+            "label": "2026-07-05_04-29-39",
+            "content": "package main\nimport \"fmt\"\n\ntype Pos struct {\n    l, c int\n}\n\nfunc inside(grid [][]int, pos Pos) bool {\n    nlinhas := len(grid)\n    ncolunas := len(grid[0])\n\n    return pos.l >= 0 && pos.l < nlinhas && pos.c >= 0 && pos.c < ncolunas\n}\n\nfunc (pos Pos) getNeig() []Pos {\n    return []Pos {\n        {pos.l - 1, pos.c},\n        {pos.l + 1, pos.c},\n        {pos.l, pos.c - 1},\n        {pos.l, pos.c + 1},\n    }\n}\n\nfunc ehFresca(grid [][]int, pos Pos) bool {\n    return inside(grid, pos) && grid[pos.l][pos.c] == 1\n}\n\nfunc prepEstadoInicial(grid [][]int) ([]Pos, int) {\n    fila := []Pos{}\n    frescas := 0\n\n    for i := 0; i < len(grid); i++ {\n        for j := 0; j < len(grid[0]); j++ {\n            if grid[i][j] == 2 {\n                fila = append(fila, Pos{i, j})\n            } else if grid[i][j] == 1 {\n                frescas++\n            }\n        }\n    }\n\n    return fila, frescas\n}\n\nfunc orangesRotting(grid [][]int) int {\n    fila, frescas := prepEstadoInicial(grid)\n\n    if frescas == 0 {\n        return 0\n    }\n\n    minutos := 0\n\n    for len(fila) > 0 && frescas > 0 {\n        tamanho := len(fila)\n\n        for i := 0; i < tamanho; i++ {\n            atual := fila[0]\n            fila = fila[1:]\n\n            for _, prox := range atual.getNeig() {\n                if !ehFresca(grid, prox) {\n                    continue\n                }\n\n                grid[prox.l][prox.c] = 2\n                frescas--\n                fila = append(fila, prox)\n            }\n        }\n\n        minutos++\n    }\n\n    if frescas > 0 {\n        return -1\n    }\n\n    return minutos\n}\n\nfunc main() {\n    var linhas, colunas int\n\n    fmt.Scan(&linhas, &colunas)\n\n    grid := make([][]int, linhas)\n\n    for i := 0; i < linhas; i++ {\n        grid[i] = make([]int, colunas)\n\n        for j := 0; j < colunas; j++ {\n            fmt.Scan(&grid[i][j])\n        }\n    }\n\n    fmt.Println(orangesRotting(grid))\n}\n",
+            "lines": "98"
+        }
+    ]
+}

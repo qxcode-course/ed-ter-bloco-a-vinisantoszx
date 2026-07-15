@@ -2,8 +2,13 @@
     "patches": [
         {
             "label": "2026-03-24_13-36-53",
-            "content": "package main\nimport \"fmt\"\nfunc main() {\n    fmt.Println(\"Hello, World!\")\n}\n",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -37,417 +37,39 @@\n ) %7B%0A\n-%09var q int%0A%09var d string%0A%0A%09fmt.Scan(&q, &d)%0A%0A%09x := make(%5B%5Dint, q)%0A%09y := make(%5B%5Dint, q)%0A%0A%09for i := 0; i %3C q; i++ %7B%0A%09%09fmt.Scan(&x%5Bi%5D, &y%5Bi%5D)%0A%09%7D%0A%0A%09for i := q - 1; i %3E 0; i-- %7B%0A%09%09x%5Bi%5D = x%5Bi-1%5D%0A%09%09y%5Bi%5D = y%5Bi-1%5D%0A%09%7D%0A%0A%09switch d %7B%0A%09case %22L%22:%0A%09%09x%5B0%5D--%0A%09case %22R%22:%0A%09%09x%5B0%5D++%0A%09case %22U%22:%0A%09%09y%5B0%5D--%0A%09case %22D%22:%0A%09%09y%5B0%5D++%0A%09default:%0A%09%09fmt.Println(%22Digite uma opcao valida%22)%0A%09%7D%0A%0A%09for i := 0; i %3C q; i++ %7B%0A%09%09fmt.Println(x%5Bi%5D, y%5Bi%5D)%0A%09%7D\n+    fmt.Println(%22Hello, World!%22)\n %0A%7D%0A\n",
             "lines": "5"
+        },
+        {
+            "label": "2026-05-20_13-35-23",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar q int\n\tvar d string\n\n\tfmt.Scan(&q, &d)\n\n\tx := make([]int, q)\n\ty := make([]int, q)\n\n\tfor i := 0; i < q; i++ {\n\t\tfmt.Scan(&x[i], &y[i])\n\t}\n\n\tfor i := q - 1; i > 0; i-- {\n\t\tx[i] = x[i-1]\n\t\ty[i] = y[i-1]\n\t}\n\n\tswitch d {\n\tcase \"L\":\n\t\tx[0]--\n\tcase \"R\":\n\t\tx[0]++\n\tcase \"U\":\n\t\ty[0]--\n\tcase \"D\":\n\t\ty[0]++\n\tdefault:\n\t\tfmt.Println(\"Digite uma opcao valida\")\n\t}\n\n\tfor i := 0; i < q; i++ {\n\t\tfmt.Println(x[i], y[i])\n\t}\n}\n",
+            "lines": "39"
         }
     ]
 }

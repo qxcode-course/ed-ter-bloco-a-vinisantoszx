@@ -1,0 +1,59 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-16_14-14-14",
+            "content": "@@ -42,19 +42,8 @@\n os%22%0A\n-%09%22strconv%22%0A\n %09%22st\n@@ -273,16 +273,17 @@\n lear()%0A%0A\n+%0A\n type Nod\n@@ -996,16 +996,19 @@\n sh%22:%0A%09%09%09\n+// \n for _, a\n@@ -1033,16 +1033,19 @@\n :%5D %7B%0A%09%09%09\n+// \n %09value, \n@@ -1070,16 +1070,19 @@\n arg)%0A%09%09%09\n+// \n %09queue.E\n@@ -1098,16 +1098,19 @@\n lue)%0A%09%09%09\n+// \n %7D%0A%09%09case\n",
+            "lines": "82"
+        },
+        {
+            "label": "2026-06-16_14-16-21",
+            "content": "@@ -1006,19 +1006,16 @@\n sh%22:%0A%09%09%09\n-// \n for _, a\n@@ -1040,18 +1040,16 @@\n :%5D %7B%0A%09%09%09\n-//\n %09value, \n@@ -1074,18 +1074,16 @@\n arg)%0A%09%09%09\n-//\n %09queue.E\n@@ -1095,27 +1095,24 @@\n e(value)%0A%09%09%09\n-// \n %7D%0A%09%09case %22po\n",
+            "lines": "82"
+        },
+        {
+            "label": "2026-06-22_14-44-25",
+            "content": "@@ -39,18 +39,16 @@\n %0A%09%22os%22%0A%09\n-//\n %22strconv\n",
+            "lines": "82"
+        },
+        {
+            "label": "2026-06-22_15-00-35",
+            "content": "@@ -39,16 +39,18 @@\n %0A%09%22os%22%0A%09\n+//\n %22strconv\n@@ -51,16 +51,16 @@\n trconv%22%0A\n-\n %09%22string\n@@ -65,16 +65,19 @@\n ngs%22%0A)%0A%0A\n+// \n func (q \n@@ -107,118 +107,8 @@\n e T)\n- %7B%0A%09newNode := &Node%5BT%5D%7BValue: value%7D%0A%0A%09if q.IsEmpty() %7B%0A%09%09q.head = newNode%0A%09%09q.tail = newNode%0A%09%7D else %7B%0A%09%7D%0A%7D%0A\n %0A// \n@@ -218,16 +218,19 @@\n e() int%0A\n+// \n func (q \n@@ -258,33 +258,8 @@\n bool\n- %7B%0A%09return q.size == 0%0A%7D%0A\n %0A// \n@@ -1008,16 +1008,19 @@\n sh%22:%0A%09%09%09\n+// \n for _, a\n@@ -1045,16 +1045,18 @@\n :%5D %7B%0A%09%09%09\n+//\n %09value, \n@@ -1081,16 +1081,18 @@\n arg)%0A%09%09%09\n+//\n %09queue.E\n@@ -1108,16 +1108,19 @@\n lue)%0A%09%09%09\n+// \n %7D%0A%09%09case\n",
+            "lines": "82"
+        },
+        {
+            "label": "2026-06-22_15-10-07",
+            "content": "@@ -207,51 +207,8 @@\n e %7B%0A\n-%09%09q.tail.next = newNode%0A%09%09q.tail = newNode%0A\n %09%7D%0A%7D\n",
+            "lines": "94"
+        },
+        {
+            "label": "2026-06-22_15-11-07",
+            "content": "@@ -252,19 +252,8 @@\n e%0A%09%7D\n-%0A%0A%09q.size++\n %0A%7D%0A%0A\n",
+            "lines": "96"
+        },
+        {
+            "label": "2026-06-22_15-11-28",
+            "content": "@@ -259,24 +259,27 @@\n q.size++%0A%7D%0A%0A\n+// \n func (q *Que\n@@ -308,18 +308,8 @@\n ool)\n- %7B%0A%09var%0A%7D%0A\n %0A// \n",
+            "lines": "98"
+        },
+        {
+            "label": "2026-06-23_01-23-56",
+            "content": "@@ -312,192 +312,8 @@\n %09var\n- defaultValue T%0A%0A%09if q.head == nil %7B%0A%09%09return defaultValue, false%0A%09%7D%0A%0A%09value := q.head.Value%0A%09q.head = q.head.next%0A%0A%09if q.head == nil %7B%0A%09%09q.tail = nil%0A%09%7D%0A%0A%09q.size--%0A%09return value, true\n %0A%7D%0A%0A\n",
+            "lines": "101"
+        },
+        {
+            "label": "2026-06-23_01-43-49",
+            "content": "@@ -1492,16 +1492,19 @@\n op%22:%0A%09%09%09\n+// \n if _, ok\n@@ -1533,16 +1533,18 @@\n ok %7B%0A%09%09%09\n+//\n  %09fmt.Pr\n@@ -1569,24 +1569,27 @@\n  vazia%22)%0A%09%09%09\n+// \n %7D%0A%09%09case %22pe\n",
+            "lines": "115"
+        },
+        {
+            "label": "2026-06-23_01-45-02",
+            "content": "@@ -492,24 +492,27 @@\n ue, true%0A%7D%0A%0A\n+// \n func (q *Que\n@@ -538,114 +538,8 @@\n ool)\n- %7B%0A%09var defaultValue T%0A%0A%09if q.head == nil %7B%0A%09%09return defaultValue, false%0A%09%7D%0A%0A%09return q.head.Value, true%0A%7D%0A\n %0A// \n@@ -568,17 +568,16 @@\n e() int%0A\n-%0A\n func (q \n@@ -1522,32 +1522,33 @@\n eue(); !ok %7B%0A%09%09%09\n+ \n %09fmt.Println(%22fa\n@@ -1588,16 +1588,19 @@\n ek%22:%0A%09%09%09\n+// \n if value\n@@ -1625,24 +1625,27 @@\n (); ok %7B%0A%09%09%09\n+// \n %09fmt.Println\n@@ -1655,16 +1655,19 @@\n lue)%0A%09%09%09\n+// \n %7D else %7B\n@@ -1670,16 +1670,19 @@\n se %7B%0A%09%09%09\n+// \n %09fmt.Pri\n@@ -1706,24 +1706,27 @@\n  vazia%22)%0A%09%09%09\n+// \n %7D%0A%09%09default:\n",
+            "lines": "115"
+        },
+        {
+            "label": "2026-06-23_01-50-05",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc (q *Queue[T]) Enqueue(value T) {\n\tnewNode := &Node[T]{Value: value}\n\n\tif q.IsEmpty() {\n\t\tq.head = newNode\n\t\tq.tail = newNode\n\t} else {\n\t\tq.tail.next = newNode\n\t\tq.tail = newNode\n\t}\n\n\tq.size++\n}\n\nfunc (q *Queue[T]) Dequeue() (T, bool) {\n\tvar defaultValue T\n\n\tif q.head == nil {\n\t\treturn defaultValue, false\n\t}\n\n\tvalue := q.head.Value\n\tq.head = q.head.next\n\n\tif q.head == nil {\n\t\tq.tail = nil\n\t}\n\n\tq.size--\n\treturn value, true\n}\n\nfunc (q *Queue[T]) Peek() (T, bool) {\n\tvar defaultValue T\n\n\tif q.head == nil {\n\t\treturn defaultValue, false\n\t}\n\n\treturn q.head.Value, true\n}\n\n// func (q *Queue[T]) Size() int\n\nfunc (q *Queue[T]) IsEmpty() bool {\n\treturn q.size == 0\n}\n\n// func (q *Queue[T]) Clear()\n\ntype Node[T any] struct {\n\tValue T\n\tnext  *Node[T]\n}\n\ntype Queue[T any] struct {\n\thead *Node[T]\n\ttail *Node[T]\n\tsize int\n}\n\nfunc NewQueue[T any]() *Queue[T] {\n\treturn &Queue[T]{}\n}\n\nfunc (q *Queue[T]) String() string {\n\tresult := \"[\"\n\tfor n := q.head; n != nil; n = n.next {\n\t\tif n != q.head {\n\t\t\tresult += \", \"\n\t\t}\n\t\tresult += fmt.Sprintf(\"%v\", n.Value)\n\t}\n\treturn result + \"]\"\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tqueue := NewQueue[int]()\n\n\tfor {\n\t\tif !scanner.Scan() {\n\t\t\tbreak\n\t\t}\n\t\tline := scanner.Text()\n\t\tfmt.Println(\"$\" + line)\n\t\targs := strings.Fields(line)\n\t\tif len(args) == 0 {\n\t\t\tcontinue\n\t\t}\n\t\tswitch args[0] {\n\t\tcase \"end\":\n\t\t\tbreak\n\t\tcase \"show\":\n\t\t\tfmt.Println(queue)\n\t\tcase \"push\":\n\t\t\tfor _, arg := range args[1:] {\n\t\t\t\tvalue, _ := strconv.Atoi(arg)\n\t\t\t\tqueue.Enqueue(value)\n\t\t\t}\n\t\tcase \"pop\":\n\t\t\tif _, ok := queue.Dequeue(); !ok {\n\t\t\t\tfmt.Println(\"falha: fila vazia\")\n\t\t\t}\n\t\tcase \"peek\":\n\t\t\tif value, ok := queue.Peek(); ok {\n\t\t\t\tfmt.Println(value)\n\t\t\t} else {\n\t\t\t\tfmt.Println(\"falha: fila vazia\")\n\t\t\t}\n\t\tdefault:\n\t\t\tfmt.Println(\"Unknown command:\", args[0])\n\t\t}\n\t}\n}\n",
+            "lines": "125"
+        }
+    ]
+}

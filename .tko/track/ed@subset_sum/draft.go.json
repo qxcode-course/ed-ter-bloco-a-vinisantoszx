@@ -1,0 +1,79 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-20_12-16-34",
+            "content": "@@ -6,17 +6,16 @@\n ge main%0A\n-%0A\n import %22\n@@ -19,17 +19,16 @@\n t %22fmt%22%0A\n-%0A\n func mai\n@@ -37,39 +37,39 @@\n ) %7B%0A\n-%09var n, k int%0A%0A%09fmt.Scan(&n, &k\n+    fmt.Println(%22Hello, World!%22\n )%0A%7D%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-06-10_00-35-16",
+            "content": "@@ -71,30 +71,7 @@\n  &k)\n-%0A%0A    fmt.Println(n, k)\n %0A%7D%0A\n",
+            "lines": "9"
+        },
+        {
+            "label": "2026-06-10_00-36-10",
+            "content": "@@ -77,98 +77,24 @@\n     \n-subconj := make(%5B%5Dint, n)%0A%0A    for i := 0; i %3C n; i++ %7B%0A        fmt.Scan(&subconj%5Bi%5D)%0A    %7D\n+fmt.Println(n, k)\n %0A%7D%0A\n",
+            "lines": "11"
+        },
+        {
+            "label": "2026-06-10_00-41-53",
+            "content": "@@ -25,91 +25,8 @@\n t%22%0A%0A\n-func somaSub(subconj %5B%5Dint, k int, i int, somaAtual int) bool %7B%0A    return true%0A%7D%0A%0A\n func\n@@ -69,17 +69,20 @@\n n, &k)%0A%0A\n-%09\n+    \n subconj \n@@ -100,17 +100,20 @@\n nt, n)%0A%0A\n-%09\n+    \n for i :=\n@@ -133,10 +133,16 @@\n + %7B%0A\n-%09%09\n+        \n fmt.\n@@ -163,32 +163,12 @@\n i%5D)%0A\n-%09%7D%0A%0A%09fmt.Println(subconj)\n+    %7D\n %0A%7D%0A\n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-06-10_00-54-46",
+            "content": "@@ -89,107 +89,12 @@\n l %7B%0A\n-%09if somaAtual == k %7B%0A%09%09return true%0A%09%7D%0A%0A%09if somaAtual %3E k %7C%7C i %3E len(subconj) %7B%0A%09%09return false%0A%09%7D%0A%0A%09\n+    \n retu\n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-06-10_01-00-38",
+            "content": "@@ -187,101 +187,19 @@\n %09%7D%0A%0A\n-    if somaSub(subconj, k, i + 1, somaAtual + subconj%5Bi%5D) %7B%0A%09%09return true%0A%09%7D%0A%0A    return fals\n+%09return tru\n e%0A%7D%0A\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-06-10_01-07-39",
+            "content": "@@ -265,74 +265,8 @@\n %09%7D%0A%0A\n-    if somaSub(subconj, k, i + 1, somaAtual) %7B%0A%09%09return false%0A%09%7D%0A%0A\n     \n@@ -425,33 +425,18 @@\n rint\n-(somaSub(subconj, n, i, )\n+ln(subconj\n )%0A%7D%0A\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-06-10_01-09-45",
+            "content": "@@ -473,31 +473,35 @@\n onj%5Bi%5D)%0A%09%7D%0A%0A\n-    if \n+%09fmt.Print(\n somaSub(subc\n@@ -509,51 +509,15 @@\n nj, \n-k, 0, 0) %7B%0A        fmt.Println(%22true%22)%0A    %7D\n+n, i, ))\n %0A%7D%0A\n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-06-10_01-12-28",
+            "content": "@@ -309,35 +309,36 @@\n ual) %7B%0A%09%09return \n-tru\n+fals\n e%0A%09%7D%0A%0A    return\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-06-10_01-12-51",
+            "content": "@@ -544,12 +544,11 @@\n %22)%0A    %7D\n- \n %0A%7D%0A\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-06-10_01-13-25",
+            "content": "@@ -549,48 +549,7 @@\n   %7D \n-else %7B%0A        fmt.Println(%22false%22)%0A    %7D\n %0A%7D%0A\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-06-10_01-13-50",
+            "content": "@@ -147,18 +147,17 @@\n  k %7C%7C i \n-==\n+%3E\n  len(sub\n@@ -539,16 +539,58 @@\n %22true%22)%0A\n+    %7D else %7B%0A        fmt.Println(%22false%22)%0A\n     %7D%0A%7D%0A\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-06-10_01-14-59",
+            "content": "@@ -475,11 +475,81 @@\n j%5Bi%5D)%0A%09%7D\n+%0A%0A    if somaSub(subconj, k, 0, 0) %7B%0A        fmt.Println(%22true%22)%0A    %7D\n %0A%7D%0A\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-06-10_01-15-13",
+            "content": "@@ -479,119 +479,7 @@\n )%0A%09%7D\n-%0A%0A    if somaSub(subconj, k, 0, 0) %7B%0A        fmt.Println(%22true%22)%0A    %7D else %7B%0A        fmt.Println(%22false%22)%0A    %7D\n %0A%7D%0A\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-06-10_01-15-31",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc somaSub(subconj []int, k int, i int, somaAtual int) bool {\n\tif somaAtual == k {\n\t\treturn true\n\t}\n\n\tif somaAtual > k || i == len(subconj) {\n\t\treturn false\n\t}\n\n    if somaSub(subconj, k, i + 1, somaAtual + subconj[i]) {\n\t\treturn true\n\t}\n\n    if somaSub(subconj, k, i + 1, somaAtual) {\n\t\treturn true\n\t}\n\n    return false\n}\n\nfunc main() {\n\tvar n, k int\n\n\tfmt.Scan(&n, &k)\n\n\tsubconj := make([]int, n)\n\n\tfor i := 0; i < n; i++ {\n\t\tfmt.Scan(&subconj[i])\n\t}\n\n    if somaSub(subconj, k, 0, 0) {\n        fmt.Println(\"true\")\n    } else {\n        fmt.Println(\"false\")\n    }\n}\n",
+            "lines": "41"
+        }
+    ]
+}

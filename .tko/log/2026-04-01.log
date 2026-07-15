@@ -1,0 +1,14 @@
+2026-04-01 13:37:25, MOVE, v:1, k:ed@triangulo, mode:DOWN
+2026-04-01 13:37:28, MOVE, v:1, k:ed@treinando, mode:DOWN
+2026-04-01 13:37:28, MOVE, v:1, k:ed@treinando, mode:PICK
+2026-04-01 13:37:30, MOVE, v:1, k:ed@treinando, mode:BACK
+2026-04-01 13:37:32, MOVE, v:1, k:ed@resto, mode:DOWN
+2026-04-01 13:37:33, MOVE, v:1, k:ed@mdc, mode:DOWN
+2026-04-01 13:37:34, MOVE, v:1, k:ed@fractais_png, mode:DOWN
+2026-04-01 13:37:37, MOVE, v:1, k:ed@queimada, mode:DOWN
+2026-04-01 13:37:38, MOVE, v:1, k:ed@labirinto, mode:DOWN
+2026-04-01 13:37:39, MOVE, v:1, k:ed@eh_primo, mode:DOWN
+2026-04-01 13:37:42, MOVE, v:1, k:ed@vetequals, mode:DOWN
+2026-04-01 13:39:48, MOVE, v:1, k:ed@resto, mode:PICK
+2026-04-01 13:39:55, EXEC, v:1, k:ed@resto, mode:FULL, rate:0, size:5
+2026-04-01 13:39:55, EXEC, v:1, k:ed@resto, mode:FULL, rate:0, size:5
